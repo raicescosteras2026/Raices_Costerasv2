@@ -1309,3 +1309,66 @@ pages.fotografia = () => {
     </div>
   `;
 };
+
+// --- REFUGIOS PAGE ---
+pages.refugios = () => {
+  const refugios = [
+    { name: "Esc. Vocacional Bernardino Cordero", phone: "(787) 842-7091", type: "Escuela" },
+    { name: "Esc. José Celso Barbosa", phone: "(787) 842-8671", type: "Escuela" },
+    { name: "Esc. Josefina Boya León", phone: "(787) 812-3879", type: "Escuela" },
+    { name: "Esc. Lila Mayoral Wirshing", phone: "(787) 843-8245", type: "Escuela" },
+    { name: "Esc. Llanos del Sur", phone: "(787) 848-1105", type: "Escuela" },
+    { name: "Esc. Santa Teresita", phone: "(787) 841-4949", type: "Escuela" },
+    { name: "Res. Arístides Chavier", phone: "(787) 844-5541", type: "Residencial" },
+    { name: "Res. Ernesto Ramos Antonini", phone: "(787) 658-4412", type: "Residencial" },
+    { name: "Res. Dr. Pila", phone: "(939) 418-3059", type: "Residencial" }
+  ];
+
+  const renderRefugioCard = (r) => `
+    <div class="bg-surface-container-low border border-outline-variant/50 rounded-xl p-5 flex flex-col gap-3 hover:bg-surface-container-high transition-colors shadow-sm">
+      <div class="flex items-start justify-between gap-2">
+        <h3 class="font-headline-sm text-on-surface font-semibold text-base leading-tight">${r.name}</h3>
+        <span class="material-symbols-outlined text-primary text-xl bg-primary-container/30 rounded-full p-1.5 shrink-0">
+          ${r.type === 'Escuela' ? 'school' : 'domain'}
+        </span>
+      </div>
+      <div class="mt-auto pt-3 border-t border-outline-variant/30 flex items-center gap-2 text-on-surface-variant">
+        <span class="material-symbols-outlined text-[18px]">call</span>
+        <a href="tel:${r.phone.replace(/[^0-9]/g, '')}" class="font-body-md font-medium hover:text-primary transition-colors">${r.phone}</a>
+      </div>
+    </div>
+  `;
+
+  return `
+    <div class="px-margin-mobile py-8 max-w-5xl mx-auto w-full">
+      
+      <div class="bg-error-container text-on-error-container p-6 rounded-2xl mb-8 flex flex-col md:flex-row gap-6 items-center shadow-md relative overflow-hidden">
+        <div class="absolute -right-6 -bottom-6 opacity-5 pointer-events-none">
+          <span class="material-symbols-outlined" style="font-size: 150px;">health_and_safety</span>
+        </div>
+        
+        <div class="bg-error text-on-error w-16 h-16 rounded-full flex items-center justify-center shrink-0 shadow-sm z-10">
+          <span class="material-symbols-outlined text-3xl">warning</span>
+        </div>
+        
+        <div class="flex-grow text-center md:text-left z-10">
+          <span class="font-label-caps text-xs uppercase tracking-widest opacity-80 block mb-1">Estamos Ready</span>
+          <h2 class="font-display-sm font-bold mb-2 leading-tight">Refugios Aprobados</h2>
+          <p class="font-body-md opacity-90 max-w-2xl">
+            Lista oficial de refugios aprobados por el Departamento de Vivienda para el Municipio Autónomo de Ponce. En caso de emergencia, comuníquese con el refugio más cercano.
+          </p>
+        </div>
+        
+        <div class="shrink-0 text-center flex flex-col items-center gap-1 opacity-90 z-10 bg-error-container/50 p-2 rounded-lg">
+          <span class="material-symbols-outlined text-3xl">admin_panel_settings</span>
+          <span class="font-label-caps text-[10px] uppercase tracking-wider font-bold">OMME Ponce</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+        ${refugios.map(renderRefugioCard).join('')}
+      </div>
+
+    </div>
+  `;
+};
