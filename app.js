@@ -1251,3 +1251,61 @@ pages.sobre = () => {
     </div>
   `;
 };
+
+// --- FOTOGRAFIA PAGE ---
+pages.fotografia = () => {
+  return `
+    <div class="px-margin-mobile py-8 max-w-7xl mx-auto w-full">
+      <header class="mb-section-gap">
+        <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mb-base block">Galería Visual</span>
+        <h2 class="font-display-lg text-display-lg text-primary mb-2">Fotografía del Proyecto</h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">Explora los momentos, los esfuerzos y la belleza de la Playa de Ponce capturados a través de nuestra comunidad.</p>
+      </header>
+
+      <!-- Masonry Photo Grid -->
+      <div class="columns-1 sm:columns-2 lg:columns-2 xl:columns-3 gap-6 space-y-6">
+        
+        <!-- Photo 1 -->
+        <figure class="break-inside-avoid relative group rounded-xl overflow-hidden shadow-lg border border-outline-variant/30">
+          <img src="assets/images/mangrove_restoration_1781124377365.png" alt="Restauración de Manglares" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <figcaption class="absolute bottom-0 left-0 right-0 p-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+            <h4 class="font-headline-sm text-on-primary text-lg">Restauración de Manglares</h4>
+            <p class="font-body-md text-xs text-on-primary/80">Voluntarios comunitarios sembrando esperanza.</p>
+          </figcaption>
+        </figure>
+
+        <!-- Photo 2 -->
+        <figure class="break-inside-avoid relative group rounded-xl overflow-hidden shadow-lg border border-outline-variant/30">
+          <img src="assets/images/coastal_community_1781124389221.png" alt="Comunidad Costera" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <figcaption class="absolute bottom-0 left-0 right-0 p-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+            <h4 class="font-headline-sm text-on-primary text-lg">Comunidad Costera</h4>
+            <p class="font-body-md text-xs text-on-primary/80">La vitalidad y el color de nuestro barrio.</p>
+          </figcaption>
+        </figure>
+
+        <!-- Photo 3 -->
+        <figure class="break-inside-avoid relative group rounded-xl overflow-hidden shadow-lg border border-outline-variant/30">
+          <img src="assets/images/community_planning_1781124400939.png" alt="Planificación Comunitaria" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <figcaption class="absolute bottom-0 left-0 right-0 p-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+            <h4 class="font-headline-sm text-on-primary text-lg">Trazando el Futuro</h4>
+            <p class="font-body-md text-xs text-on-primary/80">Reunión de planificación y mapas de riesgo.</p>
+          </figcaption>
+        </figure>
+
+        <!-- Photo 4 -->
+        <figure class="break-inside-avoid relative group rounded-xl overflow-hidden shadow-lg border border-outline-variant/30">
+          <img src="assets/images/ocean_sunset_1781124413556.png" alt="Atardecer en la Costa" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <figcaption class="absolute bottom-0 left-0 right-0 p-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+            <h4 class="font-headline-sm text-on-primary text-lg">Atardecer en la Costa</h4>
+            <p class="font-body-md text-xs text-on-primary/80">La belleza natural que protegemos.</p>
+          </figcaption>
+        </figure>
+
+      </div>
+    </div>
+  `;
+};
