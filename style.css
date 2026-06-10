@@ -6,6 +6,7 @@
 
   /* Standard Theme (Mangrove Emerald & Coral Peach) */
   --primary-color: #003629;
+  --on-primary-color: #ffffff;
   --primary-container-color: #1b4d3e;
   --on-primary-container-color: #8abda9;
   --secondary-color: #006a64;
@@ -143,7 +144,7 @@ body::before {
 /* Active Link in nav styling */
 .nav-link-active {
   background-color: var(--primary-container-color);
-  color: var(--on-primary-container-color);
+  color: var(--on-primary-color);
   font-weight: 700;
 }
 
