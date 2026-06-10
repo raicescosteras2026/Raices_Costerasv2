@@ -1,0 +1,201 @@
+/* CSS Variables and Global Custom Styles for Raíces Costeras Web */
+
+:root {
+  /* Transition timings */
+  --theme-transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, fill 0.3s ease, stroke 0.3s ease, box-shadow 0.3s ease;
+
+  /* Standard Theme (Mangrove Emerald & Coral Peach) */
+  --primary-color: #003629;
+  --primary-container-color: #1b4d3e;
+  --on-primary-container-color: #8abda9;
+  --secondary-color: #006a64;
+  --secondary-container-color: #79f7eb;
+  --on-secondary-container-color: #00716a;
+  --tertiary-color: #4c2313;
+  --tertiary-container-color: #663927;
+  --on-tertiary-container-color: #e3a38c;
+  --background-color: #faf9f5;
+  --surface-color: #faf9f5;
+  --surface-container-color: #efeeea;
+  --surface-container-low: #f4f4f0;
+  --surface-container-high: #e9e8e4;
+  --surface-container-highest: #e3e2df;
+  --surface-container-lowest: #ffffff;
+  --on-background: #1b1c1a;
+  --on-surface: #1b1c1a;
+  --on-surface-variant: #404945;
+  --outline: #707974;
+  --outline-variant: #c0c9c3;
+  --error: #ba1a1a;
+  --error-container: #ffdad6;
+  --on-error-container: #93000a;
+  --primary-fixed: #baeed9;
+  --primary-fixed-dim: #9ed1bd;
+  --tertiary-fixed: #ffdbcf;
+  --tertiary-fixed-dim: #fab79f;
+  --secondary-fixed: #79f7eb;
+  --secondary-fixed-dim: #59dacf;
+  --on-primary-fixed: #002117;
+  --on-primary-fixed-variant: #1d4f40;
+  --on-secondary-fixed: #00201e;
+  --on-secondary-fixed-variant: #00504b;
+  --on-tertiary-fixed: #341104;
+  --on-tertiary-fixed-variant: #693b29;
+}
+
+body.theme-vibrant {
+  /* Vibrant Theme (Deep Ocean Blue & Energetic Gold/Turquoise) */
+  --primary-color: #162839;
+  --primary-container-color: #2c3e50;
+  --on-primary-container-color: #96a9be;
+  --secondary-color: #7c5800;
+  --secondary-container-color: #feb700;
+  --on-secondary-container-color: #6b4b00;
+  --tertiary-color: #002c29;
+  --tertiary-container-color: #00443f;
+  --on-tertiary-container-color: #4eb7ad;
+  --background-color: #fafaf5;
+  --surface-color: #fafaf5;
+  --surface-container-color: #eeeee9;
+  --surface-container-low: #f4f4ef;
+  --surface-container-high: #e8e8e3;
+  --surface-container-highest: #e3e3de;
+  --surface-container-lowest: #ffffff;
+  --on-background: #1a1c19;
+  --on-surface: #1a1c19;
+  --on-surface-variant: #43474c;
+  --outline: #74777d;
+  --outline-variant: #c4c6cd;
+  --error: #ba1a1a;
+  --error-container: #ffdad6;
+  --on-error-container: #93000a;
+  --primary-fixed: #d1e4fb;
+  --primary-fixed-dim: #b5c8df;
+  --tertiary-fixed: #8ef4e9;
+  --tertiary-fixed-dim: #71d7cd;
+  --secondary-fixed: #ffdea8;
+  --secondary-fixed-dim: #ffba20;
+  --on-primary-fixed: #091d2e;
+  --on-primary-fixed-variant: #36485b;
+  --on-secondary-fixed: #271900;
+  --on-secondary-fixed-variant: #5e4200;
+  --on-tertiary-fixed: #00201d;
+  --on-tertiary-fixed-variant: #00504a;
+}
+
+/* Base resets & styles */
+body {
+  background-color: var(--background-color);
+  color: var(--on-background);
+  min-height: 100vh;
+  position: relative;
+  transition: var(--theme-transition);
+}
+
+/* Subtle editorial paper noise overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 999;
+}
+
+/* Apply transitions to all theme-affected properties */
+*, *::before, *::after {
+  transition-property: background-color, color, border-color, fill, stroke;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+}
+
+/* Hide scrollbar utility */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.35) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(0, 54, 41, 0.04);
+}
+
+body.theme-vibrant .glass-card {
+  box-shadow: 0 8px 32px 0 rgba(22, 40, 57, 0.04);
+}
+
+/* Interactive checkbox styling */
+.emerald-checkbox:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.emerald-checkbox:focus {
+  --tw-ring-color: var(--primary-fixed);
+}
+
+/* SVG Map custom styling */
+.map-land {
+  fill: #f1f0ea;
+  stroke: #d0cebf;
+  stroke-width: 1.5;
+}
+.map-water {
+  fill: #d5e5e3;
+  transition: var(--theme-transition);
+}
+body.theme-vibrant .map-water {
+  fill: #c5dcff;
+}
+.map-road {
+  stroke: #ffffff;
+  stroke-width: 3;
+  stroke-linecap: round;
+  fill: none;
+}
+.map-evac-route {
+  stroke: #22c55e;
+  stroke-dasharray: 6 4;
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  fill: none;
+  animation: march 20s linear infinite;
+}
+.map-flood-zone {
+  fill: #ef4444;
+  fill-opacity: 0.15;
+  stroke: #ef4444;
+  stroke-dasharray: 4 4;
+  stroke-width: 1.5;
+}
+body.theme-vibrant .map-flood-zone {
+  fill: #ff7e00;
+  fill-opacity: 0.2;
+  stroke: #ff7e00;
+}
+
+@keyframes march {
+  to {
+    stroke-dashoffset: -100;
+  }
+}
+
+/* Active Link in nav styling */
+.nav-link-active {
+  background-color: var(--primary-container-color);
+  color: var(--on-primary-container-color);
+  font-weight: 700;
+}
+
+/* Custom progress ring */
+.progress-ring__circle {
+  transition: stroke-dashoffset 0.35s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}

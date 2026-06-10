@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Datos - Raíces Costeras</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-variant": "#e3e2df",
+                      "surface-container-low": "#f4f4f0",
+                      "on-primary-container": "#8abda9",
+                      "surface-tint": "#376757",
+                      "surface-container": "#efeeea",
+                      "on-secondary": "#ffffff",
+                      "surface-dim": "#dbdad6",
+                      "secondary-fixed": "#79f7eb",
+                      "surface-container-highest": "#e3e2df",
+                      "surface-bright": "#faf9f5",
+                      "surface": "#faf9f5",
+                      "on-tertiary-fixed": "#341104",
+                      "on-error-container": "#93000a",
+                      "on-tertiary": "#ffffff",
+                      "on-background": "#1b1c1a",
+                      "error-container": "#ffdad6",
+                      "error": "#ba1a1a",
+                      "on-secondary-container": "#00716a",
+                      "on-primary": "#ffffff",
+                      "tertiary-fixed": "#ffdbcf",
+                      "tertiary-container": "#663927",
+                      "on-secondary-fixed": "#00201e",
+                      "tertiary-fixed-dim": "#fab79f",
+                      "on-tertiary-container": "#e3a38c",
+                      "on-surface": "#1b1c1a",
+                      "on-error": "#ffffff",
+                      "background": "#faf9f5",
+                      "primary-fixed-dim": "#9ed1bd",
+                      "outline": "#707974",
+                      "on-surface-variant": "#404945",
+                      "primary-fixed": "#baeed9",
+                      "secondary-container": "#79f7eb",
+                      "inverse-surface": "#2f312e",
+                      "on-secondary-fixed-variant": "#00504b",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary": "#4c2313",
+                      "secondary": "#006a64",
+                      "inverse-on-surface": "#f2f1ed",
+                      "surface-container-high": "#e9e8e4",
+                      "secondary-fixed-dim": "#59dacf",
+                      "primary": "#003629",
+                      "on-tertiary-fixed-variant": "#693b29",
+                      "on-primary-fixed-variant": "#1d4f40",
+                      "primary-container": "#1b4d3e",
+                      "inverse-primary": "#9ed1bd",
+                      "on-primary-fixed": "#002117",
+                      "outline-variant": "#c0c9c3"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "20px",
+                      "card-padding": "16px",
+                      "base": "4px",
+                      "section-gap": "32px",
+                      "gutter": "12px"
+              },
+              "fontFamily": {
+                      "label-caps": [
+                              "Vollkorn"
+                      ],
+                      "display-lg": [
+                              "Vollkorn"
+                      ],
+                      "body-lg": [
+                              "Vollkorn"
+                      ],
+                      "headline-md": [
+                              "Vollkorn"
+                      ],
+                      "body-md": [
+                              "Vollkorn"
+                      ],
+                      "headline-sm": [
+                              "Vollkorn"
+                      ]
+              },
+              "fontSize": {
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.08em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-sm": [
+                              "22px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.surface');
+            color: theme('colors.on-surface');
+            background-image: url('data:image/svg+xml,%3Csvg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23c0c9c3" fill-opacity="0.1" fill-rule="evenodd"%3E%3Ccircle cx="3" cy="3" r="3"/%3E%3Ccircle cx="13" cy="13" r="3"/%3E%3C/g%3E%3C/svg%3E');
+        }
+        
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .glass-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.3) 100%);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 32px 0 rgba(0, 54, 41, 0.05);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="antialiased min-h-screen flex flex-col md:flex-row">
+<!-- Sidebar Navigation (Desktop) / Hidden on Mobile -->
+<nav class="NavigationDrawer hidden md:flex h-full w-80 rounded-r-xl bg-surface-container shadow-md fixed inset-y-0 left-0 z-50 flex-col">
+<div class="px-6 py-8">
+<h1 class="font-display-lg text-display-lg text-primary">Raíces Costeras</h1>
+</div>
+<div class="flex-1 px-4 space-y-2 mt-4">
+<a class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-variant rounded-full mx-2 px-4 py-3 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">eco</span>
+<span class="font-body-lg text-body-lg">Iniciativas</span>
+</a>
+<a class="flex items-center gap-3 bg-primary-container text-on-primary-container rounded-full mx-2 px-4 py-3 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">monitoring</span>
+<span class="font-body-lg text-body-lg">Impacto</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-variant rounded-full mx-2 px-4 py-3 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">groups</span>
+<span class="font-body-lg text-body-lg">Comunidad</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-variant rounded-full mx-2 px-4 py-3 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">mail</span>
+<span class="font-body-lg text-body-lg">Contacto</span>
+</a>
+</div>
+<div class="p-6 border-t border-outline-variant">
+<div class="text-center">
+<p class="font-label-caps text-label-caps text-on-surface-variant">Un Nuevo Amanecer, Inc. | Comité de Asesores Comunitarios (CAC)</p>
+</div>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 w-full md:pl-80 flex flex-col">
+<!-- TopAppBar (Mobile) -->
+<header class="TopAppBar md:hidden flex justify-between items-center px-margin-mobile py-4 w-full top-0 sticky bg-surface z-40">
+<button class="text-primary hover:opacity-80 transition-opacity active:scale-95 transition-transform p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-headline-sm text-headline-sm text-primary font-bold">Raíces Costeras</h1>
+<div class="w-10"></div> <!-- Spacer for centering -->
+</header>
+<div class="px-margin-mobile py-section-gap max-w-5xl mx-auto w-full">
+<header class="mb-section-gap">
+<h2 class="font-display-lg text-display-lg text-primary mb-2">Datos y Hechos</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Una mirada profunda a la realidad de nuestra comunidad costera.</p>
+</header>
+<!-- Filter Chips -->
+<div class="flex gap-3 overflow-x-auto hide-scrollbar pb-4 mb-section-gap border-b border-outline-variant">
+<button class="whitespace-nowrap px-4 py-2 rounded-full border border-secondary text-secondary bg-secondary-container bg-opacity-20 font-body-md text-body-md font-semibold">Todos</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full border border-outline text-on-surface-variant hover:bg-surface-variant transition-colors font-body-md text-body-md">Demografía</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full border border-outline text-on-surface-variant hover:bg-surface-variant transition-colors font-body-md text-body-md">Ambiente</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full border border-outline text-on-surface-variant hover:bg-surface-variant transition-colors font-body-md text-body-md">Economía</button>
+</div>
+<!-- Bento Grid / Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Card 1: Demographics -->
+<article class="glass-card rounded-xl p-card-padding flex flex-col aspect-square relative overflow-hidden group">
+<div class="absolute inset-0 bg-secondary-fixed opacity-5 group-hover:opacity-10 transition-opacity"></div>
+<div class="flex justify-between items-start mb-4 relative z-10">
+<span class="font-label-caps text-label-caps text-secondary tracking-widest uppercase">Demografía</span>
+<span class="material-symbols-outlined text-secondary" style="font-size: 28px; font-variation-settings: 'FILL' 1;">groups</span>
+</div>
+<div class="flex-1 flex flex-col justify-center relative z-10">
+<h3 class="font-display-lg text-display-lg text-primary mb-2">12,450</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Habitantes en la zona costera sur, reflejando un crecimiento del 5% en la última década.</p>
+</div>
+</article>
+<!-- Card 2: Environment -->
+<article class="glass-card rounded-xl p-card-padding flex flex-col aspect-square relative overflow-hidden group">
+<div class="absolute inset-0 bg-tertiary-fixed opacity-5 group-hover:opacity-10 transition-opacity"></div>
+<div class="flex justify-between items-start mb-4 relative z-10">
+<span class="font-label-caps text-label-caps text-tertiary tracking-widest uppercase">Ambiente</span>
+<span class="material-symbols-outlined text-tertiary" style="font-size: 28px; font-variation-settings: 'FILL' 1;">forest</span>
+</div>
+<div class="flex-1 flex flex-col justify-center relative z-10">
+<h3 class="font-display-lg text-display-lg text-primary mb-2">850</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Hectáreas de manglar preservadas, actuando como barrera natural contra marejadas.</p>
+</div>
+</article>
+<!-- Card 3: Economy -->
+<article class="glass-card rounded-xl p-card-padding flex flex-col aspect-square relative overflow-hidden group">
+<div class="absolute inset-0 bg-primary-fixed opacity-5 group-hover:opacity-10 transition-opacity"></div>
+<div class="flex justify-between items-start mb-4 relative z-10">
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase">Economía</span>
+<span class="material-symbols-outlined text-primary" style="font-size: 28px; font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+</div>
+<div class="flex-1 flex flex-col justify-center relative z-10">
+<h3 class="font-display-lg text-display-lg text-primary mb-2">45%</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">De los comercios locales dependen directamente del ecoturismo y pesca sustentable.</p>
+</div>
+</article>
+<!-- Card 4: Demographics -->
+<article class="glass-card rounded-xl p-card-padding flex flex-col aspect-square relative overflow-hidden group">
+<div class="absolute inset-0 bg-secondary-fixed opacity-5 group-hover:opacity-10 transition-opacity"></div>
+<div class="flex justify-between items-start mb-4 relative z-10">
+<span class="font-label-caps text-label-caps text-secondary tracking-widest uppercase">Demografía</span>
+<span class="material-symbols-outlined text-secondary" style="font-size: 28px; font-variation-settings: 'FILL' 1;">elderly</span>
+</div>
+<div class="flex-1 flex flex-col justify-center relative z-10">
+<h3 class="font-display-lg text-display-lg text-primary mb-2">32%</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">De la población tiene más de 60 años, resaltando la necesidad de infraestructura accesible.</p>
+</div>
+</article>
+<!-- Card 5: Environment -->
+<article class="glass-card rounded-xl p-card-padding flex flex-col aspect-square relative overflow-hidden group">
+<div class="absolute inset-0 bg-tertiary-fixed opacity-5 group-hover:opacity-10 transition-opacity"></div>
+<div class="flex justify-between items-start mb-4 relative z-10">
+<span class="font-label-caps text-label-caps text-tertiary tracking-widest uppercase">Ambiente</span>
+<span class="material-symbols-outlined text-tertiary" style="font-size: 28px; font-variation-settings: 'FILL' 1;">water_drop</span>
+</div>
+<div class="flex-1 flex flex-col justify-center relative z-10">
+<h3 class="font-display-lg text-display-lg text-primary mb-2">2.5<span class="text-2xl ml-1">mm</span></h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Aumento anual promedio del nivel del mar registrado en las costas locales.</p>
+</div>
+</article>
+</div>
+</div>
+<!-- Footer (Mobile Only in this layout structure to fit prompt constraints elegantly) -->
+<footer class="Footer md:hidden bg-surface-container-low w-full py-8 px-margin-mobile border-t border-outline-variant flex flex-col items-center justify-center gap-4 text-center mt-auto">
+<p class="font-label-caps text-label-caps font-bold text-primary">Un Nuevo Amanecer, Inc. | Comité de Asesores Comunitarios (CAC)</p>
+<div class="flex gap-4">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-colors" href="#">Privacidad</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-colors" href="#">Términos</a>
+</div>
+</footer>
+</main>
+</body></html>

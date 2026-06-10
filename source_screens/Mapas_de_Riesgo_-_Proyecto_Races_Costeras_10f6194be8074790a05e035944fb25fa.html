@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mapas de Riesgo - Raíces Costeras</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#e3e2df",
+                    "surface-container-low": "#f4f4f0",
+                    "on-primary-container": "#8abda9",
+                    "surface-tint": "#376757",
+                    "surface-container": "#efeeea",
+                    "on-secondary": "#ffffff",
+                    "surface-dim": "#dbdad6",
+                    "secondary-fixed": "#79f7eb",
+                    "surface-container-highest": "#e3e2df",
+                    "surface-bright": "#faf9f5",
+                    "surface": "#faf9f5",
+                    "on-tertiary-fixed": "#341104",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "on-background": "#1b1c1a",
+                    "error-container": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "on-secondary-container": "#00716a",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#ffdbcf",
+                    "tertiary-container": "#663927",
+                    "on-secondary-fixed": "#00201e",
+                    "tertiary-fixed-dim": "#fab79f",
+                    "on-tertiary-container": "#e3a38c",
+                    "on-surface": "#1b1c1a",
+                    "on-error": "#ffffff",
+                    "background": "#faf9f5",
+                    "primary-fixed-dim": "#9ed1bd",
+                    "outline": "#707974",
+                    "on-surface-variant": "#404945",
+                    "primary-fixed": "#baeed9",
+                    "secondary-container": "#79f7eb",
+                    "inverse-surface": "#2f312e",
+                    "on-secondary-fixed-variant": "#00504b",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary": "#4c2313",
+                    "secondary": "#006a64",
+                    "inverse-on-surface": "#f2f1ed",
+                    "surface-container-high": "#e9e8e4",
+                    "secondary-fixed-dim": "#59dacf",
+                    "primary": "#003629",
+                    "on-tertiary-fixed-variant": "#693b29",
+                    "on-primary-fixed-variant": "#1d4f40",
+                    "primary-container": "#1b4d3e",
+                    "inverse-primary": "#9ed1bd",
+                    "on-primary-fixed": "#002117",
+                    "outline-variant": "#c0c9c3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "card-padding": "16px",
+                    "base": "4px",
+                    "section-gap": "32px",
+                    "gutter": "12px"
+            },
+            "fontFamily": {
+                    "label-caps": ["Vollkorn"],
+                    "display-lg": ["Vollkorn"],
+                    "body-lg": ["Vollkorn"],
+                    "headline-md": ["Vollkorn"],
+                    "body-md": ["Vollkorn"],
+                    "headline-sm": ["Vollkorn"]
+            },
+            "fontSize": {
+                    "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700" }],
+                    "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                    "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                    "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                    "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                    "headline-sm": ["22px", { "lineHeight": "28px", "fontWeight": "600" }]
+            }
+          }
+        }
+      }
+    </script>
+<!-- Google Fonts: Vollkorn -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        
+        .texture-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        .bento-card {
+            background-color: theme('colors.surface-container-lowest');
+            position: relative;
+            overflow: hidden;
+            border-radius: theme('borderRadius.xl');
+            box-shadow: 0 4px 20px rgba(0, 54, 41, 0.05); /* Soft ambient occlusion using primary color */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .bento-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 54, 41, 0.1);
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col relative font-body-md text-body-md">
+<!-- Global Texture Overlay -->
+<div class="fixed inset-0 texture-overlay z-0"></div>
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface w-full top-0 sticky z-40 bg-surface dark:bg-surface flex justify-between items-center px-margin-mobile py-4 w-full">
+<div class="flex items-center gap-4">
+<button aria-label="Menu" class="text-on-surface-variant hover:opacity-80 transition-opacity active:scale-95 transition-transform p-2 rounded-full hover:bg-surface-variant">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim" data-icon="menu">menu</span>
+</button>
+<h1 class="font-display-lg text-primary dark:text-primary-fixed-dim md:text-display-lg" style="font-size: 28px; line-height: 36px;">Raíces Costeras</h1>
+</div>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:opacity-80 transition-opacity active:scale-95 transition-transform" href="#">Iniciativas</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:opacity-80 transition-opacity active:scale-95 transition-transform" href="#">Impacto</a>
+<a class="font-label-caps text-label-caps bg-primary-container text-on-primary-container px-4 py-2 rounded-full hover:opacity-80 transition-opacity active:scale-95 transition-transform" href="#">Comunidad</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:opacity-80 transition-opacity active:scale-95 transition-transform" href="#">Contacto</a>
+</nav>
+<button aria-label="Search" class="md:hidden text-on-surface-variant hover:opacity-80 transition-opacity active:scale-95 transition-transform p-2 rounded-full hover:bg-surface-variant">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+</header>
+<!-- Main Canvas -->
+<main class="flex-grow z-10 relative pt-8 pb-24 px-margin-mobile md:px-8 max-w-7xl mx-auto w-full">
+<!-- Header Section -->
+<div class="mb-section-gap max-w-3xl">
+<div class="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded-full border border-secondary-container bg-surface-container-low">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Catálogo de Datos</span>
+</div>
+<h2 class="font-display-lg text-display-lg text-on-surface mb-4">Mapas de Riesgo</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                Explora el archivo cartográfico de Ponce Playa. Estos mapas detallan las zonas vulnerables y las estrategias de resiliencia comunitaria ante eventos climáticos.
+            </p>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter md:gap-6">
+<!-- Map Card 1 -->
+<article class="bento-card group flex flex-col h-full">
+<div class="relative w-full aspect-[1.49] bg-surface-variant overflow-hidden rounded-t-xl">
+<img alt="Mapa de Zonas de Inundación" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2t5nIIeb_hotxwQsgLjDb_NwAzT3MLlN5NSphMOWEqGSiwGpq08FYJHUwIUTWXKXC_ZyylnxsCdFo1gsRaleKurh_GqmrI-ssg48s4sMGrGWDR7ymercjHE424M7irq_gAikOlyGSFysZfOOI_KNApfqNtQOH0b1lObV7kCp-HVmYReRHVrUAzKNh2kMDD91hK3J0JNoGBEkqUPCr8g_UDrRP_1JSO0yCG7K3qjca0jpr-KXA-DprJDw4Ug120bo6NSOKhaG2NrM"/>
+<div class="absolute top-4 left-4">
+<span class="bg-surface-container-lowest/90 backdrop-blur-sm px-3 py-1 rounded-full font-label-caps text-label-caps text-primary border border-outline-variant/30 flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]" data-icon="waves">waves</span>
+                            Nivel del Mar
+                        </span>
+</div>
+</div>
+<div class="p-6 flex-grow flex flex-col justify-between bg-surface-container-lowest">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Zonas de Inundación</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                            Análisis topográfico de las áreas costeras de Ponce con mayor vulnerabilidad a marejadas ciclónicas y aumento del nivel del mar.
+                        </p>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-surface-variant">
+<div class="flex -space-x-2">
+<img alt="Author" class="w-8 h-8 rounded-full border-2 border-surface-container-lowest" data-alt="A small circular avatar showing a professional portrait of a cartographer in a light coastal setting. Soft natural lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCn4Mp6eotiPmOW9p3GtbgTBqEG2Y3ZunKERgFujrfgKTCTCZzCZJksKtLFIHiourn2i9a92E7gf5kEP8B4pqOc8ro8uMktPErA9v0-oZbSt6b1gBAmxnIKDCMqhZSZPWxvUt4MG4rcmUivO3tY7kjLQ_7neTtCg14SEsmuoW-SMNXKhjVl9YIhdmWtCy_FOYrtabmCvWc0uY4ti8vi6-W_ht8e3bChKO5n3mzwxinJieOUCSHLxYaE0ZAwSj7BULxWHmu3atuIZrQ"/>
+<img alt="Author" class="w-8 h-8 rounded-full border-2 border-surface-container-lowest" data-alt="A small circular avatar showing a professional portrait of an environmental scientist outdoors. Soft natural lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaqoa598YgGAcb3tg6Tx4ieQ9kUa29oOPrR_Fh69oLcHqKz4oBkn9eNqEUXc_NwdEd9Is_DRucFUtRjb2iH2rZVcC6MBNWR_pNY0G18QcEOLrbutl0p7LpDXAZ7nI6VMKVOOAW4Nmcey8JvAOWpuL-3SSQr065j55zFwpd9ggL10mpe5ZWED7x6LSNI7EM2_miUEPGYTJ7T2xYr-BeVbF4O01qRxGBJJFVETOwRCQKjZJDW23pxyg0vumb7aZf1a_uWlN-J64Z3Hk"/>
+</div>
+<button class="text-primary font-label-caps text-label-caps flex items-center gap-1 hover:text-primary-container transition-colors">
+                            Ver Detalles <span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Map Card 2 -->
+<article class="bento-card group flex flex-col h-full">
+<div class="relative w-full aspect-[1.49] bg-surface-variant overflow-hidden rounded-t-xl">
+<img alt="Mapa de Rutas de Desalojo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8GoemdRBe5tsfPAasBYNptd3tPePK29Azg81dgRZrKzxn9SIUBAPBFVr_7yAeSlCDrJ3uECfwC8a8QL_EPJpC8FC-HEogAulJOcaJX4E46Bzxlvbbx4q1fAI9yQfjeAZBviAXk-bLt9MU_lsP-DzaZxupIkvB1U7S2Kx7seDe_7zZUzuFXsvIu7fbnmVx1e9YmbjoR1O9O5-Gt6NRnPTSOekw_3fAli00-BnpXNi0E4liN-gEhDyM4lu8qqyq768htkCoiJa08jk"/>
+<div class="absolute top-4 left-4">
+<span class="bg-surface-container-lowest/90 backdrop-blur-sm px-3 py-1 rounded-full font-label-caps text-label-caps text-secondary-container border border-outline-variant/30 flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]" data-icon="directions_run">directions_run</span>
+                            Preparación
+                        </span>
+</div>
+</div>
+<div class="p-6 flex-grow flex flex-col justify-between bg-surface-container-lowest">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Rutas de Desalojo</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                            Caminos seguros identificados por la comunidad y expertos para evacuación rápida hacia terrenos elevados durante emergencias.
+                        </p>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-surface-variant">
+<div class="text-xs text-on-surface-variant font-label-caps">
+                            Actualizado: Oct 2023
+                        </div>
+<button class="text-primary font-label-caps text-label-caps flex items-center gap-1 hover:text-primary-container transition-colors">
+                            Ver Detalles <span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Action Card (Spans full width on mobile, 1 col on md) -->
+<div class="bento-card p-8 bg-surface-container-low flex flex-col justify-center items-center text-center border border-outline-variant/50 md:col-span-2 lg:col-span-1 min-h-[200px]">
+<div class="w-16 h-16 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-3xl" data-icon="download">download</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Descargar Paquete Completo</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 max-w-sm">
+                     Obtén todos los mapas en alta resolución para uso educativo o planificación comunitaria.
+                 </p>
+<button class="bg-primary text-on-primary px-6 py-3 rounded-full font-label-caps text-label-caps hover:bg-primary-container hover:shadow-md transition-all active:scale-95 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="folder_zip">folder_zip</span>
+                     Descargar ZIP (45 MB)
+                 </button>
+</div>
+<!-- Info Card -->
+<div class="bento-card p-6 bg-tertiary-container text-on-tertiary-container md:col-span-2 lg:col-span-1 min-h-[200px] flex flex-col justify-center relative overflow-hidden">
+<!-- Subtle background pattern -->
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0); background-size: 20px 20px;"></div>
+<div class="relative z-10">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined" data-icon="info">info</span>
+<span class="font-label-caps text-label-caps">Metodología</span>
+</div>
+<p class="font-body-lg text-body-lg mb-4">
+                         Estos mapas son el resultado de un esfuerzo colaborativo entre cartógrafos, el Comité de Asesores Comunitarios y residentes locales de Ponce Playa.
+                     </p>
+<a class="inline-flex items-center gap-1 font-label-caps text-label-caps underline underline-offset-4 hover:opacity-80 transition-opacity" href="#">
+                         Leer sobre el proceso <span class="material-symbols-outlined text-[16px]" data-icon="east">east</span>
+</a>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-dim w-full py-8 px-margin-mobile border-t border-outline-variant dark:border-outline flex flex-col items-center justify-center gap-4 text-center mt-auto z-10 relative">
+<p class="font-label-caps text-label-caps font-bold text-primary dark:text-primary-fixed-dim">
+            Un Nuevo Amanecer, Inc. | Comité de Asesores Comunitarios (CAC)
+        </p>
+<div class="flex gap-6">
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors underline-offset-4 hover:underline" href="#">Privacidad</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors underline-offset-4 hover:underline" href="#">Términos</a>
+</div>
+</footer>
+</body></html>

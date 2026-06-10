@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Guía para estar preparado - Raíces Costeras</title>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "background": "#faf9f5",
+                      "on-secondary-fixed": "#00201e",
+                      "on-primary-fixed": "#002117",
+                      "inverse-primary": "#9ed1bd",
+                      "error-container": "#ffdad6",
+                      "surface": "#faf9f5",
+                      "on-primary-fixed-variant": "#1d4f40",
+                      "outline": "#707974",
+                      "primary-fixed-dim": "#9ed1bd",
+                      "on-secondary-fixed-variant": "#00504b",
+                      "inverse-on-surface": "#f2f1ed",
+                      "primary": "#003629",
+                      "surface-tint": "#376757",
+                      "tertiary": "#4c2313",
+                      "on-tertiary-fixed-variant": "#693b29",
+                      "on-surface": "#1b1c1a",
+                      "on-secondary-container": "#00716a",
+                      "on-primary-container": "#8abda9",
+                      "on-surface-variant": "#404945",
+                      "on-tertiary-fixed": "#341104",
+                      "surface-bright": "#faf9f5",
+                      "tertiary-fixed": "#ffdbcf",
+                      "on-tertiary": "#ffffff",
+                      "on-tertiary-container": "#e3a38c",
+                      "surface-dim": "#dbdad6",
+                      "surface-container-low": "#f4f4f0",
+                      "secondary-container": "#79f7eb",
+                      "outline-variant": "#c0c9c3",
+                      "on-primary": "#ffffff",
+                      "primary-container": "#1b4d3e",
+                      "on-secondary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "surface-container-lowest": "#ffffff",
+                      "on-background": "#1b1c1a",
+                      "tertiary-container": "#663927",
+                      "secondary-fixed": "#79f7eb",
+                      "secondary": "#006a64",
+                      "primary-fixed": "#baeed9",
+                      "surface-container-high": "#e9e8e4",
+                      "inverse-surface": "#2f312e",
+                      "tertiary-fixed-dim": "#fab79f",
+                      "surface-container": "#efeeea",
+                      "on-error": "#ffffff",
+                      "error": "#ba1a1a",
+                      "surface-variant": "#e3e2df",
+                      "surface-container-highest": "#e3e2df",
+                      "secondary-fixed-dim": "#59dacf"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "12px",
+                      "card-padding": "16px",
+                      "section-gap": "32px",
+                      "margin-mobile": "20px",
+                      "base": "4px"
+              },
+              "fontFamily": {
+                      "body-md": [
+                              "Vollkorn"
+                      ],
+                      "label-caps": [
+                              "Vollkorn"
+                      ],
+                      "headline-md": [
+                              "Vollkorn"
+                      ],
+                      "headline-sm": [
+                              "Vollkorn"
+                      ],
+                      "body-lg": [
+                              "Vollkorn"
+                      ],
+                      "display-lg": [
+                              "Vollkorn"
+                      ]
+              },
+              "fontSize": {
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.08em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-sm": [
+                              "22px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+            }
+          }
+        }
+    </script>
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Subtle texture overlay for cards */
+        .texture-overlay {
+            position: relative;
+        }
+        .texture-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22 opacity=%220.02%22/%3E%3C/svg%3E');
+            pointer-events: none;
+            z-index: 10;
+            border-radius: inherit;
+        }
+
+        /* Checkbox styling */
+        .emerald-checkbox:checked {
+            background-color: theme('colors.primary');
+            border-color: theme('colors.primary');
+        }
+        .emerald-checkbox:focus {
+            --tw-ring-color: theme('colors.primary-fixed');
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md antialiased overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="bg-surface/90 dark:bg-surface-dim/90 backdrop-blur-md shadow-sm dark:shadow-none docked full-width top-0 sticky z-50 flex justify-between items-center w-full px-margin-mobile h-16 bg-surface-container-low dark:bg-surface-container-lowest">
+<button aria-label="Open navigation menu" class="text-primary dark:text-primary-fixed-dim hover:bg-secondary-container/20 dark:hover:bg-primary-container/30 p-2 rounded-full transition-colors" type="button">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-display-lg text-headline-sm md:text-headline-md text-primary dark:text-primary-fixed-dim tracking-tight">Raíces Costeras</h1>
+<div class="w-10"></div> <!-- Spacer for centering -->
+</header>
+<!-- NavigationDrawer (Hidden by default on mobile, illustrative for semantic shell) -->
+<!-- In a real implementation, this would be toggled via JS. -->
+<nav aria-label="Main Navigation" class="hidden md:flex fixed inset-y-0 left-0 z-[60] flex flex-col py-6 bg-surface dark:bg-surface-dim border-r border-outline-variant/30 dark:border-outline/20 shadow-2xl rounded-r-xl h-full w-4/5 max-w-sm transition-transform -translate-x-full">
+<!-- Content omitted for brevity, focusing on the main view -->
+</nav>
+<!-- Main Content Canvas -->
+<main class="w-full max-w-7xl mx-auto px-margin-mobile md:px-section-gap py-section-gap">
+<!-- Header Section -->
+<header class="mb-section-gap text-center md:text-left">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mb-base block">Guía de Preparación</span>
+<h2 class="font-display-lg text-display-lg text-primary mb-gutter">Guía para estar preparado</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">Instrucciones vitales para la comunidad de Ponce ante emergencias costeras y climáticas.</p>
+</header>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter auto-rows-min">
+<!-- 1. Mochila de Emergencia (Spans 2 cols on md) -->
+<section class="texture-overlay bg-surface-container-low rounded-xl p-card-padding shadow-[0_4px_24px_rgba(0,54,41,0.05)] md:col-span-2 flex flex-col relative overflow-hidden">
+<!-- Background decorative motif -->
+<div class="absolute -right-10 -bottom-10 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[150px] text-primary">backpack</span>
+</div>
+<header class="flex items-center gap-gutter mb-gutter relative z-20">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined icon-fill">medical_services</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-secondary block">Inventario Vital</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Mochila de Emergencia</h3>
+</div>
+</header>
+<p class="font-body-md text-body-md text-on-surface-variant mb-gutter relative z-20">Prepare suministros para al menos 72 horas. Mantenga la mochila en un lugar accesible cerca de la salida.</p>
+<ul class="flex flex-col gap-3 flex-grow relative z-20">
+<li class="flex items-start gap-3 bg-surface p-3 rounded-lg border border-outline-variant/30">
+<input class="mt-1 rounded emerald-checkbox border-outline text-primary focus:ring-primary-fixed" id="kit-water" type="checkbox"/>
+<label class="font-body-md text-body-md text-on-surface cursor-pointer select-none" for="kit-water">Agua (1 galón por persona/día)</label>
+</li>
+<li class="flex items-start gap-3 bg-surface p-3 rounded-lg border border-outline-variant/30">
+<input class="mt-1 rounded emerald-checkbox border-outline text-primary focus:ring-primary-fixed" id="kit-food" type="checkbox"/>
+<label class="font-body-md text-body-md text-on-surface cursor-pointer select-none" for="kit-food">Alimentos no perecederos</label>
+</li>
+<li class="flex items-start gap-3 bg-surface p-3 rounded-lg border border-outline-variant/30">
+<input class="mt-1 rounded emerald-checkbox border-outline text-primary focus:ring-primary-fixed" id="kit-firstaid" type="checkbox"/>
+<label class="font-body-md text-body-md text-on-surface cursor-pointer select-none" for="kit-firstaid">Botiquín de primeros auxilios y medicamentos</label>
+</li>
+<li class="flex items-start gap-3 bg-surface p-3 rounded-lg border border-outline-variant/30">
+<input class="mt-1 rounded emerald-checkbox border-outline text-primary focus:ring-primary-fixed" id="kit-docs" type="checkbox"/>
+<label class="font-body-md text-body-md text-on-surface cursor-pointer select-none" for="kit-docs">Documentos importantes (en bolsa impermeable)</label>
+</li>
+<li class="flex items-start gap-3 bg-surface p-3 rounded-lg border border-outline-variant/30">
+<input class="mt-1 rounded emerald-checkbox border-outline text-primary focus:ring-primary-fixed" id="kit-radio" type="checkbox"/>
+<label class="font-body-md text-body-md text-on-surface cursor-pointer select-none" for="kit-radio">Radio de baterías o manivela y linterna</label>
+</li>
+</ul>
+</section>
+<!-- 2. Plan Familiar (Spans 2 cols on md) -->
+<section class="texture-overlay bg-surface-container-high rounded-xl p-card-padding shadow-[0_4px_24px_rgba(0,54,41,0.05)] md:col-span-2 flex flex-col">
+<header class="flex items-center gap-gutter mb-gutter">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined icon-fill">family_home</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-secondary block">Estrategia</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Plan Familiar</h3>
+</div>
+</header>
+<p class="font-body-md text-body-md text-on-surface-variant mb-gutter">Defina rutas de evacuación y puntos de encuentro seguros antes de que ocurra la emergencia.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-gutter flex-grow">
+<!-- Step 1 -->
+<div class="bg-surface p-card-padding rounded-lg border-t-2 border-primary-fixed-dim">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-secondary">meeting_room</span>
+<h4 class="font-headline-sm text-body-lg text-on-surface font-semibold">Identifique Zonas</h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Localice las áreas más seguras de su casa, lejos de ventanas de cristal y puertas exteriores.</p>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface p-card-padding rounded-lg border-t-2 border-secondary">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-secondary">pin_drop</span>
+<h4 class="font-headline-sm text-body-lg text-on-surface font-semibold">Puntos de Encuentro</h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Establezca un lugar de reunión en su vecindario y otro fuera de él en caso de evacuación.</p>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface p-card-padding rounded-lg border-t-2 border-tertiary-fixed-dim sm:col-span-2 flex flex-col sm:flex-row items-start sm:items-center gap-gutter justify-between">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-secondary">contact_phone</span>
+<h4 class="font-headline-sm text-body-lg text-on-surface font-semibold">Contacto Foráneo</h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Designe a un familiar o amigo fuera del área de riesgo como punto de contacto central.</p>
+</div>
+<button class="shrink-0 bg-primary hover:bg-on-primary-fixed-variant text-on-primary font-label-caps text-label-caps px-4 py-2 rounded-full transition-colors active:scale-95 duration-150 ease-in-out">
+                            Añadir Contacto
+                        </button>
+</div>
+</div>
+</section>
+<!-- 3. Antes, Durante y Después (Spans all 4 cols) -->
+<section class="md:col-span-4 mt-section-gap">
+<header class="mb-gutter border-b border-outline-variant/30 pb-base">
+<span class="font-label-caps text-label-caps text-secondary block">Cronograma de Acción</span>
+<h3 class="font-headline-sm text-headline-md text-primary">Inundaciones y Huracanes</h3>
+</header>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Antes -->
+<article class="texture-overlay bg-surface-container rounded-xl p-card-padding shadow-sm">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed text-on-tertiary-fixed mb-gutter flex items-center justify-center">
+<span class="material-symbols-outlined icon-fill">weather_mix</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">Antes</h4>
+<ul class="flex flex-col gap-2 font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-fixed-dim text-sm mt-1">stop_circle</span>
+<span>Asegure puertas, ventanas y objetos sueltos en el exterior.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-fixed-dim text-sm mt-1">stop_circle</span>
+<span>Llene los tanques de gasolina de sus vehículos.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-fixed-dim text-sm mt-1">stop_circle</span>
+<span>Revise su mochila de emergencia y plan familiar.</span>
+</li>
+</ul>
+</article>
+<!-- Durante -->
+<article class="texture-overlay bg-[#e3ece8] dark:bg-primary-container rounded-xl p-card-padding shadow-sm border border-primary-fixed/50">
+<div class="w-12 h-12 rounded-full bg-primary text-on-primary mb-gutter flex items-center justify-center">
+<span class="material-symbols-outlined icon-fill">warning</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed-dim mb-2">Durante</h4>
+<ul class="flex flex-col gap-2 font-body-md text-body-md text-on-surface-variant dark:text-outline-variant">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-sm mt-1">stop_circle</span>
+<span>Manténgase alejado de ventanas y puertas de cristal.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-sm mt-1">stop_circle</span>
+<span>Escuche los boletines oficiales en la radio de baterías.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-sm mt-1">stop_circle</span>
+<span>Desconecte los aparatos eléctricos si hay riesgo de inundación o relámpagos.</span>
+</li>
+</ul>
+</article>
+<!-- Después -->
+<article class="texture-overlay bg-surface-container rounded-xl p-card-padding shadow-sm">
+<div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container mb-gutter flex items-center justify-center">
+<span class="material-symbols-outlined icon-fill">check_circle</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">Después</h4>
+<ul class="flex flex-col gap-2 font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-fixed-dim text-sm mt-1">stop_circle</span>
+<span>Permanezca en su refugio hasta que las autoridades declaren el fin del peligro.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-fixed-dim text-sm mt-1">stop_circle</span>
+<span>Evite caminar o conducir por áreas inundadas.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-fixed-dim text-sm mt-1">stop_circle</span>
+<span>Beba agua embotellada hasta confirmar que el agua del grifo es segura.</span>
+</li>
+</ul>
+</article>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap px-margin-mobile flex flex-col items-center text-center gap-base border-t border-outline-variant/20 dark:border-outline/10 bg-surface-container-low dark:bg-surface-container-lowest mt-section-gap">
+<p class="font-label-caps text-primary uppercase tracking-widest text-label-caps dark:text-on-surface-variant">
+            Un Nuevo Amanecer, Inc. | Comité de Asesores Comunitarios (CAC)
+        </p>
+</footer>
+</body></html>

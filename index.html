@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es" class="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raíces Costeras - Playa de Ponce</title>
+  
+  <!-- Material Symbols Outlined -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  
+  <!-- Google Fonts: Vollkorn -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <!-- Tailwind Configuration mapping colors to our CSS variables -->
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "var(--primary-color)",
+            "primary-container": "var(--primary-container-color)",
+            "on-primary-container": "var(--on-primary-container-color)",
+            "secondary": "var(--secondary-color)",
+            "secondary-container": "var(--secondary-container-color)",
+            "on-secondary-container": "var(--on-secondary-container-color)",
+            "tertiary": "var(--tertiary-color)",
+            "tertiary-container": "var(--tertiary-container-color)",
+            "on-tertiary-container": "var(--on-tertiary-container-color)",
+            "background": "var(--background-color)",
+            "surface": "var(--surface-color)",
+            "surface-container": "var(--surface-container-color)",
+            "surface-container-low": "var(--surface-container-low)",
+            "surface-container-high": "var(--surface-container-high)",
+            "surface-container-highest": "var(--surface-container-highest)",
+            "surface-container-lowest": "var(--surface-container-lowest)",
+            "on-background": "var(--on-background)",
+            "on-surface": "var(--on-surface)",
+            "on-surface-variant": "var(--on-surface-variant)",
+            "outline": "var(--outline)",
+            "outline-variant": "var(--outline-variant)",
+            "error": "var(--error)",
+            "error-container": "var(--error-container)",
+            "on-error-container": "var(--on-error-container)",
+            "primary-fixed": "var(--primary-fixed)",
+            "primary-fixed-dim": "var(--primary-fixed-dim)",
+            "tertiary-fixed": "var(--tertiary-fixed)",
+            "tertiary-fixed-dim": "var(--tertiary-fixed-dim)",
+            "secondary-fixed": "var(--secondary-fixed)",
+            "secondary-fixed-dim": "var(--secondary-fixed-dim)",
+            "on-primary-fixed": "var(--on-primary-fixed)",
+            "on-primary-fixed-variant": "var(--on-primary-fixed-variant)",
+            "on-secondary-fixed": "var(--on-secondary-fixed)",
+            "on-secondary-fixed-variant": "var(--on-secondary-fixed-variant)",
+            "on-tertiary-fixed": "var(--on-tertiary-fixed)",
+            "on-tertiary-fixed-variant": "var(--on-tertiary-fixed-variant)",
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "base": "4px",
+            "section-gap": "32px",
+            "gutter": "12px",
+            "card-padding": "16px",
+            "margin-mobile": "20px"
+          },
+          fontFamily: {
+            "label-caps": ["Vollkorn"],
+            "body-md": ["Vollkorn"],
+            "headline-md": ["Vollkorn"],
+            "display-lg": ["Vollkorn"],
+            "body-lg": ["Vollkorn"],
+            "headline-sm": ["Vollkorn"]
+          },
+          fontSize: {
+            "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+            "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "headline-sm": ["22px", { "lineHeight": "28px", "fontWeight": "600" }]
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Local styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="antialiased min-h-screen flex flex-col md:flex-row font-body-md text-on-surface">
+
+  <!-- ==========================================
+  <!-- Sidebar Navigation (Desktop)
+  <!-- ========================================== -->
+  <aside class="hidden md:flex h-full w-80 bg-surface-container border-r border-outline-variant/30 fixed inset-y-0 left-0 z-40 flex-col">
+    <div class="px-6 py-8">
+      <h1 class="font-display-lg text-3xl font-black text-primary tracking-tight">Raíces Costeras</h1>
+      <span class="font-label-caps text-[10px] text-secondary tracking-widest uppercase">Playa de Ponce</span>
+    </div>
+    
+    <nav class="flex-grow px-4 space-y-2 mt-4">
+      <a data-route="inicio" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-3 transition-colors duration-200 cursor-pointer" href="#inicio">
+        <span class="material-symbols-outlined">home</span>
+        <span class="font-body-lg text-base font-semibold">Inicio</span>
+      </a>
+      <a data-route="datos" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-3 transition-colors duration-200 cursor-pointer" href="#datos">
+        <span class="material-symbols-outlined">analytics</span>
+        <span class="font-body-lg text-base font-semibold">Datos del Barrio</span>
+      </a>
+      <a data-route="mapas" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-3 transition-colors duration-200 cursor-pointer" href="#mapas">
+        <span class="material-symbols-outlined">map</span>
+        <span class="font-body-lg text-base font-semibold">Mapas de Riesgo</span>
+      </a>
+      <a data-route="guia" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-3 transition-colors duration-200 cursor-pointer" href="#guia">
+        <span class="material-symbols-outlined">menu_book</span>
+        <span class="font-body-lg text-base font-semibold">Guía de Preparación</span>
+      </a>
+      <a data-route="sobre" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-3 transition-colors duration-200 cursor-pointer" href="#sobre">
+        <span class="material-symbols-outlined">group</span>
+        <span class="font-body-lg text-base font-semibold">Sobre Nosotros</span>
+      </a>
+    </nav>
+
+    <!-- Sidebar Bottom Control (Theme Toggler & Org Info) -->
+    <div class="p-6 border-t border-outline-variant/30 flex flex-col gap-4">
+      <!-- Theme Switcher Button -->
+      <button id="theme-toggle-btn" class="w-full bg-primary text-on-primary font-label-caps text-xs py-3 px-4 rounded-full flex items-center justify-center gap-2 hover:bg-primary-container active:scale-[0.98] transition-all shadow-md">
+        <span class="material-symbols-outlined">water_drop</span>
+        <span class="font-label-caps text-xs">Modo Océano</span>
+      </button>
+
+      <div class="text-center">
+        <p class="font-label-caps text-[9px] text-on-surface-variant/85 uppercase leading-relaxed">
+          Un Nuevo Amanecer, Inc.<br/>Comité de Asesores Comunitarios
+        </p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================
+  <!-- Mobile Drawer Menu
+  <!-- ========================================== -->
+  <!-- Drawer Overlay -->
+  <div class="fixed inset-0 bg-surface-variant/60 backdrop-blur-sm z-[55] hidden opacity-0 transition-opacity duration-300" id="drawer-overlay"></div>
+  
+  <!-- Drawer Container -->
+  <nav id="nav-drawer" class="fixed inset-y-0 left-0 z-[60] flex flex-col py-6 bg-surface-container w-4/5 max-w-sm border-r border-outline-variant/30 shadow-2xl rounded-r-2xl h-full transform -translate-x-full transition-transform duration-300 ease-in-out">
+    <div class="flex items-center justify-between px-margin-mobile pb-6 border-b border-outline-variant/20">
+      <div>
+        <h1 class="font-display-lg text-2xl font-black text-primary tracking-tight">Raíces Costeras</h1>
+        <span class="font-label-caps text-[9px] text-secondary tracking-widest uppercase">Playa de Ponce</span>
+      </div>
+      <button id="drawer-close-btn" class="p-2 text-primary rounded-full hover:bg-surface-container-high">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    
+    <div class="flex-grow overflow-y-auto mt-4 px-2 space-y-1">
+      <a data-route="inicio" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer" href="#inicio">
+        <span class="material-symbols-outlined">home</span>
+        <span class="font-body-lg font-semibold">Inicio</span>
+      </a>
+      <a data-route="datos" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer" href="#datos">
+        <span class="material-symbols-outlined">analytics</span>
+        <span class="font-body-lg font-semibold">Datos del Barrio</span>
+      </a>
+      <a data-route="mapas" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer" href="#mapas">
+        <span class="material-symbols-outlined">map</span>
+        <span class="font-body-lg font-semibold">Mapas de Riesgo</span>
+      </a>
+      <a data-route="guia" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer" href="#guia">
+        <span class="material-symbols-outlined">menu_book</span>
+        <span class="font-body-lg font-semibold">Guía de Preparación</span>
+      </a>
+      <a data-route="sobre" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer" href="#sobre">
+        <span class="material-symbols-outlined">group</span>
+        <span class="font-body-lg font-semibold">Sobre Nosotros</span>
+      </a>
+    </div>
+
+    <div class="p-6 border-t border-outline-variant/30 flex flex-col gap-3">
+      <div class="text-center font-label-caps text-[9px] text-on-surface-variant/80">
+        Comité de Asesores Comunitarios (CAC)
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================
+  <!-- Main View Area (Adapts to Sidebar offset on desktop)
+  <!-- ========================================== -->
+  <div class="flex-grow md:pl-80 flex flex-col min-w-0">
+    
+    <!-- Top Bar (Sticky on Mobile, hidden on Desktop except for minimal utility) -->
+    <header class="sticky top-0 z-40 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 flex justify-between items-center w-full px-margin-mobile h-16 shrink-0 md:bg-surface/50 md:border-b-0">
+      <!-- Mobile menu trigger -->
+      <button id="menu-btn" class="md:hidden text-primary hover:bg-secondary-container/20 rounded-full p-2 -ml-2 transition-colors focus:outline-none">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+      
+      <!-- Logo title on Mobile -->
+      <div class="font-display-lg text-xl md:text-2xl font-black text-primary tracking-tight md:hidden">
+        Raíces Costeras
+      </div>
+      
+      <!-- Right controls: Mobile theme toggle (Sun/Moon style but for standard/vibrant) -->
+      <div class="flex items-center gap-2">
+        <button id="theme-toggle-btn-mobile" class="md:hidden text-primary hover:bg-secondary-container/20 p-2 rounded-full transition-colors focus:outline-none">
+          <span class="material-symbols-outlined text-[20px]">water_drop</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main dynamic content container -->
+    <main id="main-content-container" class="flex-grow pb-16">
+      <!-- Dynamic Views rendered via app.js -->
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="bg-surface-container-low w-full py-8 px-margin-mobile flex flex-col items-center text-center gap-2 border-t border-outline-variant/20">
+      <div class="font-label-caps text-[10px] text-primary uppercase tracking-widest font-bold">
+        Un Nuevo Amanecer, Inc. | Comité de Asesores Comunitarios (CAC)
+      </div>
+      <nav class="flex gap-4 mt-2 font-label-caps text-[10px]">
+        <a class="text-primary hover:underline transition-all" href="#">Contacto</a>
+        <a class="text-on-surface-variant opacity-80 hover:text-primary transition-all" href="#">Privacidad</a>
+        <a class="text-on-surface-variant opacity-80 hover:text-primary transition-all" href="#">Términos</a>
+      </nav>
+    </footer>
+  </div>
+
+  <!-- Local logic script -->
+  <script src="app.js"></script>
+</body>
+</html>
