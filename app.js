@@ -1,57 +1,11 @@
 // Raíces Costeras - Application Logic & Interactive Features
 
 document.addEventListener("DOMContentLoaded", () => {
-  initTheme();
   initRouter();
   initDrawer();
 });
 
-// ==========================================
-// 1. Theme Configuration & Toggle
-// ==========================================
-function initTheme() {
-  const toggleBtn = document.getElementById("theme-toggle-btn");
-  const mobileToggleBtn = document.getElementById("theme-toggle-btn-mobile");
-  
-  // Load saved theme
-  const savedTheme = localStorage.getItem("rc-theme") || "standard";
-  setTheme(savedTheme);
 
-  const handleToggle = () => {
-    const currentTheme = document.body.classList.contains("theme-vibrant") ? "vibrant" : "standard";
-    const newTheme = currentTheme === "standard" ? "vibrant" : "standard";
-    setTheme(newTheme);
-  };
-
-  if (toggleBtn) toggleBtn.addEventListener("click", handleToggle);
-  if (mobileToggleBtn) mobileToggleBtn.addEventListener("click", handleToggle);
-}
-
-function setTheme(theme) {
-  const toggleBtn = document.getElementById("theme-toggle-btn");
-  const mobileToggleBtn = document.getElementById("theme-toggle-btn-mobile");
-  
-  if (theme === "vibrant") {
-    document.body.classList.add("theme-vibrant");
-    localStorage.setItem("rc-theme", "vibrant");
-    
-    // Update icons
-    if (toggleBtn) toggleBtn.innerHTML = `<span class="material-symbols-outlined">forest</span><span class="hidden md:inline ml-2 font-label-caps text-xs">Modo Manglar</span>`;
-    if (mobileToggleBtn) mobileToggleBtn.innerHTML = `<span class="material-symbols-outlined text-[20px]">forest</span>`;
-  } else {
-    document.body.classList.remove("theme-vibrant");
-    localStorage.setItem("rc-theme", "standard");
-    
-    // Update icons
-    if (toggleBtn) toggleBtn.innerHTML = `<span class="material-symbols-outlined">water_drop</span><span class="hidden md:inline ml-2 font-label-caps text-xs">Modo Océano</span>`;
-    if (mobileToggleBtn) mobileToggleBtn.innerHTML = `<span class="material-symbols-outlined text-[20px]">water_drop</span>`;
-  }
-
-  // Refresh charts if we are on the Datos page
-  if (window.currentRoute === "datos") {
-    renderCharts();
-  }
-}
 
 // ==========================================
 // 2. Navigation Drawer (Mobile)
@@ -416,10 +370,9 @@ function initDatosPage() {
 }
 
 function renderCharts() {
-  const isVibrant = document.body.classList.contains("theme-vibrant");
-  const primaryColor = isVibrant ? "#162839" : "#003629";
-  const secondaryColor = isVibrant ? "#feb700" : "#006a64";
-  const accentColor = isVibrant ? "#4eb7ad" : "#e3a38c";
+  const primaryColor = "#003629";
+  const secondaryColor = "#006a64";
+  const accentColor = "#e3a38c";
 
   // Render Sea Level Chart
   const seaContainer = document.getElementById("sea-level-chart-container");
