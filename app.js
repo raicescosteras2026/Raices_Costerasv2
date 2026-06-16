@@ -533,89 +533,25 @@ pages['escenarios'] = () => {
 
 
 // --- ESTRATEGIAS PAGE ---
+
 pages['estrategias'] = () => {
   return `
-<!-- Header Section -->
-<section class="flex flex-col gap-4">
-<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-pt-serif">Estrategias de Adaptación</h2>
-<p class="font-body-md text-on-surface-variant leading-relaxed text-lg">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-</section>
-<!-- Bento Grid / Cards Section -->
-<div class="flex flex-col gap-6">
-<!-- Nature-based Solutions (Mangroves) -->
-<article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm relative group hover:shadow-md transition-shadow">
-<div class="h-1 bg-tertiary-container w-full absolute top-0 left-0"></div>
-<div class="p-6 flex flex-col gap-4">
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 rounded-full bg-tertiary-container/10 flex items-center justify-center text-tertiary-container">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">eco</span>
-</div>
-<h3 class="font-pt-serif font-bold text-xl text-primary">Soluciones Basadas en la Naturaleza</h3>
-</div>
-<div class="h-40 rounded-lg bg-surface-container-high overflow-hidden relative">
-<img alt="Mangrove forest coastal protection" class="w-full h-full object-cover" data-alt="A lush, dense mangrove forest growing directly out of shallow coastal waters under bright, sunny daylight. The scene emphasizes nature-based coastal protection in a tropical or subtropical setting. The lighting is crisp, highlighting the complex root structures and vibrant green leaves against a clear blue sky. The visual style is highly detailed, photorealistic documentary photography, reflecting a professional environmental planning aesthetic with a bright, light-mode friendly color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4VyztYdfQzoT61ko6WbTfInP9bpe_VDyp9fwJxpOZqZpCxY2Yz7UgPwgiwUjdyR325X1qdM5wkFe-QKQx4Rin9L1SuKhXNFicATKHJLUrgpFkhf4vXOlzaZL82yy8qUXReAotpsYA2bF9H6II7kG7VF_0MwKujYFTScI_9YrSxlMuwGJ87ZFvynEyjWK5vRFlyH65jD6CmjT9biKPi4_0YuMyMiq1bBnoHG8Im3d8x6tTXcvWgHr1IVbKWp6beUjVwDqlECTyKhs"/>
-</div>
-<p class="font-body-md text-on-surface-variant">
-                        Restauración de manglares como barrera natural contra marejadas y erosión, fortaleciendo el ecosistema local.
-                    </p>
-<div class="flex gap-2 mt-2">
-<span class="px-3 py-1 bg-tertiary-container text-on-tertiary font-label-sm text-label-sm rounded-full">Ecológico</span>
-<span class="px-3 py-1 bg-surface-container text-on-surface-variant font-label-sm text-label-sm rounded-full">Largo Plazo</span>
-</div>
-</div>
-</article>
-<!-- Structural Improvements -->
-<article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm relative group hover:shadow-md transition-shadow">
-<div class="h-1 bg-secondary-container w-full absolute top-0 left-0"></div>
-<div class="p-6 flex flex-col gap-4">
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">architecture</span>
-</div>
-<h3 class="font-pt-serif font-bold text-xl text-primary">Mejoras Estructurales</h3>
-</div>
-<div class="h-40 rounded-lg bg-surface-container-high overflow-hidden relative">
-<img alt="Elevated coastal home architecture" class="w-full h-full object-cover" data-alt="A modern, elevated coastal home designed for flood resilience. The house features sturdy wooden pilings, clean architectural lines, and a welcoming porch. The setting is bright and sunny, conveying structural reliability and community warmth. The color palette includes warm sunlight yellow accents and coastal turquoise trims against a shell white exterior. The image is a photorealistic architectural visualization in a bright, modern corporate style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACBGjSm1rgLkFWr_SC9PbjroEGPlLNGOesYDMYTZVQLXC5ExIrJ62xEuEw4sWVGk4cHH92YDWpZwkUIKfCvl0q_m-3Yx-WInNFf0eeE1c1wKbDJsHcLcOgCdF-z0UDZxFBS0eXG5CCtWivB4MWQCDzKLdxzTZoTQsSKbfb1D4WFSEMa560gWBAH-YKSe-gYRQTuP8E7WOz_00aybkL3zy82-KRM8e1QWhrblukts1LQt1codBqkuMLt4_ApZcKR3TC0bWyL_76sgE"/>
-</div>
-<p class="font-body-md text-on-surface-variant">
-                        Elevación de viviendas y uso de materiales resistentes al agua salada para preservar el patrimonio construido.
-                    </p>
-<div class="flex gap-2 mt-2">
-<span class="px-3 py-1 bg-secondary-container text-on-secondary-container font-label-sm text-label-sm rounded-full">Infraestructura</span>
-<span class="px-3 py-1 bg-surface-container text-on-surface-variant font-label-sm text-label-sm rounded-full">Inmediato</span>
-</div>
-</div>
-</article>
-<!-- Community Protocols -->
-<article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm relative group hover:shadow-md transition-shadow">
-<div class="h-1 bg-primary w-full absolute top-0 left-0"></div>
-<div class="p-6 flex flex-col gap-4">
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">group</span>
-</div>
-<h3 class="font-pt-serif font-bold text-xl text-primary">Protocolos Comunitarios</h3>
-</div>
-<p class="font-body-md text-on-surface-variant">
-                        Redes de apoyo vecinal y sistemas de alerta temprana gestionados por la propia comunidad.
-                    </p>
-<div class="mt-4 border border-outline-variant/40 rounded-lg p-4 bg-surface-container-low">
-<h4 class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-3">Progreso de Implementación</h4>
-<div class="w-full bg-surface-container-highest rounded-full h-2.5 mb-1">
-<div class="bg-primary h-2.5 rounded-full" style="width: 65%"></div>
-</div>
-<div class="flex justify-between text-xs text-on-surface-variant">
-<span>Fase 2 de 3</span>
-<span>65% Completado</span>
-</div>
-</div>
-</div>
-</article>
-</div>
+    <div class="w-full max-w-7xl mx-auto px-margin-mobile md:px-section-gap py-8">
+      <header class="mb-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-primary-container/20 text-on-primary-container rounded-full mb-3">
+          <span class="material-symbols-outlined text-sm">alt_route</span>
+          <span class="font-label-sm text-label-sm uppercase tracking-wider">Planificación Activa</span>
+        </div>
+        <h2 class="font-headline-xl text-3xl md:text-4xl text-primary font-bold leading-tight mb-4 font-pt-serif">Estrategias de Adaptación</h2>
+        <p class="font-body-md text-on-surface-variant leading-relaxed text-lg max-w-3xl">
+          Explora las diversas estrategias y proyectos propuestos para mejorar la resiliencia y seguridad de nuestra comunidad.
+        </p>
+      </header>
+      ${cardsHtml}
+    </div>
   `;
 };
+
 
 
 // --- HERRAMIENTAS PAGE ---
