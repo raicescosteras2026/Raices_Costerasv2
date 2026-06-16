@@ -176,10 +176,10 @@ const estrategiasData = [
   { text: "Alianzas de Servicios de Emergencia", doc: "DOC-06", icon: "badge" },
   { text: "Reparación de Infraestructura Sanitaria", doc: "DOC-07", icon: "tools" },
   { text: "Plan de Adaptación de Infraestructura (Salud, Educación)", doc: "DOC-02", icon: "building" },
-  { text: "Crear una red de apoyo vecinal para promover la comunicación y monitorear población vulnerable antes, durante y después de emergencias. La red tendrá un doble propósito: establecer un sistema efectivo de comunicación y organizar el acompañamiento y monitoreo de las personas más vulnerables", doc: "DOC-10", icon: "heart-handshake" },
-  { text: "Establecer un Plan de Respuesta Comunitaria ante emergencias, con puntos de encuentro, contactos clave, capacitación de primeros auxilios y protocolos incluyendo ciclos de simulacros de emergencia tomando en consideración a personas mayores y con movilidad reducida", doc: "DOC-10", icon: "list-check" },
-  { text: "Establecer un mecanismo organizacional para darle seguimiento a las nuevas iniciativas de resiliencia comunitaria y atender nuevas. La comunidad enfrenta riesgos severos como inundaciones, tsunamis, terremotos y el deterioro de infraestructura esencial, lo cual requiere una respuesta planificada y continua.", doc: "DOC-10", icon: "clipboard-data" },
-  { text: "Realizar un registro voluntario para identificar los recursos disponibles entre los vecinos, así como las vulnerabilidades en las viviendas y las necesidades particulares en la población. Permitirá conocer fortalezas como habilidades especializadas y equipos disponibles.", doc: "DOC-10", icon: "clipboard-list" },
+  { text: "Crear una red de apoyo vecinal para promover la comunicación y monitorear población vulnerable antes, durante y después de emergencias.", doc: "DOC-10", icon: "heart-handshake" },
+  { text: "Establecer un Plan de Respuesta Comunitaria ante emergencias, con puntos de encuentro, contactos clave, capacitación de primeros auxilios", doc: "DOC-10", icon: "list-check" },
+  { text: "Establecer un mecanismo organizacional para darle seguimiento a las nuevas iniciativas de resiliencia comunitaria", doc: "DOC-10", icon: "clipboard-data" },
+  { text: "Realizar un registro voluntario para identificar los recursos disponibles entre los vecinos, así como las vulnerabilidades", doc: "DOC-10", icon: "clipboard-list" },
   { text: "Revisar y abogar por la actualización de las rutas de desalojo, la señalización de la ruta y el sistema de alarma oficial en caso de eventos de emergencias. Permitirá identificar y corregir deficiencias, mejorar la visibilidad de las rutas y asegurar su accesibilidad.", doc: "DOC-10", icon: "sign-right" }
 ];
 
@@ -715,7 +715,7 @@ pages['estrategias'] = () => {
     <div class="w-full max-w-7xl mx-auto px-margin-mobile md:px-section-gap py-8 md:py-12">
       <header class="mb-12">
         <div class="inline-flex items-center gap-2 px-3 py-1 bg-primary-container/20 text-on-primary-container rounded-full mb-4">
-          <i class="ti ti-route-alt text-sm"></i>
+          <i class="ti ti-route text-sm"></i>
           <span class="font-label-sm text-label-sm uppercase tracking-wider">Planificación Activa</span>
         </div>
         <h2 class="font-headline-xl text-4xl md:text-5xl text-primary font-bold leading-tight mb-4 font-pt-serif">Estrategias de Adaptación</h2>
