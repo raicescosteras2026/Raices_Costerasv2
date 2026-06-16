@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Herramientas de Planificación - Raíces Costeras</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&amp;family=Work+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#271900",
+                        "on-secondary-container": "#6b4b00",
+                        "secondary": "#7c5800",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#fafaf5",
+                        "surface-container": "#eeeee9",
+                        "background": "#fafaf5",
+                        "tertiary-fixed": "#8ef4e9",
+                        "on-primary-fixed": "#091d2e",
+                        "on-surface": "#1a1c19",
+                        "primary-fixed-dim": "#b5c8df",
+                        "on-surface-variant": "#43474c",
+                        "primary-fixed": "#d1e4fb",
+                        "secondary-fixed-dim": "#ffba20",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#00504a",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#fafaf5",
+                        "surface-container-highest": "#e3e3de",
+                        "tertiary-container": "#00443f",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#96a9be",
+                        "on-tertiary-fixed": "#00201d",
+                        "secondary-fixed": "#ffdea8",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e3e3de",
+                        "surface-dim": "#dadad5",
+                        "tertiary": "#002c29",
+                        "surface-tint": "#4e6073",
+                        "surface-container-high": "#e8e8e3",
+                        "inverse-surface": "#2f312e",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "primary-container": "#2c3e50",
+                        "on-tertiary-container": "#4eb7ad",
+                        "inverse-primary": "#b5c8df",
+                        "tertiary-fixed-dim": "#71d7cd",
+                        "outline-variant": "#c4c6cd",
+                        "surface-container-low": "#f4f4ef",
+                        "on-secondary-fixed-variant": "#5e4200",
+                        "primary": "#162839",
+                        "outline": "#74777d",
+                        "on-background": "#1a1c19",
+                        "secondary-container": "#feb700",
+                        "on-primary-fixed-variant": "#36485b",
+                        "inverse-on-surface": "#f1f1ec"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px",
+                        "base": "8px",
+                        "max-width": "1280px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Vollkorn", "serif"],
+                        "label-sm": ["Work Sans", "sans-serif"],
+                        "body-md": ["Work Sans", "sans-serif"],
+                        "headline-lg-mobile": ["Vollkorn", "serif"],
+                        "headline-xl": ["Vollkorn", "serif"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Hide scrollbar for clean horizontal scroll */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="bg-surface/90 dark:bg-surface-dim/90 backdrop-blur-md full-width top-0 sticky shadow-sm dark:shadow-none z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile h-16">
+<button class="text-primary dark:text-primary-fixed-dim hover:bg-secondary-container/20 dark:hover:bg-primary-container/30 p-2 rounded-full transition-colors focus:outline-none" id="menuToggle">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-primary dark:text-primary-fixed-dim tracking-tight font-headline-lg-mobile">Raíces Costeras</h1>
+<div class="w-10"></div> <!-- Placeholder for balance -->
+</div>
+<div class="h-[1px] w-full bg-surface-container-low dark:bg-surface-container-lowest"></div>
+</header>
+<!-- Navigation Drawer (Hidden by default) -->
+<div class="fixed inset-0 z-[60] hidden" id="navigationDrawer">
+<div class="absolute inset-0 bg-on-surface/50 transition-opacity" id="drawerOverlay"></div>
+<nav class="fixed inset-y-0 left-0 flex flex-col py-6 bg-surface dark:bg-surface-dim rounded-r-xl h-full w-4/5 max-w-sm border-r border-outline-variant/30 dark:border-outline/20 shadow-2xl transition-transform -translate-x-full" id="drawerContent">
+<div class="px-margin-mobile flex justify-between items-center py-section-gap">
+<h2 class="font-display-lg-mobile text-display-lg-mobile text-primary dark:text-primary-fixed-dim font-headline-lg-mobile">Raíces Costeras</h2>
+<button class="text-on-surface-variant p-2 rounded-full hover:bg-surface-container-high focus:outline-none" id="closeMenu">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<ul class="flex-1 overflow-y-auto mt-4">
+<li><a class="flex items-center gap-4 text-on-surface-variant dark:text-outline-variant px-4 py-3 mx-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors rounded-lg" href="#"><span class="material-symbols-outlined">map</span><span class="font-body-md text-body-md dark:text-on-surface-variant">Mapas de Riesgo</span></a></li>
+<li><a class="flex items-center gap-4 text-on-surface-variant dark:text-outline-variant px-4 py-3 mx-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors rounded-lg" href="#"><span class="material-symbols-outlined">analytics</span><span class="font-body-md text-body-md dark:text-on-surface-variant">Datos</span></a></li>
+<li><a class="flex items-center gap-4 text-on-surface-variant dark:text-outline-variant px-4 py-3 mx-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors rounded-lg" href="#"><span class="material-symbols-outlined">info</span><span class="font-body-md text-body-md dark:text-on-surface-variant">Sobre el Proyecto</span></a></li>
+<li><a class="flex items-center gap-4 text-on-surface-variant dark:text-outline-variant px-4 py-3 mx-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors rounded-lg" href="#"><span class="material-symbols-outlined">group</span><span class="font-body-md text-body-md dark:text-on-surface-variant">Sobre Nosotros</span></a></li>
+<li><a class="flex items-center gap-4 text-on-surface-variant dark:text-outline-variant px-4 py-3 mx-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors rounded-lg" href="#"><span class="material-symbols-outlined">location_on</span><span class="font-body-md text-body-md dark:text-on-surface-variant">Puntos de Encuentro La Playa</span></a></li>
+<li><a class="flex items-center gap-4 text-on-surface-variant dark:text-outline-variant px-4 py-3 mx-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors rounded-lg" href="#"><span class="material-symbols-outlined">emergency</span><span class="font-body-md text-body-md dark:text-on-surface-variant">Contactos de Emergencia</span></a></li>
+<li><a class="flex items-center gap-4 bg-primary-container text-on-primary-container rounded-lg px-4 py-3 mx-2 translate-x-1 transition-transform shadow-sm" href="#"><span class="material-symbols-outlined icon-fill">menu_book</span><span class="font-body-md text-body-md font-bold">Guía para estar preparado</span></a></li>
+</ul>
+</nav>
+</div>
+<!-- Main Content Canvas -->
+<main class="flex-1 w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop py-8 md:py-12 space-y-12">
+<!-- Header Section -->
+<section class="space-y-4">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container/20 text-on-secondary-container rounded-full mb-2">
+<span class="material-symbols-outlined text-sm">construction</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Planificación Activa</span>
+</div>
+<h2 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary font-bold leading-tight">
+                Herramientas de Planificación
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+</section>
+<!-- Bento Grid: Interactive Tools -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Tool 1: Risk Calculator (Featured) -->
+<div class="col-span-1 md:col-span-8 bg-surface-container-lowest border border-outline-variant/30 rounded-xl overflow-hidden relative group hover:shadow-2xl transition-all duration-300 ease-in-out">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary-container"></div>
+<div class="p-6 md:p-8 flex flex-col md:flex-row gap-6 h-full">
+<div class="flex-1 space-y-4">
+<div class="h-12 w-12 bg-secondary-container/20 text-secondary-container rounded-lg flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-3xl">calculate</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg-mobile text-on-surface font-semibold">Calculadora de Riesgo Inmobiliario</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Evalúe la vulnerabilidad estructural de su propiedad frente a marejadas y erosión costera basándose en datos históricos.
+                        </p>
+<div class="pt-4 mt-auto">
+<button class="bg-secondary-container text-on-secondary-container hover:bg-secondary-fixed-dim font-label-sm text-label-sm px-6 py-3 rounded-lg flex items-center gap-2 transition-colors w-full md:w-auto justify-center font-semibold">
+                                Iniciar Evaluación
+                                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="w-full md:w-1/3 bg-surface-container-low rounded-lg p-4 flex flex-col justify-center items-center border border-outline-variant/20 relative overflow-hidden">
+<!-- Decorative graphic placeholder for calculator -->
+<div class="w-24 h-24 rounded-full border-4 border-secondary-container/30 border-t-secondary-container animate-[spin_10s_linear_infinite] absolute -right-4 -top-4 opacity-50"></div>
+<span class="material-symbols-outlined text-6xl text-outline-variant mb-2 z-10">analytics</span>
+<span class="font-label-sm text-label-sm text-outline z-10 text-center">Datos actualizados: Oct 2023</span>
+</div>
+</div>
+</div>
+<!-- Tool 2: Resource Checklist -->
+<div class="col-span-1 md:col-span-4 bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-6 relative hover:shadow-xl transition-all duration-300 flex flex-col">
+<div class="absolute top-0 left-0 w-full h-1 bg-tertiary-container"></div>
+<div class="flex justify-between items-start mb-4">
+<div class="h-10 w-10 bg-tertiary-container/10 text-tertiary-container rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined">checklist</span>
+</div>
+<span class="px-2 py-1 bg-tertiary-container/10 text-tertiary-container font-label-sm text-[10px] rounded uppercase">Descargable</span>
+</div>
+<h3 class="font-headline-lg text-xl text-on-surface font-semibold mb-2">Lista de Verificación</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-1 text-sm">
+                    Materiales y documentos esenciales para asegurar su hogar antes de la temporada de huracanes.
+                </p>
+<div class="space-y-3">
+<div class="flex items-center gap-3 p-2 bg-surface-container-low rounded border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary text-sm">check_box</span>
+<span class="font-label-sm text-label-sm text-on-surface">Suministros Básicos</span>
+</div>
+<div class="flex items-center gap-3 p-2 bg-surface-container-low rounded border border-outline-variant/10">
+<span class="material-symbols-outlined text-outline text-sm">check_box_outline_blank</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Documentos Críticos</span>
+</div>
+</div>
+<button class="mt-6 border border-tertiary-container text-tertiary-container hover:bg-tertiary-container/5 font-label-sm text-label-sm px-4 py-2 rounded-lg flex items-center justify-center gap-2 transition-colors w-full">
+<span class="material-symbols-outlined text-sm">download</span>
+                    Descargar PDF
+                </button>
+</div>
+<!-- Tool 3: Community Mapping Form -->
+<div class="col-span-1 md:col-span-6 bg-primary border border-outline-variant/20 rounded-xl p-6 md:p-8 text-on-primary relative overflow-hidden group">
+<!-- Abstract background pattern -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary-container rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 opacity-50 group-hover:opacity-70 transition-opacity"></div>
+<div class="relative z-10 flex flex-col h-full">
+<div class="h-12 w-12 bg-on-primary/10 rounded-lg flex items-center justify-center mb-4 border border-on-primary/20">
+<span class="material-symbols-outlined text-on-primary">edit_location</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg-mobile text-on-primary font-semibold mb-3">Mapeo Participativo</h3>
+<p class="font-body-md text-body-md text-primary-fixed-dim mb-8 flex-1">
+                        Reporte áreas de inundación recurrente, infraestructura dañada o puntos de encuentro no oficiales en su vecindario para actualizar el mapa maestro.
+                    </p>
+<button class="bg-on-primary text-primary hover:bg-primary-fixed font-label-sm text-label-sm px-6 py-3 rounded-lg flex items-center gap-2 transition-colors w-fit font-semibold">
+                        Abrir Formulario
+                        <span class="material-symbols-outlined text-sm">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Tool 4: Structural Guidance (Glassmorphism inspired) -->
+<div class="col-span-1 md:col-span-6 rounded-xl p-6 relative flex flex-col justify-end min-h-[250px] border border-outline-variant/30 overflow-hidden">
+<!-- Image Background -->
+<div class="absolute inset-0 z-0">
+<img alt="Blueprint over wood table" class="w-full h-full object-cover opacity-20 filter grayscale" data-alt="A close-up view of architectural blueprints spread out on a warm, weathered wooden table. The scene is illuminated by bright, natural sunlight evoking a coastal morning, reflecting a modern light-mode aesthetic. A brass compass and a yellow pencil rest on the plans, emphasizing planning and structural integrity. The color palette focuses on crisp whites, heritage navy lines of the blueprint, and natural wood tones, conveying professional heritage preservation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvpN0-SpgEl1RvTNVy_TC3Whnw7cO49XBEE-8v0Y7LD5zDYFFsznWyzZ3MsLZ8qRChz1M5zwnXcZbfsEX7N83EsLiOVANr4GBQXlL7GxR3fbfsdTcQpr1RiDQH-xqA15Mf0NHWTCcXqfA5b8IwhBDHPVqZgW7lKoGvMr920m2qAfJDS0nOgPZvtoq8C9cyUGPBh_vMpIKbTuzKtOw9YMsTVKZ9d5MDhHOXEzO4znutxcJr8Vh9W6Ux2P3mhHVMMWq9g1guZiqDhNM"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/80 to-transparent z-0"></div>
+<div class="relative z-10 space-y-3">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-highest/80 backdrop-blur-sm text-on-surface rounded-md border border-outline-variant/30 w-fit">
+<span class="material-symbols-outlined text-[14px]">architecture</span>
+<span class="font-label-sm text-[10px] uppercase font-bold tracking-widest">Guía Constructiva</span>
+</div>
+<h3 class="font-headline-lg text-xl text-on-surface font-bold">Refuerzo Estructural Vernáculo</h3>
+<p class="font-body-md text-sm text-on-surface-variant max-w-sm">
+                        Catálogo interactivo de técnicas de carpintería tradicional adaptadas para resistencia a vientos huracanados.
+                    </p>
+<a class="inline-flex items-center gap-1 text-primary hover:text-primary-container font-label-sm text-label-sm pt-2 transition-colors underline underline-offset-4" href="#">
+                        Explorar Catálogo <span class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap px-margin-mobile flex flex-col items-center text-center gap-base bg-surface-container-low dark:bg-surface-container-lowest border-t border-outline-variant/20 dark:border-outline/10 mt-auto py-8">
+<p class="font-label-caps text-label-caps dark:text-on-surface-variant text-on-surface-variant opacity-80 text-sm">
+            Un Nuevo Amanecer, Inc. | Comité de Asesores Comunitarios (CAC)
+        </p>
+</footer>
+<!-- Interactive Script for Drawer -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.getElementById('menuToggle');
+            const closeMenu = document.getElementById('closeMenu');
+            const drawer = document.getElementById('navigationDrawer');
+            const drawerContent = document.getElementById('drawerContent');
+            const drawerOverlay = document.getElementById('drawerOverlay');
+
+            function openDrawer() {
+                drawer.classList.remove('hidden');
+                // Small delay to allow display:block to apply before animating
+                setTimeout(() => {
+                    drawerContent.classList.remove('-translate-x-full');
+                    drawerOverlay.classList.remove('opacity-0');
+                    drawerOverlay.classList.add('opacity-100');
+                }, 10);
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            }
+
+            function closeDrawer() {
+                drawerContent.classList.add('-translate-x-full');
+                drawerOverlay.classList.remove('opacity-100');
+                drawerOverlay.classList.add('opacity-0');
+                
+                // Wait for animation to finish before hiding
+                setTimeout(() => {
+                    drawer.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }, 300); // Matches transition duration
+            }
+
+            menuToggle.addEventListener('click', openDrawer);
+            closeMenu.addEventListener('click', closeDrawer);
+            drawerOverlay.addEventListener('click', closeDrawer);
+        });
+    </script>
+</body></html>

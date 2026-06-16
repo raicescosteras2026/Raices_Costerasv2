@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Escenarios y Rutas de Evacuación - Raíces Costeras</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@600;700&amp;family=Work+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#271900",
+                        "on-secondary-container": "#6b4b00",
+                        "secondary": "#7c5800",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#fafaf5",
+                        "surface-container": "#eeeee9",
+                        "background": "#fafaf5",
+                        "tertiary-fixed": "#8ef4e9",
+                        "on-primary-fixed": "#091d2e",
+                        "on-surface": "#1a1c19",
+                        "primary-fixed-dim": "#b5c8df",
+                        "on-surface-variant": "#43474c",
+                        "primary-fixed": "#d1e4fb",
+                        "secondary-fixed-dim": "#ffba20",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#00504a",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#fafaf5",
+                        "surface-container-highest": "#e3e3de",
+                        "tertiary-container": "#00443f",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#96a9be",
+                        "on-tertiary-fixed": "#00201d",
+                        "secondary-fixed": "#ffdea8",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e3e3de",
+                        "surface-dim": "#dadad5",
+                        "tertiary": "#002c29",
+                        "surface-tint": "#4e6073",
+                        "surface-container-high": "#e8e8e3",
+                        "inverse-surface": "#2f312e",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "primary-container": "#2c3e50",
+                        "on-tertiary-container": "#4eb7ad",
+                        "inverse-primary": "#b5c8df",
+                        "tertiary-fixed-dim": "#71d7cd",
+                        "outline-variant": "#c4c6cd",
+                        "surface-container-low": "#f4f4ef",
+                        "on-secondary-fixed-variant": "#5e4200",
+                        "primary": "#162839",
+                        "outline": "#74777d",
+                        "on-background": "#1a1c19",
+                        "secondary-container": "#feb700",
+                        "on-primary-fixed-variant": "#36485b",
+                        "inverse-on-surface": "#f1f1ec"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px",
+                        "base": "8px",
+                        "max-width": "1280px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Be Vietnam Pro"],
+                        "label-sm": ["Work Sans"],
+                        "body-md": ["Work Sans"],
+                        "headline-lg-mobile": ["Be Vietnam Pro"],
+                        "headline-xl": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md text-body-md antialiased w-full min-h-screen overflow-x-hidden flex flex-col">
+<!-- TopAppBar -->
+<header class="docked full-width top-0 sticky bg-surface/90 dark:bg-surface-dim/90 backdrop-blur-md bg-surface-container-low dark:bg-surface-container-lowest shadow-sm dark:shadow-none flex justify-between items-center w-full px-margin-mobile h-16 z-50">
+<button class="text-primary dark:text-primary-fixed-dim hover:bg-secondary-container/20 dark:hover:bg-primary-container/30 rounded-full p-2 flex items-center justify-center transition-colors" id="menu-btn">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<div class="font-display-lg-mobile text-display-lg-mobile text-primary dark:text-primary-fixed-dim tracking-tight font-headline-lg-mobile text-headline-lg-mobile font-bold flex-1 text-center truncate px-4">
+            Raíces Costeras
+        </div>
+<div class="w-10"></div> <!-- Placeholder for balance -->
+</header>
+<!-- NavigationDrawer Overlay -->
+<div class="fixed inset-0 bg-inverse-surface/40 z-[55] hidden opacity-0 transition-opacity duration-300" id="drawer-overlay"></div>
+<!-- NavigationDrawer -->
+<nav class="bg-surface dark:bg-surface-dim rounded-r-xl h-full w-4/5 max-w-sm border-r border-outline-variant/30 dark:border-outline/20 shadow-2xl fixed inset-y-0 left-0 z-[60] flex flex-col py-6 transform -translate-x-full transition-transform duration-300 ease-in-out" id="nav-drawer">
+<div class="px-6 mb-8">
+<h2 class="font-display-lg-mobile text-display-lg-mobile text-primary dark:text-primary-fixed-dim py-section-gap font-headline-lg-mobile text-headline-lg-mobile">
+                Raíces Costeras
+            </h2>
+</div>
+<ul class="flex-1 overflow-y-auto flex flex-col gap-2">
+<!-- Active Tab: Mapas de Riesgo -->
+<li>
+<a class="flex items-center gap-4 bg-primary-container text-on-primary-container rounded-lg px-4 py-3 mx-2 scale-95 duration-150 ease-in-out translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="map" data-weight="fill" style="font-variation-settings: 'FILL' 1;">map</span>
+<span class="font-body-lg-mobile text-body-lg-mobile font-bold">Mapas de Riesgo</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-4 text-on-surface-variant dark:text-outline-variant px-4 py-3 mx-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-body-lg-mobile text-body-lg-mobile">Datos</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-4 text-on-surface-variant dark:text-outline-variant px-4 py-3 mx-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="info">info</span>
+<span class="font-body-lg-mobile text-body-lg-mobile">Sobre el Proyecto</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-4 text-on-surface-variant dark:text-outline-variant px-4 py-3 mx-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-body-lg-mobile text-body-lg-mobile">Sobre Nosotros</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-4 text-on-surface-variant dark:text-outline-variant px-4 py-3 mx-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+<span class="font-body-lg-mobile text-body-lg-mobile">Puntos de Encuentro La Playa</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-4 text-on-surface-variant dark:text-outline-variant px-4 py-3 mx-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="emergency">emergency</span>
+<span class="font-body-lg-mobile text-body-lg-mobile">Contactos de Emergencia</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-4 text-on-surface-variant dark:text-outline-variant px-4 py-3 mx-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-body-lg-mobile text-body-lg-mobile">Guía para estar preparado</span>
+</a>
+</li>
+</ul>
+</nav>
+<!-- Main Canvas -->
+<main class="flex-1 w-full max-w-max-width mx-auto px-margin-mobile py-8 md:py-margin-desktop md:px-margin-desktop flex flex-col gap-10">
+<!-- Header Section -->
+<section class="flex flex-col gap-4">
+<div class="inline-flex items-center gap-2 bg-error-container text-on-error-container font-label-sm text-label-sm px-3 py-1 rounded-full w-max">
+<span class="material-symbols-outlined text-[16px]" data-icon="warning" data-weight="fill">warning</span>
+                ALERTA &amp; PREPARACIÓN
+            </div>
+<h1 class="font-headline-xl text-headline-xl text-primary leading-tight">
+                Escenarios y Rutas de Evacuación
+            </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Conoce las rutas seguras y los puntos de encuentro comunitarios en caso de inundaciones o marejadas ciclónicas para proteger a tu familia y comunidad.
+            </p>
+</section>
+<!-- Routes Grid (Bento/Card Layout) -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Primary Evacuation Route Card -->
+<article class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl overflow-hidden relative shadow-[0_24px_48px_-12px_rgba(22,40,57,0.04)] flex flex-col">
+<!-- Top Accent Strip -->
+<div class="h-1 w-full bg-secondary-container"></div>
+<!-- Map Snippet -->
+<div class="w-full aspect-[1.49] bg-surface-variant relative overflow-hidden group">
+<img alt="Map snippet showing safe evacuation routes in Ponce Playa" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLsi4XGpYirkFqHuGGDvd9GKDabxAXwCOB2uxauv57H380y0Jg7Vv-IhS8t1lWGfhFAo1WPhKjdmgCut9WL3CFOxLgmqVDd6088z_6mmhnFSV18N8S1C5EjSfHlwZi7Rms5ZVch79_yJC5oOVAtDufz7YFEOSRHWulX6z5pgyvn_6whGRwFnZBTx4DQ6Y4-PPOaASJFo9a5Pi1cNaIHyfHWwk4HQrFYimZiPzPMUo7-fyJ1Q7SFwIDwtfw"/>
+<div class="absolute bottom-3 left-3 bg-surface/90 backdrop-blur-sm px-3 py-1.5 rounded-lg border border-outline-variant/20 shadow-sm flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container"></span>
+<span class="font-label-sm text-label-sm text-primary">Ruta Principal Activa</span>
+</div>
+</div>
+<div class="p-6 flex flex-col gap-4 flex-1">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Zona A: Costera Baja</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-1">
+                        Esta ruta conecta directamente con el refugio primario en terreno elevado. Utilice esta vía si se encuentra al sur de la Avenida Central. Siga la señalización verde instalada a lo largo del trayecto.
+                    </p>
+<div class="flex items-center gap-4 pt-2 border-t border-outline-variant/20">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-outline" data-icon="directions_walk">directions_walk</span>
+<span class="font-label-sm text-label-sm">15 min</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-outline" data-icon="group">group</span>
+<span class="font-label-sm text-label-sm">Capacidad: 250</span>
+</div>
+</div>
+<button class="mt-2 w-full bg-secondary-container hover:bg-secondary text-on-secondary-container hover:text-on-secondary font-label-sm text-label-sm py-3 px-4 rounded-lg transition-colors flex justify-center items-center gap-2">
+                        Ver Detalles de Ruta
+                        <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Secondary Info Cards -->
+<div class="flex flex-col gap-gutter">
+<article class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-6 flex flex-col gap-3">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed mb-2">
+<span class="material-symbols-outlined" data-icon="water_drop" data-weight="fill">water_drop</span>
+</div>
+<h4 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Niveles de Inundación</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Conozca la diferencia entre alertas amarillas y rojas. Los mapas de riesgo detallan hasta dónde podría llegar el agua en diferentes escenarios climáticos severos.
+                    </p>
+</article>
+<article class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-6 flex flex-col gap-3">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed mb-2">
+<span class="material-symbols-outlined" data-icon="home_work" data-weight="fill">home_work</span>
+</div>
+<h4 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Puntos de Encuentro</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Lugares preestablecidos por el Comité de Asesores Comunitarios (CAC) con suministros de emergencia y comunicación satelital directa.
+                    </p>
+</article>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 px-margin-mobile flex flex-col items-center text-center gap-base bg-surface-container-low dark:bg-surface-container-lowest border-t border-outline-variant/20 dark:border-outline/10 mt-auto">
+<div class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-4">
+            Raíces Costeras
+        </div>
+<p class="font-label-sm text-label-sm dark:text-on-surface-variant text-on-surface-variant opacity-80">
+            Un Nuevo Amanecer, Inc. | Comité de Asesores Comunitarios (CAC)
+        </p>
+<div class="flex gap-4 mt-4">
+<a class="font-label-sm text-label-sm text-primary underline hover:text-primary transition-opacity" href="#">Términos</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant opacity-80 hover:text-primary transition-opacity" href="#">Privacidad</a>
+</div>
+</footer>
+<script>
+        // Drawer Toggle Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const drawer = document.getElementById('nav-drawer');
+        const overlay = document.getElementById('drawer-overlay');
+
+        function toggleDrawer() {
+            const isClosed = drawer.classList.contains('-translate-x-full');
+            if (isClosed) {
+                drawer.classList.remove('-translate-x-full');
+                overlay.classList.remove('hidden');
+                // slight delay to allow display:block to apply before animating opacity
+                setTimeout(() => {
+                    overlay.classList.remove('opacity-0');
+                    overlay.classList.add('opacity-100');
+                }, 10);
+            } else {
+                drawer.classList.add('-translate-x-full');
+                overlay.classList.remove('opacity-100');
+                overlay.classList.add('opacity-0');
+                setTimeout(() => {
+                    overlay.classList.add('hidden');
+                }, 300);
+            }
+        }
+
+        menuBtn.addEventListener('click', toggleDrawer);
+        overlay.addEventListener('click', toggleDrawer);
+    </script>
+</body></html>

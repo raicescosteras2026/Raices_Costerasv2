@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Planes Existentes - Raíces Costeras</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&amp;family=Work+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed": "#271900",
+                      "on-secondary-container": "#6b4b00",
+                      "secondary": "#7c5800",
+                      "error-container": "#ffdad6",
+                      "surface-bright": "#fafaf5",
+                      "surface-container": "#eeeee9",
+                      "background": "#fafaf5",
+                      "tertiary-fixed": "#8ef4e9",
+                      "on-primary-fixed": "#091d2e",
+                      "on-surface": "#1a1c19",
+                      "primary-fixed-dim": "#b5c8df",
+                      "on-surface-variant": "#43474c",
+                      "primary-fixed": "#d1e4fb",
+                      "secondary-fixed-dim": "#ffba20",
+                      "on-tertiary": "#ffffff",
+                      "on-tertiary-fixed-variant": "#00504a",
+                      "surface-container-lowest": "#ffffff",
+                      "surface": "#fafaf5",
+                      "surface-container-highest": "#e3e3de",
+                      "tertiary-container": "#00443f",
+                      "on-secondary": "#ffffff",
+                      "on-primary-container": "#96a9be",
+                      "on-tertiary-fixed": "#00201d",
+                      "secondary-fixed": "#ffdea8",
+                      "on-error-container": "#93000a",
+                      "surface-variant": "#e3e3de",
+                      "surface-dim": "#dadad5",
+                      "tertiary": "#002c29",
+                      "surface-tint": "#4e6073",
+                      "surface-container-high": "#e8e8e3",
+                      "inverse-surface": "#2f312e",
+                      "error": "#ba1a1a",
+                      "on-primary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "primary-container": "#2c3e50",
+                      "on-tertiary-container": "#4eb7ad",
+                      "inverse-primary": "#b5c8df",
+                      "tertiary-fixed-dim": "#71d7cd",
+                      "outline-variant": "#c4c6cd",
+                      "surface-container-low": "#f4f4ef",
+                      "on-secondary-fixed-variant": "#5e4200",
+                      "primary": "#162839",
+                      "outline": "#74777d",
+                      "on-background": "#1a1c19",
+                      "secondary-container": "#feb700",
+                      "on-primary-fixed-variant": "#36485b",
+                      "inverse-on-surface": "#f1f1ec"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "margin-desktop": "64px",
+                      "base": "8px",
+                      "max-width": "1280px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-lg": [
+                              "Be Vietnam Pro"
+                      ],
+                      "label-sm": [
+                              "Work Sans"
+                      ],
+                      "body-md": [
+                              "Work Sans"
+                      ],
+                      "headline-lg-mobile": [
+                              "Be Vietnam Pro"
+                      ],
+                      "headline-xl": [
+                              "Be Vietnam Pro"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-xl": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col font-body-md text-body-md">
+<!-- TopAppBar -->
+<header class="bg-surface/90 dark:bg-surface-dim/90 backdrop-blur-md docked full-width top-0 sticky bg-surface-container-low dark:bg-surface-container-lowest shadow-sm dark:shadow-none flex justify-between items-center w-full px-margin-mobile h-16 z-50">
+<div class="flex items-center gap-4">
+<button aria-label="Menu" class="text-primary dark:text-primary-fixed-dim hover:bg-secondary-container/20 dark:hover:bg-primary-container/30 p-2 rounded-full transition-transform active:scale-95 duration-150 ease-in-out" onclick="document.getElementById('nav-drawer').classList.toggle('-translate-x-full')">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-primary dark:text-primary-fixed-dim tracking-tight">Raíces Costeras</h1>
+</div>
+</header>
+<!-- NavigationDrawer (Hidden by default, toggled via JS) -->
+<div class="fixed inset-y-0 left-0 z-[60] flex flex-col py-6 bg-surface dark:bg-surface-dim rounded-r-xl h-full w-4/5 max-w-sm border-r border-outline-variant/30 dark:border-outline/20 shadow-2xl transition-transform duration-300 -translate-x-full" id="nav-drawer">
+<div class="px-margin-mobile flex justify-between items-center mb-6">
+<h2 class="font-display-lg-mobile text-display-lg-mobile text-primary dark:text-primary-fixed-dim py-section-gap">Raíces Costeras</h2>
+<button class="text-on-surface-variant p-2" onclick="document.getElementById('nav-drawer').classList.add('-translate-x-full')">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="flex-1 overflow-y-auto flex flex-col gap-2">
+<a class="flex items-center gap-4 text-on-surface-variant dark:text-outline-variant px-4 py-3 mx-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span class="font-body-lg-mobile text-body-lg-mobile dark:text-on-surface-variant">Mapas de Riesgo</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant dark:text-outline-variant px-4 py-3 mx-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-body-lg-mobile text-body-lg-mobile dark:text-on-surface-variant">Datos</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant dark:text-outline-variant px-4 py-3 mx-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="info">info</span>
+<span class="font-body-lg-mobile text-body-lg-mobile dark:text-on-surface-variant">Sobre el Proyecto</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant dark:text-outline-variant px-4 py-3 mx-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-body-lg-mobile text-body-lg-mobile dark:text-on-surface-variant">Sobre Nosotros</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant dark:text-outline-variant px-4 py-3 mx-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+<span class="font-body-lg-mobile text-body-lg-mobile dark:text-on-surface-variant">Puntos de Encuentro La Playa</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant dark:text-outline-variant px-4 py-3 mx-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="emergency">emergency</span>
+<span class="font-body-lg-mobile text-body-lg-mobile dark:text-on-surface-variant">Contactos de Emergencia</span>
+</a>
+<a class="flex items-center gap-4 bg-primary-container text-on-primary-container rounded-lg px-4 py-3 mx-2 translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-body-lg-mobile text-body-lg-mobile dark:text-on-surface-variant font-bold">Guía para estar preparado</span>
+</a>
+</nav>
+</div>
+<!-- Overlay -->
+<div class="fixed inset-0 bg-scrim/50 z-[55] hidden" id="nav-overlay" onclick="document.getElementById('nav-drawer').classList.add('-translate-x-full'); this.classList.add('hidden')"></div>
+<script>
+        const drawer = document.getElementById('nav-drawer');
+        const overlay = document.getElementById('nav-overlay');
+        const menuBtn = document.querySelector('[aria-label="Menu"]');
+
+        menuBtn.addEventListener('click', () => {
+            drawer.classList.remove('-translate-x-full');
+            overlay.classList.remove('hidden');
+        });
+
+        overlay.addEventListener('click', () => {
+            drawer.classList.add('-translate-x-full');
+            overlay.classList.add('hidden');
+        });
+    </script>
+<!-- Main Content -->
+<main class="flex-1 w-full max-w-[1280px] mx-auto px-margin-mobile py-8 flex flex-col gap-8">
+<!-- Header Section -->
+<section class="flex flex-col gap-4">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Planes Existentes</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+</section>
+<!-- Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+<!-- Card 1: Municipal Ordinances (Highlight) -->
+<article class="col-span-1 md:col-span-2 bg-surface-container-lowest border border-outline-variant/30 rounded-xl overflow-hidden shadow-[0_8px_24px_rgba(22,40,57,0.04)] relative group">
+<div class="h-1 w-full bg-secondary-container"></div>
+<div class="p-6 flex flex-col h-full gap-4 relative z-10">
+<div class="flex justify-between items-start">
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-3 py-1 rounded-full uppercase tracking-wider">Ordenanzas</span>
+<span class="material-symbols-outlined text-primary" data-icon="gavel">gavel</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mt-2">Normativas Municipales Vigentes</h3>
+<p class="text-on-surface-variant flex-1">
+                        Regulaciones actuales para la construcción y desarrollo en zonas costeras, enfocadas en la mitigación de riesgos de inundación y protección del ecosistema local.
+                    </p>
+<button class="self-start mt-4 px-6 py-2 bg-secondary text-on-secondary rounded-lg font-label-sm text-label-sm hover:bg-secondary-fixed transition-colors">
+                        Ver Detalles
+                    </button>
+</div>
+</article>
+<!-- Card 2: Coastal Management -->
+<article class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl overflow-hidden shadow-[0_8px_24px_rgba(22,40,57,0.04)] flex flex-col">
+<div class="h-1 w-full bg-tertiary-container"></div>
+<div class="p-6 flex flex-col h-full gap-4">
+<div class="flex justify-between items-start">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-3 py-1 rounded-full uppercase tracking-wider">Estrategia</span>
+<span class="material-symbols-outlined text-primary" data-icon="water">water</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mt-2">Manejo Costero</h3>
+<p class="text-on-surface-variant flex-1">
+                        Estrategias de adaptación y defensa de la línea costera ante el aumento del nivel del mar.
+                    </p>
+<a class="text-tertiary-container font-label-sm text-label-sm flex items-center gap-1 hover:underline" href="#">
+                        Descargar PDF <span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+</a>
+</div>
+</article>
+<!-- Card 3: Community Resilience -->
+<article class="col-span-1 md:col-span-3 bg-surface-container-lowest border border-outline-variant/30 rounded-xl overflow-hidden shadow-[0_8px_24px_rgba(22,40,57,0.04)] relative">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-secondary-container via-surface-container-lowest to-surface-container-lowest"></div>
+<div class="h-1 w-full bg-error"></div>
+<div class="p-6 md:p-8 flex flex-col md:flex-row gap-6 items-center relative z-10">
+<div class="flex-1 flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<span class="bg-error-container text-on-error-container font-label-sm text-label-sm px-3 py-1 rounded-full uppercase tracking-wider">Comunidad</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-primary">Planes de Resiliencia Comunitaria</h3>
+<p class="text-on-surface-variant max-w-2xl">
+                            Iniciativas locales para fortalecer la capacidad de respuesta y recuperación de los vecindarios ante eventos climáticos extremos. Incluye rutas de evacuación y refugios.
+                        </p>
+</div>
+<div class="w-full md:w-auto flex flex-col gap-2 min-w-[200px]">
+<div class="flex justify-between items-end mb-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Progreso de Implementación</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">65%</span>
+</div>
+<div class="w-full bg-surface-variant rounded-full h-2.5">
+<div class="bg-error h-2.5 rounded-full" style="width: 65%"></div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-lowest border-t border-outline-variant/20 dark:border-outline/10 w-full py-section-gap px-margin-mobile flex flex-col items-center text-center gap-base mt-12 py-8">
+<p class="font-label-caps text-label-caps dark:text-on-surface-variant text-on-surface-variant opacity-80">
+            Un Nuevo Amanecer, Inc. | Comité de Asesores Comunitarios (CAC)
+        </p>
+<p class="font-label-caps text-primary uppercase tracking-widest text-xs mt-2">
+            © 2024 Raíces Costeras
+        </p>
+</footer>
+</body></html>

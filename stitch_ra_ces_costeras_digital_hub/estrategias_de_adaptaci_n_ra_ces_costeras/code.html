@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Estrategias de Adaptación - Raíces Costeras</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&amp;family=Work+Sans:wght@400;600&amp;family=Vollkorn:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#271900",
+                        "on-secondary-container": "#6b4b00",
+                        "secondary": "#7c5800",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#fafaf5",
+                        "surface-container": "#eeeee9",
+                        "background": "#fafaf5",
+                        "tertiary-fixed": "#8ef4e9",
+                        "on-primary-fixed": "#091d2e",
+                        "on-surface": "#1a1c19",
+                        "primary-fixed-dim": "#b5c8df",
+                        "on-surface-variant": "#43474c",
+                        "primary-fixed": "#d1e4fb",
+                        "secondary-fixed-dim": "#ffba20",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#00504a",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#fafaf5",
+                        "surface-container-highest": "#e3e3de",
+                        "tertiary-container": "#00443f",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#96a9be",
+                        "on-tertiary-fixed": "#00201d",
+                        "secondary-fixed": "#ffdea8",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e3e3de",
+                        "surface-dim": "#dadad5",
+                        "tertiary": "#002c29",
+                        "surface-tint": "#4e6073",
+                        "surface-container-high": "#e8e8e3",
+                        "inverse-surface": "#2f312e",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "primary-container": "#2c3e50",
+                        "on-tertiary-container": "#4eb7ad",
+                        "inverse-primary": "#b5c8df",
+                        "tertiary-fixed-dim": "#71d7cd",
+                        "outline-variant": "#c4c6cd",
+                        "surface-container-low": "#f4f4ef",
+                        "on-secondary-fixed-variant": "#5e4200",
+                        "primary": "#162839",
+                        "outline": "#74777d",
+                        "on-background": "#1a1c19",
+                        "secondary-container": "#feb700",
+                        "on-primary-fixed-variant": "#36485b",
+                        "inverse-on-surface": "#f1f1ec"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px",
+                        "base": "8px",
+                        "max-width": "1280px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Be Vietnam Pro"],
+                        "label-sm": ["Work Sans"],
+                        "body-md": ["Work Sans"],
+                        "headline-lg-mobile": ["Be Vietnam Pro"],
+                        "headline-xl": ["Be Vietnam Pro"],
+                        "vollkorn": ["Vollkorn", "serif"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .font-vollkorn { font-family: 'Vollkorn', serif; }
+        
+        /* Subtle texture overlay for coastal feel */
+        .texture-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 50;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col relative md:hidden">
+<div class="texture-overlay"></div>
+<!-- TopAppBar -->
+<header class="bg-surface/90 backdrop-blur-md shadow-sm docked full-width top-0 sticky z-40 bg-surface-container-low flex justify-between items-center w-full px-margin-mobile h-16">
+<button aria-label="Menu" class="text-on-surface-variant hover:bg-secondary-container/20 p-2 rounded-full transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-primary tracking-tight font-vollkorn font-bold">Raíces Costeras</h1>
+<div class="w-10"></div> <!-- Spacer for centering -->
+</header>
+<!-- Main Content -->
+<main class="flex-grow px-margin-mobile py-8 flex flex-col gap-8 pb-32">
+<!-- Header Section -->
+<section class="flex flex-col gap-4">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-vollkorn">Estrategias de Adaptación</h2>
+<p class="font-body-md text-on-surface-variant leading-relaxed text-lg">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+</section>
+<!-- Bento Grid / Cards Section -->
+<div class="flex flex-col gap-6">
+<!-- Nature-based Solutions (Mangroves) -->
+<article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm relative group hover:shadow-md transition-shadow">
+<div class="h-1 bg-tertiary-container w-full absolute top-0 left-0"></div>
+<div class="p-6 flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-tertiary-container/10 flex items-center justify-center text-tertiary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<h3 class="font-vollkorn font-bold text-xl text-primary">Soluciones Basadas en la Naturaleza</h3>
+</div>
+<div class="h-40 rounded-lg bg-surface-container-high overflow-hidden relative">
+<img alt="Mangrove forest coastal protection" class="w-full h-full object-cover" data-alt="A lush, dense mangrove forest growing directly out of shallow coastal waters under bright, sunny daylight. The scene emphasizes nature-based coastal protection in a tropical or subtropical setting. The lighting is crisp, highlighting the complex root structures and vibrant green leaves against a clear blue sky. The visual style is highly detailed, photorealistic documentary photography, reflecting a professional environmental planning aesthetic with a bright, light-mode friendly color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4VyztYdfQzoT61ko6WbTfInP9bpe_VDyp9fwJxpOZqZpCxY2Yz7UgPwgiwUjdyR325X1qdM5wkFe-QKQx4Rin9L1SuKhXNFicATKHJLUrgpFkhf4vXOlzaZL82yy8qUXReAotpsYA2bF9H6II7kG7VF_0MwKujYFTScI_9YrSxlMuwGJ87ZFvynEyjWK5vRFlyH65jD6CmjT9biKPi4_0YuMyMiq1bBnoHG8Im3d8x6tTXcvWgHr1IVbKWp6beUjVwDqlECTyKhs"/>
+</div>
+<p class="font-body-md text-on-surface-variant">
+                        Restauración de manglares como barrera natural contra marejadas y erosión, fortaleciendo el ecosistema local.
+                    </p>
+<div class="flex gap-2 mt-2">
+<span class="px-3 py-1 bg-tertiary-container text-on-tertiary font-label-sm text-label-sm rounded-full">Ecológico</span>
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant font-label-sm text-label-sm rounded-full">Largo Plazo</span>
+</div>
+</div>
+</article>
+<!-- Structural Improvements -->
+<article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm relative group hover:shadow-md transition-shadow">
+<div class="h-1 bg-secondary-container w-full absolute top-0 left-0"></div>
+<div class="p-6 flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">architecture</span>
+</div>
+<h3 class="font-vollkorn font-bold text-xl text-primary">Mejoras Estructurales</h3>
+</div>
+<div class="h-40 rounded-lg bg-surface-container-high overflow-hidden relative">
+<img alt="Elevated coastal home architecture" class="w-full h-full object-cover" data-alt="A modern, elevated coastal home designed for flood resilience. The house features sturdy wooden pilings, clean architectural lines, and a welcoming porch. The setting is bright and sunny, conveying structural reliability and community warmth. The color palette includes warm sunlight yellow accents and coastal turquoise trims against a shell white exterior. The image is a photorealistic architectural visualization in a bright, modern corporate style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACBGjSm1rgLkFWr_SC9PbjroEGPlLNGOesYDMYTZVQLXC5ExIrJ62xEuEw4sWVGk4cHH92YDWpZwkUIKfCvl0q_m-3Yx-WInNFf0eeE1c1wKbDJsHcLcOgCdF-z0UDZxFBS0eXG5CCtWivB4MWQCDzKLdxzTZoTQsSKbfb1D4WFSEMa560gWBAH-YKSe-gYRQTuP8E7WOz_00aybkL3zy82-KRM8e1QWhrblukts1LQt1codBqkuMLt4_ApZcKR3TC0bWyL_76sgE"/>
+</div>
+<p class="font-body-md text-on-surface-variant">
+                        Elevación de viviendas y uso de materiales resistentes al agua salada para preservar el patrimonio construido.
+                    </p>
+<div class="flex gap-2 mt-2">
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container font-label-sm text-label-sm rounded-full">Infraestructura</span>
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant font-label-sm text-label-sm rounded-full">Inmediato</span>
+</div>
+</div>
+</article>
+<!-- Community Protocols -->
+<article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm relative group hover:shadow-md transition-shadow">
+<div class="h-1 bg-primary w-full absolute top-0 left-0"></div>
+<div class="p-6 flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">group</span>
+</div>
+<h3 class="font-vollkorn font-bold text-xl text-primary">Protocolos Comunitarios</h3>
+</div>
+<p class="font-body-md text-on-surface-variant">
+                        Redes de apoyo vecinal y sistemas de alerta temprana gestionados por la propia comunidad.
+                    </p>
+<div class="mt-4 border border-outline-variant/40 rounded-lg p-4 bg-surface-container-low">
+<h4 class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-3">Progreso de Implementación</h4>
+<div class="w-full bg-surface-container-highest rounded-full h-2.5 mb-1">
+<div class="bg-primary h-2.5 rounded-full" style="width: 65%"></div>
+</div>
+<div class="flex justify-between text-xs text-on-surface-variant">
+<span>Fase 2 de 3</span>
+<span>65% Completado</span>
+</div>
+</div>
+</div>
+</article>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-outline-variant/20 w-full py-section-gap px-margin-mobile flex flex-col items-center text-center gap-base mt-auto py-8">
+<p class="font-label-caps text-label-caps text-on-surface-variant opacity-80 uppercase tracking-widest text-xs">
+            Un Nuevo Amanecer, Inc. | Comité de Asesores Comunitarios (CAC)
+        </p>
+</footer>
+</body></html>

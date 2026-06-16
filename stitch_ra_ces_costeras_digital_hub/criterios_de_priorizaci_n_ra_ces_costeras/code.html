@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Criterios de Priorización</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&amp;family=Be+Vietnam+Pro:wght@400;600;700&amp;family=Work+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#271900",
+                        "on-secondary-container": "#6b4b00",
+                        "secondary": "#7c5800",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#fafaf5",
+                        "surface-container": "#eeeee9",
+                        "background": "#fafaf5",
+                        "tertiary-fixed": "#8ef4e9",
+                        "on-primary-fixed": "#091d2e",
+                        "on-surface": "#1a1c19",
+                        "primary-fixed-dim": "#b5c8df",
+                        "on-surface-variant": "#43474c",
+                        "primary-fixed": "#d1e4fb",
+                        "secondary-fixed-dim": "#ffba20",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#00504a",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#fafaf5",
+                        "surface-container-highest": "#e3e3de",
+                        "tertiary-container": "#00443f",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#96a9be",
+                        "on-tertiary-fixed": "#00201d",
+                        "secondary-fixed": "#ffdea8",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e3e3de",
+                        "surface-dim": "#dadad5",
+                        "tertiary": "#002c29",
+                        "surface-tint": "#4e6073",
+                        "surface-container-high": "#e8e8e3",
+                        "inverse-surface": "#2f312e",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "primary-container": "#2c3e50",
+                        "on-tertiary-container": "#4eb7ad",
+                        "inverse-primary": "#b5c8df",
+                        "tertiary-fixed-dim": "#71d7cd",
+                        "outline-variant": "#c4c6cd",
+                        "surface-container-low": "#f4f4ef",
+                        "on-secondary-fixed-variant": "#5e4200",
+                        "primary": "#162839",
+                        "outline": "#74777d",
+                        "on-background": "#1a1c19",
+                        "secondary-container": "#feb700",
+                        "on-primary-fixed-variant": "#36485b",
+                        "inverse-on-surface": "#f1f1ec"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px",
+                        "base": "8px",
+                        "max-width": "1280px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Vollkorn"],
+                        "label-sm": ["Work Sans"],
+                        "body-md": ["Work Sans"],
+                        "headline-lg-mobile": ["Vollkorn"],
+                        "headline-xl": ["Vollkorn"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .vollkorn-text { font-family: 'Vollkorn', serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md text-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="bg-surface/90 dark:bg-surface-dim/90 backdrop-blur-md shadow-sm dark:shadow-none docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile h-16 bg-surface-container-low dark:bg-surface-container-lowest">
+<button class="text-primary dark:text-primary-fixed-dim hover:bg-secondary-container/20 dark:hover:bg-primary-container/30 rounded-full p-2 active:scale-95 duration-150 ease-in-out transition-all" id="menu-btn">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-headline-sm-mobile text-headline-sm-mobile dark:text-on-surface text-primary dark:text-primary-fixed-dim tracking-tight font-bold">Raíces Costeras</h1>
+<div class="w-10"></div> <!-- Spacer -->
+</div>
+</header>
+<!-- NavigationDrawer (Hidden by default, shown via JS) -->
+<nav class="fixed inset-y-0 left-0 z-[60] flex flex-col py-6 bg-surface dark:bg-surface-dim rounded-r-xl h-full w-4/5 max-w-sm border-r border-outline-variant/30 dark:border-outline/20 shadow-2xl transform -translate-x-full transition-transform duration-300" id="nav-drawer">
+<div class="px-margin-mobile py-section-gap border-b border-outline-variant/20 mb-4">
+<h2 class="font-display-lg-mobile text-display-lg-mobile text-primary dark:text-primary-fixed-dim vollkorn-text font-bold">Raíces Costeras</h2>
+</div>
+<ul class="flex flex-col gap-2 overflow-y-auto">
+<li><a class="flex items-center gap-4 text-on-surface-variant dark:text-outline-variant px-4 py-3 mx-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors rounded-lg" href="#"><span class="material-symbols-outlined" data-icon="map">map</span><span class="font-body-lg-mobile text-body-lg-mobile dark:text-on-surface-variant">Mapas de Riesgo</span></a></li>
+<li><a class="flex items-center gap-4 bg-primary-container text-on-primary-container rounded-lg px-4 py-3 mx-2 active:translate-x-1 transition-transform font-bold" href="#"><span class="material-symbols-outlined" data-icon="analytics">analytics</span><span class="font-body-lg-mobile text-body-lg-mobile dark:text-on-surface-variant">Datos</span></a></li>
+<li><a class="flex items-center gap-4 text-on-surface-variant dark:text-outline-variant px-4 py-3 mx-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors rounded-lg" href="#"><span class="material-symbols-outlined" data-icon="info">info</span><span class="font-body-lg-mobile text-body-lg-mobile dark:text-on-surface-variant">Sobre el Proyecto</span></a></li>
+<li><a class="flex items-center gap-4 text-on-surface-variant dark:text-outline-variant px-4 py-3 mx-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors rounded-lg" href="#"><span class="material-symbols-outlined" data-icon="group">group</span><span class="font-body-lg-mobile text-body-lg-mobile dark:text-on-surface-variant">Sobre Nosotros</span></a></li>
+<li><a class="flex items-center gap-4 text-on-surface-variant dark:text-outline-variant px-4 py-3 mx-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors rounded-lg" href="#"><span class="material-symbols-outlined" data-icon="location_on">location_on</span><span class="font-body-lg-mobile text-body-lg-mobile dark:text-on-surface-variant">Puntos de Encuentro La Playa</span></a></li>
+<li><a class="flex items-center gap-4 text-on-surface-variant dark:text-outline-variant px-4 py-3 mx-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors rounded-lg" href="#"><span class="material-symbols-outlined" data-icon="emergency">emergency</span><span class="font-body-lg-mobile text-body-lg-mobile dark:text-on-surface-variant">Contactos de Emergencia</span></a></li>
+<li><a class="flex items-center gap-4 text-on-surface-variant dark:text-outline-variant px-4 py-3 mx-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors rounded-lg" href="#"><span class="material-symbols-outlined" data-icon="menu_book">menu_book</span><span class="font-body-lg-mobile text-body-lg-mobile dark:text-on-surface-variant">Guía para estar preparado</span></a></li>
+</ul>
+</nav>
+<div class="fixed inset-0 bg-on-background/50 z-50 hidden transition-opacity opacity-0" id="drawer-overlay"></div>
+<main class="flex-grow px-margin-mobile py-8 max-w-max-width mx-auto w-full">
+<header class="mb-12">
+<h1 class="font-headline-xl text-headline-xl text-primary vollkorn-text mb-4">Criterios de Priorización</h1>
+<p class="text-on-surface-variant max-w-prose text-lg leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+</header>
+<section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+<!-- Glassmorphism Card 1: Vulnerabilidad Socioeconómica -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest border border-outline-variant/30 p-6 flex flex-col gap-4 shadow-[0_24px_60px_-15px_rgba(22,40,57,0.04)]">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary-container"></div>
+<div class="flex items-center gap-3">
+<div class="p-3 bg-secondary-container/20 rounded-full text-secondary">
+<span class="material-symbols-outlined" data-icon="diversity_3" data-weight="fill">diversity_3</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary vollkorn-text">Vulnerabilidad Socioeconómica</h3>
+</div>
+<p class="text-on-surface-variant">
+                    Evaluamos la capacidad de respuesta de las comunidades ante eventos climáticos, considerando factores como el acceso a servicios básicos, niveles de ingresos y densidad poblacional. Las áreas con menor resiliencia económica reciben mayor prioridad de intervención.
+                </p>
+<div class="mt-auto flex flex-wrap gap-2 pt-4">
+<span class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed rounded-full text-sm font-label-sm uppercase tracking-wider">Ingresos</span>
+<span class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed rounded-full text-sm font-label-sm uppercase tracking-wider">Infraestructura</span>
+<span class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed rounded-full text-sm font-label-sm uppercase tracking-wider">Demografía</span>
+</div>
+</div>
+<!-- Glassmorphism Card 2: Exposición Física -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest border border-outline-variant/30 p-6 flex flex-col gap-4 shadow-[0_24px_60px_-15px_rgba(22,40,57,0.04)]">
+<div class="absolute top-0 left-0 w-full h-1 bg-tertiary-container"></div>
+<div class="flex items-center gap-3">
+<div class="p-3 bg-tertiary-container/10 rounded-full text-tertiary-container">
+<span class="material-symbols-outlined" data-icon="flood" data-weight="fill">flood</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary vollkorn-text">Exposición Física</h3>
+</div>
+<p class="text-on-surface-variant">
+                    Análisis topográfico y geoespacial para determinar el nivel de riesgo directo por inundaciones, erosión costera y aumento del nivel del mar. Se priorizan las zonas con mayor probabilidad de impacto físico a corto y mediano plazo.
+                </p>
+<div class="mt-auto flex flex-wrap gap-2 pt-4">
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-sm font-label-sm uppercase tracking-wider">Topografía</span>
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-sm font-label-sm uppercase tracking-wider">Erosión</span>
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-sm font-label-sm uppercase tracking-wider">Nivel del Mar</span>
+</div>
+</div>
+</section>
+<!-- Data Visualization Placeholder Area -->
+<section class="mb-16 bg-surface-container-low rounded-xl p-6 border border-outline-variant/20 flex flex-col items-center justify-center text-center h-64">
+<span class="material-symbols-outlined text-4xl text-outline mb-2" data-icon="monitoring">monitoring</span>
+<p class="text-on-surface-variant font-label-sm uppercase tracking-widest">Visualización de Matriz de Riesgo</p>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-lowest border-t border-outline-variant/20 dark:border-outline/10 full-width w-full py-8 px-margin-mobile flex flex-col items-center text-center gap-base mt-auto">
+<p class="font-label-caps text-label-caps dark:text-on-surface-variant text-on-surface-variant opacity-80">
+            Un Nuevo Amanecer, Inc. | Comité de Asesores Comunitarios (CAC)
+        </p>
+</footer>
+<script>
+        const menuBtn = document.getElementById('menu-btn');
+        const navDrawer = document.getElementById('nav-drawer');
+        const overlay = document.getElementById('drawer-overlay');
+
+        function toggleMenu() {
+            const isClosed = navDrawer.classList.contains('-translate-x-full');
+            if (isClosed) {
+                navDrawer.classList.remove('-translate-x-full');
+                overlay.classList.remove('hidden');
+                setTimeout(() => overlay.classList.remove('opacity-0'), 10);
+            } else {
+                navDrawer.classList.add('-translate-x-full');
+                overlay.classList.add('opacity-0');
+                setTimeout(() => overlay.classList.add('hidden'), 300);
+            }
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+    </script>
+</body></html>

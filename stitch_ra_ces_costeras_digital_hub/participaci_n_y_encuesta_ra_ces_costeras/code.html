@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Participación Ciudadana - Raíces Costeras</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&amp;family=Work+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#271900",
+                        "on-secondary-container": "#6b4b00",
+                        "secondary": "#7c5800",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#fafaf5",
+                        "surface-container": "#eeeee9",
+                        "background": "#fafaf5",
+                        "tertiary-fixed": "#8ef4e9",
+                        "on-primary-fixed": "#091d2e",
+                        "on-surface": "#1a1c19",
+                        "primary-fixed-dim": "#b5c8df",
+                        "on-surface-variant": "#43474c",
+                        "primary-fixed": "#d1e4fb",
+                        "secondary-fixed-dim": "#ffba20",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#00504a",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#fafaf5",
+                        "surface-container-highest": "#e3e3de",
+                        "tertiary-container": "#00443f",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#96a9be",
+                        "on-tertiary-fixed": "#00201d",
+                        "secondary-fixed": "#ffdea8",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e3e3de",
+                        "surface-dim": "#dadad5",
+                        "tertiary": "#002c29",
+                        "surface-tint": "#4e6073",
+                        "surface-container-high": "#e8e8e3",
+                        "inverse-surface": "#2f312e",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "primary-container": "#2c3e50",
+                        "on-tertiary-container": "#4eb7ad",
+                        "inverse-primary": "#b5c8df",
+                        "tertiary-fixed-dim": "#71d7cd",
+                        "outline-variant": "#c4c6cd",
+                        "surface-container-low": "#f4f4ef",
+                        "on-secondary-fixed-variant": "#5e4200",
+                        "primary": "#162839",
+                        "outline": "#74777d",
+                        "on-background": "#1a1c19",
+                        "secondary-container": "#feb700",
+                        "on-primary-fixed-variant": "#36485b",
+                        "inverse-on-surface": "#f1f1ec"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px",
+                        "base": "8px",
+                        "max-width": "1280px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Be Vietnam Pro"],
+                        "label-sm": ["Work Sans"],
+                        "body-md": ["Work Sans"],
+                        "headline-lg-mobile": ["Be Vietnam Pro"],
+                        "headline-xl": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .soft-shadow {
+            box-shadow: 0 12px 24px -4px rgba(22, 40, 57, 0.04);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md text-body-md md:hidden">
+<!-- TopAppBar -->
+<header class="bg-surface/90 dark:bg-surface-dim/90 backdrop-blur-md shadow-sm dark:shadow-none docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile h-16 bg-surface-container-low dark:bg-surface-container-lowest">
+<button class="text-primary dark:text-primary-fixed-dim hover:bg-secondary-container/20 dark:hover:bg-primary-container/30 p-2 rounded-full transition-transform active:scale-95 duration-150 ease-in-out flex items-center justify-center">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-primary dark:text-primary-fixed-dim tracking-tight font-headline-lg-mobile text-headline-lg-mobile">Raíces Costeras</h1>
+<div class="w-10"></div> <!-- Spacer for centering -->
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-grow px-margin-mobile py-8 flex flex-col gap-10">
+<!-- Header Section -->
+<section class="flex flex-col gap-4">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Participación Ciudadana</h2>
+<p class="text-on-surface-variant">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</section>
+<!-- Survey Card (Primary CTA) -->
+<section class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 soft-shadow overflow-hidden relative">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary-container"></div>
+<div class="p-6 flex flex-col gap-4 relative z-10">
+<div class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center text-on-secondary-container mb-2">
+<span class="material-symbols-outlined text-2xl">assignment</span>
+</div>
+<div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary text-[24px] mb-2">Llena la Encuesta</h3>
+<p class="text-on-surface-variant mb-6">Tu opinión es vital para el desarrollo de nuestro proyecto costero. Ayúdanos a entender las necesidades de la comunidad.</p>
+</div>
+<button class="w-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm py-4 rounded-lg hover:bg-secondary-fixed transition-colors flex items-center justify-center gap-2 uppercase tracking-widest shadow-sm">
+                    Comenzar Encuesta
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<!-- Decorative background element -->
+<div class="absolute -bottom-10 -right-10 w-32 h-32 bg-secondary-container/10 rounded-full blur-2xl pointer-events-none"></div>
+</section>
+<!-- Events/Participa Section -->
+<section class="flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary text-[24px]">Participa</h3>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-3 py-1 rounded-full uppercase">Talleres</span>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Event Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 soft-shadow p-4 flex gap-4 items-start relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-tertiary-fixed"></div>
+<div class="flex flex-col items-center justify-center bg-surface-container-low w-16 h-16 rounded-lg text-primary flex-shrink-0">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Oct</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-[24px] leading-none">12</span>
+</div>
+<div class="flex flex-col flex-grow">
+<h4 class="font-body-md text-body-md font-semibold text-primary">Taller de Diseño Participativo</h4>
+<div class="flex items-center gap-1 text-on-surface-variant mt-1 text-sm">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>10:00 AM - 12:00 PM</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant mt-1 text-sm">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>Centro Comunitario</span>
+</div>
+</div>
+</div>
+<!-- Event Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 soft-shadow p-4 flex gap-4 items-start relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-tertiary-fixed"></div>
+<div class="flex flex-col items-center justify-center bg-surface-container-low w-16 h-16 rounded-lg text-primary flex-shrink-0">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Oct</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-[24px] leading-none">26</span>
+</div>
+<div class="flex flex-col flex-grow">
+<h4 class="font-body-md text-body-md font-semibold text-primary">Reunión de Avances del Proyecto</h4>
+<div class="flex items-center gap-1 text-on-surface-variant mt-1 text-sm">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>6:00 PM - 8:00 PM</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant mt-1 text-sm">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>Plaza Principal</span>
+</div>
+</div>
+</div>
+</div>
+<button class="w-full border-2 border-primary text-primary font-label-sm text-label-sm py-4 rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors flex items-center justify-center gap-2 uppercase tracking-widest mt-2">
+                Ver Calendario Completo
+                <span class="material-symbols-outlined text-sm">calendar_month</span>
+</button>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap px-margin-mobile flex flex-col items-center text-center gap-base border-t border-outline-variant/20 dark:border-outline/10 bg-surface-container-low dark:bg-surface-container-lowest py-8 mt-auto">
+<p class="font-label-caps text-label-caps dark:text-on-surface-variant text-primary uppercase tracking-widest text-[10px] opacity-80">
+            Un Nuevo Amanecer, Inc. | Comité de Asesores Comunitarios (CAC)
+        </p>
+</footer>
+</body></html>

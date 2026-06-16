@@ -110,39 +110,95 @@
       <span class="font-label-caps text-[10px] text-secondary tracking-widest uppercase">Playa de Ponce</span>
     </div>
     
-    <nav class="flex-grow px-4 space-y-2 mt-4">
-      <a data-route="inicio" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-3 transition-colors duration-200 cursor-pointer" href="#inicio">
-        <span class="material-symbols-outlined">home</span>
-        <span class="font-body-lg text-base font-semibold">Inicio</span>
-      </a>
-      <a data-route="mapas" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-3 transition-colors duration-200 cursor-pointer" href="#mapas">
-        <span class="material-symbols-outlined">map</span>
-        <span class="font-body-lg text-base font-semibold">Mapas de Riesgo</span>
-      </a>
-      <a data-route="datos" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-3 transition-colors duration-200 cursor-pointer" href="#datos">
-        <span class="material-symbols-outlined">analytics</span>
-        <span class="font-body-lg text-base font-semibold">Datos</span>
-      </a>
-      <a data-route="sobre-proyecto" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-3 transition-colors duration-200 cursor-pointer" href="#sobre-proyecto">
-        <span class="material-symbols-outlined">info</span>
-        <span class="font-body-lg text-base font-semibold">Sobre el Proyecto</span>
-      </a>
-      <a data-route="sobre" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-3 transition-colors duration-200 cursor-pointer" href="#sobre">
-        <span class="material-symbols-outlined">group</span>
-        <span class="font-body-lg text-base font-semibold">Sobre Nosotros</span>
-      </a>
-      <a data-route="puntos-encuentro" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-3 transition-colors duration-200 cursor-pointer" href="#puntos-encuentro">
-        <span class="material-symbols-outlined">location_on</span>
-        <span class="font-body-lg text-base font-semibold">Puntos de Encuentro</span>
-      </a>
-      <a data-route="contactos" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-3 transition-colors duration-200 cursor-pointer" href="#contactos">
-        <span class="material-symbols-outlined">emergency</span>
-        <span class="font-body-lg text-base font-semibold">Contactos de Emergencia</span>
-      </a>
-      <a data-route="guia" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-3 transition-colors duration-200 cursor-pointer" href="#guia">
-        <span class="material-symbols-outlined">menu_book</span>
-        <span class="font-body-lg text-base font-semibold">Guía para estar preparado</span>
-      </a>
+    <nav class="flex-grow px-4 mt-4 overflow-y-auto space-y-6 pb-8 custom-scrollbar">
+      
+      <!-- RESILIENCIA Y DATOS -->
+      <div>
+        <h3 class="font-label-caps text-[10px] text-on-surface-variant/70 tracking-widest uppercase mb-2 px-4">Resiliencia y Datos</h3>
+        <div class="space-y-1">
+          <a data-route="mapas" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-2.5 transition-colors duration-200 cursor-pointer" href="#mapas">
+            <span class="material-symbols-outlined text-[20px]">map</span>
+            <span class="font-body-md text-[15px] font-semibold">Mapas de Riesgo</span>
+          </a>
+          <a data-route="datos" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-2.5 transition-colors duration-200 cursor-pointer" href="#datos">
+            <span class="material-symbols-outlined text-[20px]">analytics</span>
+            <span class="font-body-md text-[15px] font-semibold">Datos de la Comunidad</span>
+          </a>
+          <a data-route="visualizador" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-2.5 transition-colors duration-200 cursor-pointer" href="#visualizador">
+            <span class="material-symbols-outlined text-[20px]">visibility</span>
+            <span class="font-body-md text-[15px] font-semibold">Visualizador de La Playa</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- PLANIFICACIÓN -->
+      <div>
+        <h3 class="font-label-caps text-[10px] text-on-surface-variant/70 tracking-widest uppercase mb-2 px-4">Planificación</h3>
+        <div class="space-y-1">
+          <a data-route="planes" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-2.5 transition-colors duration-200 cursor-pointer" href="#planes">
+            <span class="material-symbols-outlined text-[20px]">description</span>
+            <span class="font-body-md text-[15px] font-semibold">Planes Existentes</span>
+          </a>
+          <a data-route="herramientas" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-2.5 transition-colors duration-200 cursor-pointer" href="#herramientas">
+            <span class="material-symbols-outlined text-[20px]">handyman</span>
+            <span class="font-body-md text-[15px] font-semibold">Herramientas de Planificación</span>
+          </a>
+          <a data-route="estrategias" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-2.5 transition-colors duration-200 cursor-pointer" href="#estrategias">
+            <span class="material-symbols-outlined text-[20px]">alt_route</span>
+            <span class="font-body-md text-[15px] font-semibold">Estrategias de Adaptación</span>
+          </a>
+          <a data-route="criterios" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-2.5 transition-colors duration-200 cursor-pointer" href="#criterios">
+            <span class="material-symbols-outlined text-[20px]">format_list_numbered</span>
+            <span class="font-body-md text-[15px] font-semibold">Criterios de Priorización</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- PREPARACIÓN Y RESPUESTA -->
+      <div>
+        <h3 class="font-label-caps text-[10px] text-on-surface-variant/70 tracking-widest uppercase mb-2 px-4">Preparación y Respuesta</h3>
+        <div class="space-y-1">
+          <a data-route="guia" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-2.5 transition-colors duration-200 cursor-pointer" href="#guia">
+            <span class="material-symbols-outlined text-[20px]">menu_book</span>
+            <span class="font-body-md text-[15px] font-semibold">Guía para estar preparado</span>
+          </a>
+          <a data-route="escenarios" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-2.5 transition-colors duration-200 cursor-pointer" href="#escenarios">
+            <span class="material-symbols-outlined text-[20px]">route</span>
+            <span class="font-body-md text-[15px] font-semibold">Escenarios y Rutas de Evacuación</span>
+          </a>
+          <a data-route="puntos-encuentro" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-2.5 transition-colors duration-200 cursor-pointer" href="#puntos-encuentro">
+            <span class="material-symbols-outlined text-[20px]">home_pin</span>
+            <span class="font-body-md text-[15px] font-semibold">Puntos de Encuentro y Refugios</span>
+          </a>
+          <a data-route="contactos" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-2.5 transition-colors duration-200 cursor-pointer" href="#contactos">
+            <span class="material-symbols-outlined text-[20px]">emergency</span>
+            <span class="font-body-md text-[15px] font-semibold">Contactos de Emergencia</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- COMUNIDAD -->
+      <div>
+        <h3 class="font-label-caps text-[10px] text-on-surface-variant/70 tracking-widest uppercase mb-2 px-4">Comunidad</h3>
+        <div class="space-y-1">
+          <a data-route="sobre-proyecto" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-2.5 transition-colors duration-200 cursor-pointer" href="#sobre-proyecto">
+            <span class="material-symbols-outlined text-[20px]">info</span>
+            <span class="font-body-md text-[15px] font-semibold">Sobre el Proyecto</span>
+          </a>
+          <a data-route="sobre" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-2.5 transition-colors duration-200 cursor-pointer" href="#sobre">
+            <span class="material-symbols-outlined text-[20px]">group</span>
+            <span class="font-body-md text-[15px] font-semibold">Sobre Nosotros</span>
+          </a>
+          <a data-route="encuesta" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-2.5 transition-colors duration-200 cursor-pointer" href="#encuesta">
+            <span class="material-symbols-outlined text-[20px]">poll</span>
+            <span class="font-body-md text-[15px] font-semibold">Llena la Encuesta</span>
+          </a>
+          <a data-route="participacion" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-2.5 transition-colors duration-200 cursor-pointer" href="#participacion">
+            <span class="material-symbols-outlined text-[20px]">volunteer_activism</span>
+            <span class="font-body-md text-[15px] font-semibold">Participa</span>
+          </a>
+        </div>
+      </div>
     </nav>
 
     <!-- Sidebar Bottom Control (Org Info) -->
@@ -173,39 +229,95 @@
       </button>
     </div>
     
-    <div class="flex-grow overflow-y-auto mt-4 px-2 space-y-1">
-      <a data-route="inicio" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group" href="#inicio">
-        <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">home</span>
-        <span class="font-body-lg font-semibold">Inicio</span>
-      </a>
-      <a data-route="mapas" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group" href="#mapas">
-        <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">map</span>
-        <span class="font-body-lg font-semibold">Mapas de Riesgo</span>
-      </a>
-      <a data-route="datos" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group" href="#datos">
-        <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">analytics</span>
-        <span class="font-body-lg font-semibold">Datos</span>
-      </a>
-      <a data-route="sobre-proyecto" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group" href="#sobre-proyecto">
-        <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">info</span>
-        <span class="font-body-lg font-semibold">Sobre el Proyecto</span>
-      </a>
-      <a data-route="sobre" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group" href="#sobre">
-        <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">group</span>
-        <span class="font-body-lg font-semibold">Sobre Nosotros</span>
-      </a>
-      <a data-route="puntos-encuentro" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group" href="#puntos-encuentro">
-        <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">location_on</span>
-        <span class="font-body-lg font-semibold">Puntos de Encuentro</span>
-      </a>
-      <a data-route="contactos" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group" href="#contactos">
-        <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">emergency</span>
-        <span class="font-body-lg font-semibold">Contactos de Emergencia</span>
-      </a>
-      <a data-route="guia" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group" href="#guia">
-        <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">menu_book</span>
-        <span class="font-body-lg font-semibold">Guía para estar preparado</span>
-      </a>
+    <div class="flex-grow overflow-y-auto mt-4 px-2 space-y-6 pb-8 custom-scrollbar">
+      
+      <!-- RESILIENCIA Y DATOS -->
+      <div>
+        <h3 class="font-label-caps text-[10px] text-on-surface-variant/70 tracking-widest uppercase mb-2 px-4">Resiliencia y Datos</h3>
+        <div class="space-y-1">
+          <a data-route="mapas" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group" href="#mapas">
+            <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">map</span>
+            <span class="font-body-md text-[16px] font-semibold">Mapas de Riesgo</span>
+          </a>
+          <a data-route="datos" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group" href="#datos">
+            <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">analytics</span>
+            <span class="font-body-md text-[16px] font-semibold">Datos de la Comunidad</span>
+          </a>
+          <a data-route="visualizador" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group" href="#visualizador">
+            <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">visibility</span>
+            <span class="font-body-md text-[16px] font-semibold">Visualizador de La Playa</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- PLANIFICACIÓN -->
+      <div>
+        <h3 class="font-label-caps text-[10px] text-on-surface-variant/70 tracking-widest uppercase mb-2 px-4">Planificación</h3>
+        <div class="space-y-1">
+          <a data-route="planes" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group" href="#planes">
+            <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">description</span>
+            <span class="font-body-md text-[16px] font-semibold">Planes Existentes</span>
+          </a>
+          <a data-route="herramientas" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group" href="#herramientas">
+            <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">handyman</span>
+            <span class="font-body-md text-[16px] font-semibold">Herramientas de Planificación</span>
+          </a>
+          <a data-route="estrategias" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group" href="#estrategias">
+            <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">alt_route</span>
+            <span class="font-body-md text-[16px] font-semibold">Estrategias de Adaptación</span>
+          </a>
+          <a data-route="criterios" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group" href="#criterios">
+            <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">format_list_numbered</span>
+            <span class="font-body-md text-[16px] font-semibold">Criterios de Priorización</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- PREPARACIÓN Y RESPUESTA -->
+      <div>
+        <h3 class="font-label-caps text-[10px] text-on-surface-variant/70 tracking-widest uppercase mb-2 px-4">Preparación y Respuesta</h3>
+        <div class="space-y-1">
+          <a data-route="guia" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group" href="#guia">
+            <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">menu_book</span>
+            <span class="font-body-md text-[16px] font-semibold">Guía para estar preparado</span>
+          </a>
+          <a data-route="escenarios" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group" href="#escenarios">
+            <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">route</span>
+            <span class="font-body-md text-[16px] font-semibold">Escenarios y Rutas de Evacuación</span>
+          </a>
+          <a data-route="puntos-encuentro" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group" href="#puntos-encuentro">
+            <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">home_pin</span>
+            <span class="font-body-md text-[16px] font-semibold">Puntos de Encuentro y Refugios</span>
+          </a>
+          <a data-route="contactos" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group" href="#contactos">
+            <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">emergency</span>
+            <span class="font-body-md text-[16px] font-semibold">Contactos de Emergencia</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- COMUNIDAD -->
+      <div>
+        <h3 class="font-label-caps text-[10px] text-on-surface-variant/70 tracking-widest uppercase mb-2 px-4">Comunidad</h3>
+        <div class="space-y-1">
+          <a data-route="sobre-proyecto" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group" href="#sobre-proyecto">
+            <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">info</span>
+            <span class="font-body-md text-[16px] font-semibold">Sobre el Proyecto</span>
+          </a>
+          <a data-route="sobre" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group" href="#sobre">
+            <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">group</span>
+            <span class="font-body-md text-[16px] font-semibold">Sobre Nosotros</span>
+          </a>
+          <a data-route="encuesta" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group" href="#encuesta">
+            <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">poll</span>
+            <span class="font-body-md text-[16px] font-semibold">Llena la Encuesta</span>
+          </a>
+          <a data-route="participacion" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group" href="#participacion">
+            <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">volunteer_activism</span>
+            <span class="font-body-md text-[16px] font-semibold">Participa</span>
+          </a>
+        </div>
+      </div>
     </div>
 
     <div class="p-6 border-t border-outline-variant/30 flex flex-col gap-3">

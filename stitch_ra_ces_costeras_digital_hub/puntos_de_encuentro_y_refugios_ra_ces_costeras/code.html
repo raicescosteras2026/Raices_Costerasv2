@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Puntos de Encuentro La Playa - Raíces Costeras</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&amp;family=Work+Sans:wght@400;600&amp;family=Vollkorn:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed": "#271900",
+                      "on-secondary-container": "#6b4b00",
+                      "secondary": "#7c5800",
+                      "error-container": "#ffdad6",
+                      "surface-bright": "#fafaf5",
+                      "surface-container": "#eeeee9",
+                      "background": "#fafaf5",
+                      "tertiary-fixed": "#8ef4e9",
+                      "on-primary-fixed": "#091d2e",
+                      "on-surface": "#1a1c19",
+                      "primary-fixed-dim": "#b5c8df",
+                      "on-surface-variant": "#43474c",
+                      "primary-fixed": "#d1e4fb",
+                      "secondary-fixed-dim": "#ffba20",
+                      "on-tertiary": "#ffffff",
+                      "on-tertiary-fixed-variant": "#00504a",
+                      "surface-container-lowest": "#ffffff",
+                      "surface": "#fafaf5",
+                      "surface-container-highest": "#e3e3de",
+                      "tertiary-container": "#00443f",
+                      "on-secondary": "#ffffff",
+                      "on-primary-container": "#96a9be",
+                      "on-tertiary-fixed": "#00201d",
+                      "secondary-fixed": "#ffdea8",
+                      "on-error-container": "#93000a",
+                      "surface-variant": "#e3e3de",
+                      "surface-dim": "#dadad5",
+                      "tertiary": "#002c29",
+                      "surface-tint": "#4e6073",
+                      "surface-container-high": "#e8e8e3",
+                      "inverse-surface": "#2f312e",
+                      "error": "#ba1a1a",
+                      "on-primary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "primary-container": "#2c3e50",
+                      "on-tertiary-container": "#4eb7ad",
+                      "inverse-primary": "#b5c8df",
+                      "tertiary-fixed-dim": "#71d7cd",
+                      "outline-variant": "#c4c6cd",
+                      "surface-container-low": "#f4f4ef",
+                      "on-secondary-fixed-variant": "#5e4200",
+                      "primary": "#162839",
+                      "outline": "#74777d",
+                      "on-background": "#1a1c19",
+                      "secondary-container": "#feb700",
+                      "on-primary-fixed-variant": "#36485b",
+                      "inverse-on-surface": "#f1f1ec"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "margin-desktop": "64px",
+                      "base": "8px",
+                      "max-width": "1280px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-lg": ["Vollkorn", "serif"],
+                      "label-sm": ["Vollkorn", "serif"],
+                      "body-md": ["Vollkorn", "serif"],
+                      "headline-lg-mobile": ["Vollkorn", "serif"],
+                      "headline-xl": ["Vollkorn", "serif"]
+              },
+              "fontSize": {
+                      "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                      "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        body { font-family: 'Vollkorn', serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background antialiased md:hidden flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-surface/90 backdrop-blur-md text-primary font-headline-sm-mobile text-headline-sm-mobile docked full-width top-0 sticky shadow-sm bg-surface-container-low flex justify-between items-center w-full px-margin-mobile h-16 z-50">
+<div class="flex items-center gap-4">
+<button aria-label="Menu" class="material-symbols-outlined text-primary hover:bg-secondary-container/20 rounded-full p-2 transition-colors">menu</button>
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-primary tracking-tight font-bold">Raíces Costeras</h1>
+</div>
+</header>
+<!-- NavigationDrawer (Hidden by default, structure provided) -->
+<nav aria-hidden="true" class="fixed inset-y-0 left-0 z-[60] flex flex-col py-6 bg-surface text-primary font-body-lg-mobile text-body-lg-mobile rounded-r-xl h-full w-4/5 max-w-sm border-r border-outline-variant/30 shadow-2xl transform -translate-x-full transition-transform duration-300" id="drawer">
+<div class="font-display-lg-mobile text-display-lg-mobile text-primary py-section-gap px-6 font-bold border-b border-outline-variant/30 pb-4 mb-4">Raíces Costeras</div>
+<ul class="flex-1 overflow-y-auto">
+<li><a class="flex items-center gap-4 text-on-surface-variant px-4 py-3 mx-2 hover:bg-surface-container-high transition-colors rounded-lg" href="#"><span class="material-symbols-outlined">map</span>Mapas de Riesgo</a></li>
+<li><a class="flex items-center gap-4 text-on-surface-variant px-4 py-3 mx-2 hover:bg-surface-container-high transition-colors rounded-lg" href="#"><span class="material-symbols-outlined">analytics</span>Datos</a></li>
+<li><a class="flex items-center gap-4 text-on-surface-variant px-4 py-3 mx-2 hover:bg-surface-container-high transition-colors rounded-lg" href="#"><span class="material-symbols-outlined">info</span>Sobre el Proyecto</a></li>
+<li><a class="flex items-center gap-4 text-on-surface-variant px-4 py-3 mx-2 hover:bg-surface-container-high transition-colors rounded-lg" href="#"><span class="material-symbols-outlined">group</span>Sobre Nosotros</a></li>
+<li><a class="flex items-center gap-4 bg-primary-container text-on-primary-container rounded-lg px-4 py-3 mx-2 font-bold" href="#"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">location_on</span>Puntos de Encuentro La Playa</a></li>
+<li><a class="flex items-center gap-4 text-on-surface-variant px-4 py-3 mx-2 hover:bg-surface-container-high transition-colors rounded-lg" href="#"><span class="material-symbols-outlined">emergency</span>Contactos de Emergencia</a></li>
+<li><a class="flex items-center gap-4 text-on-surface-variant px-4 py-3 mx-2 hover:bg-surface-container-high transition-colors rounded-lg" href="#"><span class="material-symbols-outlined">menu_book</span>Guía para estar preparado</a></li>
+</ul>
+</nav>
+<!-- Main Content -->
+<main class="flex-1 px-margin-mobile py-8 flex flex-col gap-8">
+<!-- Intro Section -->
+<section class="flex flex-col gap-4">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Puntos de Encuentro y Refugios</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis, nisl nec sodales mattis, enim justo auctor diam, et blandit justo neque non metus. Pellentesque id sem at sapien tristique sagittis.
+            </p>
+</section>
+<!-- Map/Visual Area (Placeholder for actual map) -->
+<section class="w-full h-64 bg-surface-container rounded-xl overflow-hidden shadow-sm relative" data-location="Ponce, Puerto Rico">
+<img alt="Aerial view of a coastal city" class="w-full h-full object-cover opacity-80 mix-blend-multiply" data-alt="A stylized, high-contrast aerial map view of a coastal district with clear, modern architectural lines. The scene uses a bright light-mode aesthetic with crisp whites, deep heritage navy accents, and vibrant coastal turquoise highlights marking specific locations. The lighting is sunny and clear, evoking a sense of safety and structured planning." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzMr2pElr6PFm0eUM0T84-BgEe_X2qfv1bDQlwG84vmjojNV5F_IOWzGbT4qgH8jhr_anPjR0daioqdVwiIb7UuHQXN_VlTf0xhom5cK6KUvdXn0pE5Cx-DnZABLXHgYxzHr_T-shzjGUoI9FrOBQlQVyqMITbvusPSgX3yMS6sk9fxOXs2nGEl5i2stRifh6g6oEU7zxir5j7BN0o3dpFTHkSUwkBlYLrJGfSnn5DdGsVfSRrmyhq6co2ki3YvjS3pVS4H4L0BEo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 to-transparent flex items-end p-4">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest bg-surface-bright/90 px-3 py-1 rounded-full border border-primary/20 backdrop-blur-sm">Mapa de La Playa</span>
+</div>
+</section>
+<!-- List Section -->
+<section class="flex flex-col gap-6">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary border-b-2 border-secondary-container pb-2 inline-block w-max">Ubicaciones Seguras</h3>
+<div class="grid grid-cols-1 gap-4">
+<!-- Card 1: School Shelter -->
+<article class="bg-surface-bright rounded-xl border border-outline-variant p-5 shadow-sm relative overflow-hidden flex flex-col gap-3">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary-container"></div>
+<div class="flex justify-between items-start">
+<div>
+<span class="inline-block bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-2 py-1 rounded-sm mb-2 uppercase tracking-wide">Refugio Escolar</span>
+<h4 class="font-headline-lg-mobile text-xl font-bold text-on-surface leading-tight">Escuela Lucy Grillasca</h4>
+</div>
+<span class="material-symbols-outlined text-secondary-container text-3xl" style="font-variation-settings: 'FILL' 1;">school</span>
+</div>
+<p class="font-body-md text-on-surface-variant flex items-center gap-2"><span class="material-symbols-outlined text-sm">location_on</span> Ave. Hostos, Esq. Calle 1</p>
+<div class="mt-2 flex gap-2">
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-[10px] px-2 py-1 rounded-full border border-outline/20">Capacidad: 200</span>
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-[10px] px-2 py-1 rounded-full border border-outline/20">Generador</span>
+</div>
+</article>
+<!-- Card 2: Community Center -->
+<article class="bg-surface-bright rounded-xl border border-outline-variant p-5 shadow-sm relative overflow-hidden flex flex-col gap-3">
+<div class="absolute top-0 left-0 w-full h-1 bg-tertiary-container"></div>
+<div class="flex justify-between items-start">
+<div>
+<span class="inline-block bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm px-2 py-1 rounded-sm mb-2 uppercase tracking-wide">Centro Comunal</span>
+<h4 class="font-headline-lg-mobile text-xl font-bold text-on-surface leading-tight">Centro Sor Isolina Ferré</h4>
+</div>
+<span class="material-symbols-outlined text-tertiary-container text-3xl" style="font-variation-settings: 'FILL' 1;">diversity_3</span>
+</div>
+<p class="font-body-md text-on-surface-variant flex items-center gap-2"><span class="material-symbols-outlined text-sm">location_on</span> Sector Puerto Viejo</p>
+<div class="mt-2 flex gap-2">
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-[10px] px-2 py-1 rounded-full border border-outline/20">Suministros Base</span>
+</div>
+</article>
+<!-- Card 3: Verified Safe Area -->
+<article class="bg-surface-bright rounded-xl border border-outline-variant p-5 shadow-sm relative overflow-hidden flex flex-col gap-3">
+<div class="absolute top-0 left-0 w-full h-1 bg-primary"></div>
+<div class="flex justify-between items-start">
+<div>
+<span class="inline-block bg-primary text-on-primary font-label-sm text-label-sm px-2 py-1 rounded-sm mb-2 uppercase tracking-wide">Área Segura</span>
+<h4 class="font-headline-lg-mobile text-xl font-bold text-on-surface leading-tight">Parque del Litoral (Zona Alta)</h4>
+</div>
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">park</span>
+</div>
+<p class="font-body-md text-on-surface-variant flex items-center gap-2"><span class="material-symbols-outlined text-sm">location_on</span> Final Ave. Hostos Sur</p>
+<p class="font-body-md text-sm text-on-surface-variant mt-1 italic">Punto de encuentro temporal al aire libre.</p>
+</article>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low text-primary font-label-caps text-label-caps w-full py-section-gap px-margin-mobile flex flex-col items-center text-center gap-base border-t border-outline-variant/20 py-8 mt-auto">
+<span class="font-label-caps text-primary uppercase tracking-widest font-bold mb-2">Raíces Costeras</span>
+<p class="text-on-surface-variant opacity-80 max-w-xs leading-relaxed text-xs">Un Nuevo Amanecer, Inc. | Comité de Asesores Comunitarios (CAC)</p>
+</footer>
+<script>
+        // Simple drawer toggle logic
+        document.querySelector('[aria-label="Menu"]').addEventListener('click', function() {
+            const drawer = document.getElementById('drawer');
+            if(drawer.classList.contains('-translate-x-full')) {
+                drawer.classList.remove('-translate-x-full');
+            } else {
+                drawer.classList.add('-translate-x-full');
+            }
+        });
+    </script>
+</body></html>

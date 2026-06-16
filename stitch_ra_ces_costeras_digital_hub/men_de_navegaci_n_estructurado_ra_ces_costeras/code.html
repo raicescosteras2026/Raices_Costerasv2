@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Raíces Costeras - Menú</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                            "secondary-container": "#79f7eb",
+                            "on-surface-variant": "#404945",
+                            "on-secondary-fixed-variant": "#00504b",
+                            "primary-fixed": "#baeed9",
+                            "on-error-container": "#93000a",
+                            "on-primary-fixed": "#002117",
+                            "on-primary-container": "#8abda9",
+                            "tertiary-container": "#663927",
+                            "on-primary": "#ffffff",
+                            "on-tertiary-fixed-variant": "#693b29",
+                            "on-secondary": "#ffffff",
+                            "inverse-surface": "#2f312e",
+                            "primary": "#003629",
+                            "surface-container-low": "#f4f4f0",
+                            "on-tertiary-fixed": "#341104",
+                            "secondary-fixed": "#79f7eb",
+                            "inverse-on-surface": "#f2f1ed",
+                            "primary-fixed-dim": "#9ed1bd",
+                            "error": "#ba1a1a",
+                            "tertiary": "#4c2313",
+                            "on-error": "#ffffff",
+                            "surface-container-high": "#e9e8e4",
+                            "on-primary-fixed-variant": "#1d4f40",
+                            "tertiary-fixed-dim": "#fab79f",
+                            "surface-bright": "#faf9f5",
+                            "on-tertiary-container": "#e3a38c",
+                            "outline-variant": "#c0c9c3",
+                            "tertiary-fixed": "#ffdbcf",
+                            "on-tertiary": "#ffffff",
+                            "on-secondary-container": "#00716a",
+                            "surface-container-lowest": "#ffffff",
+                            "on-secondary-fixed": "#00201e",
+                            "secondary-fixed-dim": "#59dacf",
+                            "background": "#faf9f5",
+                            "surface-variant": "#e3e2df",
+                            "primary-container": "#1b4d3e",
+                            "on-background": "#1b1c1a",
+                            "secondary": "#006a64",
+                            "outline": "#707974",
+                            "surface": "#faf9f5",
+                            "on-surface": "#1b1c1a",
+                            "inverse-primary": "#9ed1bd",
+                            "surface-dim": "#dbdad6",
+                            "error-container": "#ffdad6",
+                            "surface-container-highest": "#e3e2df",
+                            "surface-tint": "#376757",
+                            "surface-container": "#efeeea"
+                    },
+                    "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                    },
+                    "spacing": {
+                            "base": "4px",
+                            "section-gap": "32px",
+                            "gutter": "12px",
+                            "card-padding": "16px",
+                            "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                            "label-caps": ["Vollkorn"],
+                            "body-md": ["Vollkorn"],
+                            "headline-md": ["Vollkorn"],
+                            "display-lg": ["Vollkorn"],
+                            "body-lg": ["Vollkorn"],
+                            "headline-sm": ["Vollkorn"]
+                    },
+                    "fontSize": {
+                            "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700" }],
+                            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                            "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                            "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                            "headline-sm": ["22px", { "lineHeight": "28px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .pattern-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54.627 0l.83.83-54.627 54.627-.83-.83L54.627 0zm0 60l.83-.83L.83 4.543 0 5.373 54.627 60z' fill='%231b4d3e' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        .rejas-motif {
+            background-image: radial-gradient(circle at 50% 50%, rgba(27, 77, 62, 0.02) 2px, transparent 2px),
+                              radial-gradient(circle at 0% 50%, rgba(27, 77, 62, 0.03) 3px, transparent 3px);
+            background-size: 40px 40px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background antialiased relative min-h-screen overflow-hidden">
+<!-- Dimmed Background Overlay (Simulating Homepage underneath) -->
+<div class="absolute inset-0 bg-surface-dim/80 backdrop-blur-sm z-40 transition-opacity duration-300">
+<!-- Faux content to give context -->
+<header class="w-full h-16 flex justify-between items-center px-margin-mobile border-b border-outline-variant/30 opacity-50">
+<span class="material-symbols-outlined text-primary text-3xl">menu</span>
+<span class="font-display-lg text-headline-sm text-primary">Raíces Costeras</span>
+<div class="w-8"></div>
+</header>
+<main class="p-margin-mobile opacity-30">
+<div class="w-full h-48 bg-surface-container rounded-xl mb-6"></div>
+<div class="grid grid-cols-2 gap-4">
+<div class="h-32 bg-surface-container rounded-xl"></div>
+<div class="h-32 bg-surface-container rounded-xl"></div>
+</div>
+</main>
+</div>
+<!-- Navigation Drawer (Active State) -->
+<!-- Applying Shared Component JSON classes: style_bg_color, style_component_shape, style_separation_logic, style_shadows_and_elevation, style_shell_layout -->
+<aside class="bg-surface dark:bg-surface-dim rounded-r-xl h-full w-4/5 max-w-sm border-r border-outline-variant/30 dark:border-outline/20 shadow-2xl fixed inset-y-0 left-0 z-[60] flex flex-col py-6 transform transition-transform duration-300 translate-x-0 rejas-motif overflow-y-auto">
+<!-- Header -->
+<div class="px-6 mb-8 flex items-center justify-between">
+<h2 class="font-display-lg text-display-lg text-primary dark:text-primary-fixed-dim py-section-gap tracking-tight">Raíces Costeras</h2>
+<button aria-label="Close menu" class="text-on-surface-variant hover:bg-surface-container p-2 rounded-full transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Navigation Links -->
+<nav class="flex-1 px-2 space-y-2"><!-- Category 1: Resiliencia y Datos -->
+<div class="pt-4 pb-2 px-4">
+<h3 class="font-label-caps text-label-caps text-primary opacity-50 uppercase tracking-widest">Resiliencia y Datos</h3>
+</div>
+<a class="flex items-center gap-4 text-on-surface-variant px-4 py-2 mx-2 hover:bg-surface-container-high transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">map</span>
+<span class="font-body-lg text-body-lg">Mapas de Riesgo</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant px-4 py-2 mx-2 hover:bg-surface-container-high transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">analytics</span>
+<span class="font-body-lg text-body-lg">Datos de la Comunidad</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant px-4 py-2 mx-2 hover:bg-surface-container-high transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">visibility</span>
+<span class="font-body-lg text-body-lg">Visualizador de La Playa</span>
+</a>
+<!-- Category 2: Planificación -->
+<div class="pt-6 pb-2 px-4">
+<h3 class="font-label-caps text-label-caps text-primary opacity-50 uppercase tracking-widest">Planificación</h3>
+</div>
+<a class="flex items-center gap-4 text-on-surface-variant px-4 py-2 mx-2 hover:bg-surface-container-high transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">description</span>
+<span class="font-body-lg text-body-lg">Planes Existentes</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant px-4 py-2 mx-2 hover:bg-surface-container-high transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">construction</span>
+<span class="font-body-lg text-body-lg">Herramientas de Planificación</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant px-4 py-2 mx-2 hover:bg-surface-container-high transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">strategy</span>
+<span class="font-body-lg text-body-lg">Estrategias de Adaptación</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant px-4 py-2 mx-2 hover:bg-surface-container-high transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">low_priority</span>
+<span class="font-body-lg text-body-lg">Criterios de Priorización</span>
+</a>
+<!-- Category 3: Preparación y Respuesta -->
+<div class="pt-6 pb-2 px-4">
+<h3 class="font-label-caps text-label-caps text-primary opacity-50 uppercase tracking-widest">Preparación y Respuesta</h3>
+</div>
+<a class="flex items-center gap-4 bg-primary-container text-on-primary-container rounded-lg px-4 py-3 mx-2 relative overflow-hidden" href="#">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary-container rounded-l-lg"></div>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<span class="font-body-lg text-body-lg font-semibold">Guía para estar preparado</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant px-4 py-2 mx-2 hover:bg-surface-container-high transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">route</span>
+<span class="font-body-lg text-body-lg">Escenarios y Rutas de Evacuación</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant px-4 py-2 mx-2 hover:bg-surface-container-high transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">home_pin</span>
+<span class="font-body-lg text-body-lg">Puntos de Encuentro y Refugios</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant px-4 py-2 mx-2 hover:bg-surface-container-high transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">emergency</span>
+<span class="font-body-lg text-body-lg">Contactos de Emergencia</span>
+</a>
+<!-- Category 4: Comunidad -->
+<div class="pt-6 pb-2 px-4">
+<h3 class="font-label-caps text-label-caps text-primary opacity-50 uppercase tracking-widest">Comunidad</h3>
+</div>
+<a class="flex items-center gap-4 text-on-surface-variant px-4 py-2 mx-2 hover:bg-surface-container-high transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">info</span>
+<span class="font-body-lg text-body-lg">Sobre el Proyecto</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant px-4 py-2 mx-2 hover:bg-surface-container-high transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">group</span>
+<span class="font-body-lg text-body-lg">Sobre Nosotros</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant px-4 py-2 mx-2 hover:bg-surface-container-high transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">poll</span>
+<span class="font-body-lg text-body-lg">Llena la Encuesta</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant px-4 py-2 mx-2 hover:bg-surface-container-high transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">volunteer_activism</span>
+<span class="font-body-lg text-body-lg">Participa</span>
+</a></nav>
+<!-- Footer Area in Drawer (Optional enhancement based on design system depth) -->
+<div class="mt-auto px-6 pt-8 pb-4 border-t border-outline-variant/20 mx-4">
+<p class="font-label-caps text-label-caps text-on-surface-variant/70 text-center">
+                Un Nuevo Amanecer, Inc.
+            </p>
+</div>
+</aside>
+</body></html>

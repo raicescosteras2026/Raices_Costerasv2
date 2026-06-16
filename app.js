@@ -205,7 +205,829 @@ function initPageScripts(route) {
 // 4. Page View Templates
 // ==========================================
 
-// --- INICIO PAGE ---
+
+// --- SOBRE-PROYECTO PAGE ---
+pages['sobre-proyecto'] = () => {
+  return `
+<header class="mb-12">
+  <h1 class="font-headline-md text-headline-md text-primary mb-4">Sobre el Proyecto Raíces Costeras</h1>
+  <p class="text-on-surface-variant max-w-prose text-lg leading-relaxed">
+    Raíces Costeras es una iniciativa comunitaria que une a residentes, planificadores urbanos e historiadores culturales para construir resiliencia climática en el barrio La Playa de Ponce.
+  </p>
+</header>
+
+<section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+  <div class="relative overflow-hidden rounded-xl bg-surface-container-lowest border border-outline-variant/30 p-6 flex flex-col gap-4 shadow-sm">
+    <div class="absolute top-0 left-0 w-full h-1 bg-primary"></div>
+    <div class="flex items-center gap-3">
+      <div class="p-3 bg-primary-fixed/30 rounded-full text-primary">
+        <span class="material-symbols-outlined">landscape</span>
+      </div>
+      <h3 class="font-headline-sm text-headline-sm text-primary">Nuestra Visión</h3>
+    </div>
+    <p class="text-on-surface-variant">
+      Crear una comunidad costera que combine la preservación del patrimonio histórico con estrategias innovadoras de adaptación climática, donde cada residente sea agente de cambio para un futuro más seguro y sostenible.
+    </p>
+  </div>
+
+  <div class="relative overflow-hidden rounded-xl bg-surface-container-lowest border border-outline-variant/30 p-6 flex flex-col gap-4 shadow-sm">
+    <div class="absolute top-0 left-0 w-full h-1 bg-secondary-container"></div>
+    <div class="flex items-center gap-3">
+      <div class="p-3 bg-secondary-fixed/30 rounded-full text-secondary">
+        <span class="material-symbols-outlined">groups</span>
+      </div>
+      <h3 class="font-headline-sm text-headline-sm text-primary">Nuestra Misión</h3>
+    </div>
+    <p class="text-on-surface-variant">
+      Empoderar a los residentes del barrio La Playa de Ponce con herramientas, conocimiento y recursos para enfrentar los retos del cambio climático, las emergencias costeras y la preservación de su identidad cultural.
+    </p>
+  </div>
+</section>
+
+<section class="mb-16">
+  <h2 class="font-headline-sm text-headline-sm text-primary mb-6">Ejes de Trabajo</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+    <div class="bg-primary-fixed/20 border border-outline-variant/20 rounded-xl p-5 text-center flex flex-col items-center gap-3">
+      <span class="material-symbols-outlined text-3xl text-primary">monitoring</span>
+      <h4 class="font-body-md text-body-md font-semibold text-primary">Resiliencia y Datos</h4>
+      <p class="text-on-surface-variant text-sm">Mapeo de riesgos, datos comunitarios y visualización geoespacial.</p>
+    </div>
+    <div class="bg-secondary-fixed/20 border border-outline-variant/20 rounded-xl p-5 text-center flex flex-col items-center gap-3">
+      <span class="material-symbols-outlined text-3xl text-secondary">architecture</span>
+      <h4 class="font-body-md text-body-md font-semibold text-primary">Planificación</h4>
+      <p class="text-on-surface-variant text-sm">Planes existentes, herramientas, estrategias de adaptación y criterios de priorización.</p>
+    </div>
+    <div class="bg-tertiary-fixed/20 border border-outline-variant/20 rounded-xl p-5 text-center flex flex-col items-center gap-3">
+      <span class="material-symbols-outlined text-3xl text-tertiary">emergency</span>
+      <h4 class="font-body-md text-body-md font-semibold text-primary">Preparación y Respuesta</h4>
+      <p class="text-on-surface-variant text-sm">Guías de preparación, rutas de evacuación, puntos de encuentro y contactos de emergencia.</p>
+    </div>
+  </div>
+</section>
+
+<section class="bg-surface-container-low rounded-xl p-6 border border-outline-variant/20 mb-8">
+  <h2 class="font-headline-sm text-headline-sm text-primary mb-3">Organizaciones Involucradas</h2>
+  <p class="text-on-surface-variant mb-4">
+    Este proyecto es posible gracias a la colaboración entre organizaciones comunitarias, académicas y gubernamentales comprometidas con la resiliencia costera.
+  </p>
+  <div class="flex flex-wrap gap-3">
+    <span class="px-4 py-2 bg-primary-fixed text-on-primary-fixed rounded-full text-sm font-semibold">Un Nuevo Amanecer, Inc.</span>
+    <span class="px-4 py-2 bg-secondary-fixed text-on-secondary-fixed rounded-full text-sm font-semibold">Comité de Asesores Comunitarios</span>
+    <span class="px-4 py-2 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-sm font-semibold">CAC La Playa</span>
+  </div>
+</section>
+  `;
+};
+
+// --- ENCUESTA PAGE ---
+pages['encuesta'] = () => {
+  return `
+<header class="mb-12">
+  <h1 class="font-headline-md text-headline-md text-primary mb-4">Llena la Encuesta</h1>
+  <p class="text-on-surface-variant max-w-prose text-lg leading-relaxed">
+    Tu opinión es vital para el desarrollo de este proyecto. Ayúdanos a comprender las necesidades de la comunidad completando esta breve encuesta sobre resiliencia costera.
+  </p>
+</header>
+
+<section class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 mb-8 text-center flex flex-col items-center gap-6">
+  <div class="w-20 h-20 rounded-full bg-secondary-fixed/30 flex items-center justify-center">
+    <span class="material-symbols-outlined text-5xl text-secondary">assignment</span>
+  </div>
+  <h2 class="font-headline-sm text-headline-sm text-primary">Encuesta Comunitaria 2026</h2>
+  <p class="text-on-surface-variant max-w-md">
+    La encuesta toma aproximadamente 10 minutos. Tus respuestas son confidenciales y nos ayudan a priorizar las acciones del proyecto.
+  </p>
+  <div class="flex flex-wrap gap-3 justify-center">
+    <span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed rounded-full text-xs font-semibold uppercase tracking-wider">~10 minutos</span>
+    <span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-xs font-semibold uppercase tracking-wider">Confidencial</span>
+    <span class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed rounded-full text-xs font-semibold uppercase tracking-wider">Español</span>
+  </div>
+  <a href="#" class="mt-4 inline-flex items-center gap-2 bg-primary text-on-primary px-8 py-4 rounded-lg font-headline-sm text-lg hover:opacity-90 active:scale-[0.98] transition-all shadow-lg">
+    <span class="material-symbols-outlined">open_in_new</span>
+    Comenzar Encuesta
+  </a>
+</section>
+
+<section class="bg-surface-container-low rounded-xl p-6 border border-outline-variant/20">
+  <h3 class="font-body-md font-semibold text-primary mb-2">¿Por qué es importante tu participación?</h3>
+  <p class="text-on-surface-variant text-sm">
+    Los datos recopilados se utilizan para identificar prioridades, diseñar estrategias de adaptación y gestionar recursos de manera efectiva. Cada respuesta cuenta para construir un barrio más resiliente.
+  </p>
+</section>
+  `;
+};
+
+// --- CONTACTOS PAGE ---
+pages['contactos'] = () => {
+  return `
+<header class="mb-12">
+  <h1 class="font-headline-md text-headline-md text-primary mb-4">Contactos de Emergencia</h1>
+  <p class="text-on-surface-variant max-w-prose text-lg leading-relaxed">
+    Mantén esta información a la mano. Estos son los contactos esenciales para antes, durante y después de una emergencia en La Playa de Ponce.
+  </p>
+</header>
+
+<section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+  <div class="relative overflow-hidden rounded-xl bg-error-container/20 border border-error-container p-6 flex flex-col gap-3">
+    <div class="absolute top-0 left-0 w-full h-1 bg-error"></div>
+    <div class="flex items-center gap-3">
+      <div class="p-3 bg-error-container rounded-full">
+        <span class="material-symbols-outlined text-error">emergency</span>
+      </div>
+      <div>
+        <h3 class="font-body-md font-bold text-on-surface">Sistema de Emergencias 9-1-1</h3>
+        <p class="text-error font-semibold text-lg">9-1-1</p>
+      </div>
+    </div>
+    <p class="text-on-surface-variant text-sm">Policía, Bomberos, Ambulancia — Línea principal para cualquier emergencia inmediata.</p>
+  </div>
+
+  <div class="relative overflow-hidden rounded-xl bg-surface-container-lowest border border-outline-variant/30 p-6 flex flex-col gap-3">
+    <div class="absolute top-0 left-0 w-full h-1 bg-secondary-container"></div>
+    <div class="flex items-center gap-3">
+      <div class="p-3 bg-secondary-fixed/30 rounded-full">
+        <span class="material-symbols-outlined text-secondary">local_fire_department</span>
+      </div>
+      <div>
+        <h3 class="font-body-md font-bold text-on-surface">Manejo de Emergencias Municipal</h3>
+        <p class="text-secondary font-semibold">(787) 284-4141</p>
+      </div>
+    </div>
+    <p class="text-on-surface-variant text-sm">Oficina de Manejo de Emergencias del Municipio de Ponce.</p>
+  </div>
+
+  <div class="relative overflow-hidden rounded-xl bg-surface-container-lowest border border-outline-variant/30 p-6 flex flex-col gap-3">
+    <div class="absolute top-0 left-0 w-full h-1 bg-primary"></div>
+    <div class="flex items-center gap-3">
+      <div class="p-3 bg-primary-fixed/30 rounded-full">
+        <span class="material-symbols-outlined text-primary">shield</span>
+      </div>
+      <div>
+        <h3 class="font-body-md font-bold text-on-surface">Defensa Civil</h3>
+        <p class="text-primary font-semibold">(787) 724-0124</p>
+      </div>
+    </div>
+    <p class="text-on-surface-variant text-sm">Agencia Estatal para el Manejo de Emergencias y Administración de Desastres (AEMEAD).</p>
+  </div>
+
+  <div class="relative overflow-hidden rounded-xl bg-surface-container-lowest border border-outline-variant/30 p-6 flex flex-col gap-3">
+    <div class="absolute top-0 left-0 w-full h-1 bg-tertiary-fixed-dim"></div>
+    <div class="flex items-center gap-3">
+      <div class="p-3 bg-tertiary-fixed/30 rounded-full">
+        <span class="material-symbols-outlined text-tertiary">water</span>
+      </div>
+      <div>
+        <h3 class="font-body-md font-bold text-on-surface">Cruz Roja Americana</h3>
+        <p class="text-tertiary font-semibold">(787) 758-8150</p>
+      </div>
+    </div>
+    <p class="text-on-surface-variant text-sm">Capítulo de Puerto Rico — Asistencia en refugios, primeros auxilios y recuperación.</p>
+  </div>
+</section>
+
+<section class="bg-surface-container-low rounded-xl p-6 border border-outline-variant/20">
+  <h3 class="font-body-md font-semibold text-primary mb-3 flex items-center gap-2">
+    <span class="material-symbols-outlined">volunteer_activism</span>
+    Contacto del Proyecto
+  </h3>
+  <p class="text-on-surface-variant text-sm mb-2">
+    Para información sobre el proyecto Raíces Costeras y las actividades del Comité de Asesores Comunitarios (CAC):
+  </p>
+  <p class="text-primary font-semibold">Un Nuevo Amanecer, Inc.</p>
+  <p class="text-on-surface-variant text-sm">Barrio La Playa, Ponce, Puerto Rico</p>
+</section>
+  `;
+};
+
+// --- CRITERIOS PAGE ---
+pages['criterios'] = () => {
+  return `
+<header class="mb-12">
+<h1 class="font-headline-xl text-headline-xl text-primary vollkorn-text mb-4">Criterios de Priorización</h1>
+<p class="text-on-surface-variant max-w-prose text-lg leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+</header>
+<section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+<!-- Glassmorphism Card 1: Vulnerabilidad Socioeconómica -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest border border-outline-variant/30 p-6 flex flex-col gap-4 shadow-[0_24px_60px_-15px_rgba(22,40,57,0.04)]">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary-container"></div>
+<div class="flex items-center gap-3">
+<div class="p-3 bg-secondary-container/20 rounded-full text-secondary">
+<span class="material-symbols-outlined" data-icon="diversity_3" data-weight="fill">diversity_3</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary vollkorn-text">Vulnerabilidad Socioeconómica</h3>
+</div>
+<p class="text-on-surface-variant">
+                    Evaluamos la capacidad de respuesta de las comunidades ante eventos climáticos, considerando factores como el acceso a servicios básicos, niveles de ingresos y densidad poblacional. Las áreas con menor resiliencia económica reciben mayor prioridad de intervención.
+                </p>
+<div class="mt-auto flex flex-wrap gap-2 pt-4">
+<span class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed rounded-full text-sm font-label-sm uppercase tracking-wider">Ingresos</span>
+<span class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed rounded-full text-sm font-label-sm uppercase tracking-wider">Infraestructura</span>
+<span class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed rounded-full text-sm font-label-sm uppercase tracking-wider">Demografía</span>
+</div>
+</div>
+<!-- Glassmorphism Card 2: Exposición Física -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest border border-outline-variant/30 p-6 flex flex-col gap-4 shadow-[0_24px_60px_-15px_rgba(22,40,57,0.04)]">
+<div class="absolute top-0 left-0 w-full h-1 bg-tertiary-container"></div>
+<div class="flex items-center gap-3">
+<div class="p-3 bg-tertiary-container/10 rounded-full text-tertiary-container">
+<span class="material-symbols-outlined" data-icon="flood" data-weight="fill">flood</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary vollkorn-text">Exposición Física</h3>
+</div>
+<p class="text-on-surface-variant">
+                    Análisis topográfico y geoespacial para determinar el nivel de riesgo directo por inundaciones, erosión costera y aumento del nivel del mar. Se priorizan las zonas con mayor probabilidad de impacto físico a corto y mediano plazo.
+                </p>
+<div class="mt-auto flex flex-wrap gap-2 pt-4">
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-sm font-label-sm uppercase tracking-wider">Topografía</span>
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-sm font-label-sm uppercase tracking-wider">Erosión</span>
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-sm font-label-sm uppercase tracking-wider">Nivel del Mar</span>
+</div>
+</div>
+</section>
+<!-- Data Visualization Placeholder Area -->
+<section class="mb-16 bg-surface-container-low rounded-xl p-6 border border-outline-variant/20 flex flex-col items-center justify-center text-center h-64">
+<span class="material-symbols-outlined text-4xl text-outline mb-2" data-icon="monitoring">monitoring</span>
+<p class="text-on-surface-variant font-label-sm uppercase tracking-widest">Visualización de Matriz de Riesgo</p>
+</section>
+  `;
+};
+
+
+// --- ESCENARIOS PAGE ---
+pages['escenarios'] = () => {
+  return `
+<!-- Header Section -->
+<section class="flex flex-col gap-4">
+<div class="inline-flex items-center gap-2 bg-error-container text-on-error-container font-label-sm text-label-sm px-3 py-1 rounded-full w-max">
+<span class="material-symbols-outlined text-[16px]" data-icon="warning" data-weight="fill">warning</span>
+                ALERTA &amp; PREPARACIÓN
+            </div>
+<h1 class="font-headline-xl text-headline-xl text-primary leading-tight">
+                Escenarios y Rutas de Evacuación
+            </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Conoce las rutas seguras y los puntos de encuentro comunitarios en caso de inundaciones o marejadas ciclónicas para proteger a tu familia y comunidad.
+            </p>
+</section>
+<!-- Routes Grid (Bento/Card Layout) -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Primary Evacuation Route Card -->
+<article class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl overflow-hidden relative shadow-[0_24px_48px_-12px_rgba(22,40,57,0.04)] flex flex-col">
+<!-- Top Accent Strip -->
+<div class="h-1 w-full bg-secondary-container"></div>
+<!-- Map Snippet -->
+<div class="w-full aspect-[1.49] bg-surface-variant relative overflow-hidden group">
+<img alt="Map snippet showing safe evacuation routes in Ponce Playa" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLsi4XGpYirkFqHuGGDvd9GKDabxAXwCOB2uxauv57H380y0Jg7Vv-IhS8t1lWGfhFAo1WPhKjdmgCut9WL3CFOxLgmqVDd6088z_6mmhnFSV18N8S1C5EjSfHlwZi7Rms5ZVch79_yJC5oOVAtDufz7YFEOSRHWulX6z5pgyvn_6whGRwFnZBTx4DQ6Y4-PPOaASJFo9a5Pi1cNaIHyfHWwk4HQrFYimZiPzPMUo7-fyJ1Q7SFwIDwtfw"/>
+<div class="absolute bottom-3 left-3 bg-surface/90 backdrop-blur-sm px-3 py-1.5 rounded-lg border border-outline-variant/20 shadow-sm flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container"></span>
+<span class="font-label-sm text-label-sm text-primary">Ruta Principal Activa</span>
+</div>
+</div>
+<div class="p-6 flex flex-col gap-4 flex-1">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Zona A: Costera Baja</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-1">
+                        Esta ruta conecta directamente con el refugio primario en terreno elevado. Utilice esta vía si se encuentra al sur de la Avenida Central. Siga la señalización verde instalada a lo largo del trayecto.
+                    </p>
+<div class="flex items-center gap-4 pt-2 border-t border-outline-variant/20">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-outline" data-icon="directions_walk">directions_walk</span>
+<span class="font-label-sm text-label-sm">15 min</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-outline" data-icon="group">group</span>
+<span class="font-label-sm text-label-sm">Capacidad: 250</span>
+</div>
+</div>
+<button class="mt-2 w-full bg-secondary-container hover:bg-secondary text-on-secondary-container hover:text-on-secondary font-label-sm text-label-sm py-3 px-4 rounded-lg transition-colors flex justify-center items-center gap-2">
+                        Ver Detalles de Ruta
+                        <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Secondary Info Cards -->
+<div class="flex flex-col gap-gutter">
+<article class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-6 flex flex-col gap-3">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed mb-2">
+<span class="material-symbols-outlined" data-icon="water_drop" data-weight="fill">water_drop</span>
+</div>
+<h4 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Niveles de Inundación</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Conozca la diferencia entre alertas amarillas y rojas. Los mapas de riesgo detallan hasta dónde podría llegar el agua en diferentes escenarios climáticos severos.
+                    </p>
+</article>
+<article class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-6 flex flex-col gap-3">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed mb-2">
+<span class="material-symbols-outlined" data-icon="home_work" data-weight="fill">home_work</span>
+</div>
+<h4 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Puntos de Encuentro</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Lugares preestablecidos por el Comité de Asesores Comunitarios (CAC) con suministros de emergencia y comunicación satelital directa.
+                    </p>
+</article>
+</div>
+</section>
+  `;
+};
+
+
+// --- ESTRATEGIAS PAGE ---
+pages['estrategias'] = () => {
+  return `
+<!-- Header Section -->
+<section class="flex flex-col gap-4">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-vollkorn">Estrategias de Adaptación</h2>
+<p class="font-body-md text-on-surface-variant leading-relaxed text-lg">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+</section>
+<!-- Bento Grid / Cards Section -->
+<div class="flex flex-col gap-6">
+<!-- Nature-based Solutions (Mangroves) -->
+<article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm relative group hover:shadow-md transition-shadow">
+<div class="h-1 bg-tertiary-container w-full absolute top-0 left-0"></div>
+<div class="p-6 flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-tertiary-container/10 flex items-center justify-center text-tertiary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<h3 class="font-vollkorn font-bold text-xl text-primary">Soluciones Basadas en la Naturaleza</h3>
+</div>
+<div class="h-40 rounded-lg bg-surface-container-high overflow-hidden relative">
+<img alt="Mangrove forest coastal protection" class="w-full h-full object-cover" data-alt="A lush, dense mangrove forest growing directly out of shallow coastal waters under bright, sunny daylight. The scene emphasizes nature-based coastal protection in a tropical or subtropical setting. The lighting is crisp, highlighting the complex root structures and vibrant green leaves against a clear blue sky. The visual style is highly detailed, photorealistic documentary photography, reflecting a professional environmental planning aesthetic with a bright, light-mode friendly color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4VyztYdfQzoT61ko6WbTfInP9bpe_VDyp9fwJxpOZqZpCxY2Yz7UgPwgiwUjdyR325X1qdM5wkFe-QKQx4Rin9L1SuKhXNFicATKHJLUrgpFkhf4vXOlzaZL82yy8qUXReAotpsYA2bF9H6II7kG7VF_0MwKujYFTScI_9YrSxlMuwGJ87ZFvynEyjWK5vRFlyH65jD6CmjT9biKPi4_0YuMyMiq1bBnoHG8Im3d8x6tTXcvWgHr1IVbKWp6beUjVwDqlECTyKhs"/>
+</div>
+<p class="font-body-md text-on-surface-variant">
+                        Restauración de manglares como barrera natural contra marejadas y erosión, fortaleciendo el ecosistema local.
+                    </p>
+<div class="flex gap-2 mt-2">
+<span class="px-3 py-1 bg-tertiary-container text-on-tertiary font-label-sm text-label-sm rounded-full">Ecológico</span>
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant font-label-sm text-label-sm rounded-full">Largo Plazo</span>
+</div>
+</div>
+</article>
+<!-- Structural Improvements -->
+<article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm relative group hover:shadow-md transition-shadow">
+<div class="h-1 bg-secondary-container w-full absolute top-0 left-0"></div>
+<div class="p-6 flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">architecture</span>
+</div>
+<h3 class="font-vollkorn font-bold text-xl text-primary">Mejoras Estructurales</h3>
+</div>
+<div class="h-40 rounded-lg bg-surface-container-high overflow-hidden relative">
+<img alt="Elevated coastal home architecture" class="w-full h-full object-cover" data-alt="A modern, elevated coastal home designed for flood resilience. The house features sturdy wooden pilings, clean architectural lines, and a welcoming porch. The setting is bright and sunny, conveying structural reliability and community warmth. The color palette includes warm sunlight yellow accents and coastal turquoise trims against a shell white exterior. The image is a photorealistic architectural visualization in a bright, modern corporate style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACBGjSm1rgLkFWr_SC9PbjroEGPlLNGOesYDMYTZVQLXC5ExIrJ62xEuEw4sWVGk4cHH92YDWpZwkUIKfCvl0q_m-3Yx-WInNFf0eeE1c1wKbDJsHcLcOgCdF-z0UDZxFBS0eXG5CCtWivB4MWQCDzKLdxzTZoTQsSKbfb1D4WFSEMa560gWBAH-YKSe-gYRQTuP8E7WOz_00aybkL3zy82-KRM8e1QWhrblukts1LQt1codBqkuMLt4_ApZcKR3TC0bWyL_76sgE"/>
+</div>
+<p class="font-body-md text-on-surface-variant">
+                        Elevación de viviendas y uso de materiales resistentes al agua salada para preservar el patrimonio construido.
+                    </p>
+<div class="flex gap-2 mt-2">
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container font-label-sm text-label-sm rounded-full">Infraestructura</span>
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant font-label-sm text-label-sm rounded-full">Inmediato</span>
+</div>
+</div>
+</article>
+<!-- Community Protocols -->
+<article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm relative group hover:shadow-md transition-shadow">
+<div class="h-1 bg-primary w-full absolute top-0 left-0"></div>
+<div class="p-6 flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">group</span>
+</div>
+<h3 class="font-vollkorn font-bold text-xl text-primary">Protocolos Comunitarios</h3>
+</div>
+<p class="font-body-md text-on-surface-variant">
+                        Redes de apoyo vecinal y sistemas de alerta temprana gestionados por la propia comunidad.
+                    </p>
+<div class="mt-4 border border-outline-variant/40 rounded-lg p-4 bg-surface-container-low">
+<h4 class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-3">Progreso de Implementación</h4>
+<div class="w-full bg-surface-container-highest rounded-full h-2.5 mb-1">
+<div class="bg-primary h-2.5 rounded-full" style="width: 65%"></div>
+</div>
+<div class="flex justify-between text-xs text-on-surface-variant">
+<span>Fase 2 de 3</span>
+<span>65% Completado</span>
+</div>
+</div>
+</div>
+</article>
+</div>
+  `;
+};
+
+
+// --- HERRAMIENTAS PAGE ---
+pages['herramientas'] = () => {
+  return `
+<!-- Header Section -->
+<section class="space-y-4">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container/20 text-on-secondary-container rounded-full mb-2">
+<span class="material-symbols-outlined text-sm">construction</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Planificación Activa</span>
+</div>
+<h2 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary font-bold leading-tight">
+                Herramientas de Planificación
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+</section>
+<!-- Bento Grid: Interactive Tools -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Tool 1: Risk Calculator (Featured) -->
+<div class="col-span-1 md:col-span-8 bg-surface-container-lowest border border-outline-variant/30 rounded-xl overflow-hidden relative group hover:shadow-2xl transition-all duration-300 ease-in-out">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary-container"></div>
+<div class="p-6 md:p-8 flex flex-col md:flex-row gap-6 h-full">
+<div class="flex-1 space-y-4">
+<div class="h-12 w-12 bg-secondary-container/20 text-secondary-container rounded-lg flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-3xl">calculate</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg-mobile text-on-surface font-semibold">Calculadora de Riesgo Inmobiliario</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Evalúe la vulnerabilidad estructural de su propiedad frente a marejadas y erosión costera basándose en datos históricos.
+                        </p>
+<div class="pt-4 mt-auto">
+<button class="bg-secondary-container text-on-secondary-container hover:bg-secondary-fixed-dim font-label-sm text-label-sm px-6 py-3 rounded-lg flex items-center gap-2 transition-colors w-full md:w-auto justify-center font-semibold">
+                                Iniciar Evaluación
+                                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="w-full md:w-1/3 bg-surface-container-low rounded-lg p-4 flex flex-col justify-center items-center border border-outline-variant/20 relative overflow-hidden">
+<!-- Decorative graphic placeholder for calculator -->
+<div class="w-24 h-24 rounded-full border-4 border-secondary-container/30 border-t-secondary-container animate-[spin_10s_linear_infinite] absolute -right-4 -top-4 opacity-50"></div>
+<span class="material-symbols-outlined text-6xl text-outline-variant mb-2 z-10">analytics</span>
+<span class="font-label-sm text-label-sm text-outline z-10 text-center">Datos actualizados: Oct 2023</span>
+</div>
+</div>
+</div>
+<!-- Tool 2: Resource Checklist -->
+<div class="col-span-1 md:col-span-4 bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-6 relative hover:shadow-xl transition-all duration-300 flex flex-col">
+<div class="absolute top-0 left-0 w-full h-1 bg-tertiary-container"></div>
+<div class="flex justify-between items-start mb-4">
+<div class="h-10 w-10 bg-tertiary-container/10 text-tertiary-container rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined">checklist</span>
+</div>
+<span class="px-2 py-1 bg-tertiary-container/10 text-tertiary-container font-label-sm text-[10px] rounded uppercase">Descargable</span>
+</div>
+<h3 class="font-headline-lg text-xl text-on-surface font-semibold mb-2">Lista de Verificación</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-1 text-sm">
+                    Materiales y documentos esenciales para asegurar su hogar antes de la temporada de huracanes.
+                </p>
+<div class="space-y-3">
+<div class="flex items-center gap-3 p-2 bg-surface-container-low rounded border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary text-sm">check_box</span>
+<span class="font-label-sm text-label-sm text-on-surface">Suministros Básicos</span>
+</div>
+<div class="flex items-center gap-3 p-2 bg-surface-container-low rounded border border-outline-variant/10">
+<span class="material-symbols-outlined text-outline text-sm">check_box_outline_blank</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Documentos Críticos</span>
+</div>
+</div>
+<button class="mt-6 border border-tertiary-container text-tertiary-container hover:bg-tertiary-container/5 font-label-sm text-label-sm px-4 py-2 rounded-lg flex items-center justify-center gap-2 transition-colors w-full">
+<span class="material-symbols-outlined text-sm">download</span>
+                    Descargar PDF
+                </button>
+</div>
+<!-- Tool 3: Community Mapping Form -->
+<div class="col-span-1 md:col-span-6 bg-primary border border-outline-variant/20 rounded-xl p-6 md:p-8 text-on-primary relative overflow-hidden group">
+<!-- Abstract background pattern -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary-container rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 opacity-50 group-hover:opacity-70 transition-opacity"></div>
+<div class="relative z-10 flex flex-col h-full">
+<div class="h-12 w-12 bg-on-primary/10 rounded-lg flex items-center justify-center mb-4 border border-on-primary/20">
+<span class="material-symbols-outlined text-on-primary">edit_location</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg-mobile text-on-primary font-semibold mb-3">Mapeo Participativo</h3>
+<p class="font-body-md text-body-md text-primary-fixed-dim mb-8 flex-1">
+                        Reporte áreas de inundación recurrente, infraestructura dañada o puntos de encuentro no oficiales en su vecindario para actualizar el mapa maestro.
+                    </p>
+<button class="bg-on-primary text-primary hover:bg-primary-fixed font-label-sm text-label-sm px-6 py-3 rounded-lg flex items-center gap-2 transition-colors w-fit font-semibold">
+                        Abrir Formulario
+                        <span class="material-symbols-outlined text-sm">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Tool 4: Structural Guidance (Glassmorphism inspired) -->
+<div class="col-span-1 md:col-span-6 rounded-xl p-6 relative flex flex-col justify-end min-h-[250px] border border-outline-variant/30 overflow-hidden">
+<!-- Image Background -->
+<div class="absolute inset-0 z-0">
+<img alt="Blueprint over wood table" class="w-full h-full object-cover opacity-20 filter grayscale" data-alt="A close-up view of architectural blueprints spread out on a warm, weathered wooden table. The scene is illuminated by bright, natural sunlight evoking a coastal morning, reflecting a modern light-mode aesthetic. A brass compass and a yellow pencil rest on the plans, emphasizing planning and structural integrity. The color palette focuses on crisp whites, heritage navy lines of the blueprint, and natural wood tones, conveying professional heritage preservation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvpN0-SpgEl1RvTNVy_TC3Whnw7cO49XBEE-8v0Y7LD5zDYFFsznWyzZ3MsLZ8qRChz1M5zwnXcZbfsEX7N83EsLiOVANr4GBQXlL7GxR3fbfsdTcQpr1RiDQH-xqA15Mf0NHWTCcXqfA5b8IwhBDHPVqZgW7lKoGvMr920m2qAfJDS0nOgPZvtoq8C9cyUGPBh_vMpIKbTuzKtOw9YMsTVKZ9d5MDhHOXEzO4znutxcJr8Vh9W6Ux2P3mhHVMMWq9g1guZiqDhNM"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/80 to-transparent z-0"></div>
+<div class="relative z-10 space-y-3">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-highest/80 backdrop-blur-sm text-on-surface rounded-md border border-outline-variant/30 w-fit">
+<span class="material-symbols-outlined text-[14px]">architecture</span>
+<span class="font-label-sm text-[10px] uppercase font-bold tracking-widest">Guía Constructiva</span>
+</div>
+<h3 class="font-headline-lg text-xl text-on-surface font-bold">Refuerzo Estructural Vernáculo</h3>
+<p class="font-body-md text-sm text-on-surface-variant max-w-sm">
+                        Catálogo interactivo de técnicas de carpintería tradicional adaptadas para resistencia a vientos huracanados.
+                    </p>
+<a class="inline-flex items-center gap-1 text-primary hover:text-primary-container font-label-sm text-label-sm pt-2 transition-colors underline underline-offset-4" href="#">
+                        Explorar Catálogo <span class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</section>
+  `;
+};
+
+
+// --- PARTICIPACION PAGE ---
+pages['participacion'] = () => {
+  return `
+<!-- Header Section -->
+<section class="flex flex-col gap-4">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Participación Ciudadana</h2>
+<p class="text-on-surface-variant">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</section>
+<!-- Survey Card (Primary CTA) -->
+<section class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 soft-shadow overflow-hidden relative">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary-container"></div>
+<div class="p-6 flex flex-col gap-4 relative z-10">
+<div class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center text-on-secondary-container mb-2">
+<span class="material-symbols-outlined text-2xl">assignment</span>
+</div>
+<div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary text-[24px] mb-2">Llena la Encuesta</h3>
+<p class="text-on-surface-variant mb-6">Tu opinión es vital para el desarrollo de nuestro proyecto costero. Ayúdanos a entender las necesidades de la comunidad.</p>
+</div>
+<button class="w-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm py-4 rounded-lg hover:bg-secondary-fixed transition-colors flex items-center justify-center gap-2 uppercase tracking-widest shadow-sm">
+                    Comenzar Encuesta
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<!-- Decorative background element -->
+<div class="absolute -bottom-10 -right-10 w-32 h-32 bg-secondary-container/10 rounded-full blur-2xl pointer-events-none"></div>
+</section>
+<!-- Events/Participa Section -->
+<section class="flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary text-[24px]">Participa</h3>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-3 py-1 rounded-full uppercase">Talleres</span>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Event Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 soft-shadow p-4 flex gap-4 items-start relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-tertiary-fixed"></div>
+<div class="flex flex-col items-center justify-center bg-surface-container-low w-16 h-16 rounded-lg text-primary flex-shrink-0">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Oct</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-[24px] leading-none">12</span>
+</div>
+<div class="flex flex-col flex-grow">
+<h4 class="font-body-md text-body-md font-semibold text-primary">Taller de Diseño Participativo</h4>
+<div class="flex items-center gap-1 text-on-surface-variant mt-1 text-sm">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>10:00 AM - 12:00 PM</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant mt-1 text-sm">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>Centro Comunitario</span>
+</div>
+</div>
+</div>
+<!-- Event Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 soft-shadow p-4 flex gap-4 items-start relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-tertiary-fixed"></div>
+<div class="flex flex-col items-center justify-center bg-surface-container-low w-16 h-16 rounded-lg text-primary flex-shrink-0">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Oct</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-[24px] leading-none">26</span>
+</div>
+<div class="flex flex-col flex-grow">
+<h4 class="font-body-md text-body-md font-semibold text-primary">Reunión de Avances del Proyecto</h4>
+<div class="flex items-center gap-1 text-on-surface-variant mt-1 text-sm">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>6:00 PM - 8:00 PM</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant mt-1 text-sm">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>Plaza Principal</span>
+</div>
+</div>
+</div>
+</div>
+<button class="w-full border-2 border-primary text-primary font-label-sm text-label-sm py-4 rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors flex items-center justify-center gap-2 uppercase tracking-widest mt-2">
+                Ver Calendario Completo
+                <span class="material-symbols-outlined text-sm">calendar_month</span>
+</button>
+</section>
+  `;
+};
+
+
+// --- PLANES PAGE ---
+pages['planes'] = () => {
+  return `
+<!-- Header Section -->
+<section class="flex flex-col gap-4">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Planes Existentes</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+</section>
+<!-- Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+<!-- Card 1: Municipal Ordinances (Highlight) -->
+<article class="col-span-1 md:col-span-2 bg-surface-container-lowest border border-outline-variant/30 rounded-xl overflow-hidden shadow-[0_8px_24px_rgba(22,40,57,0.04)] relative group">
+<div class="h-1 w-full bg-secondary-container"></div>
+<div class="p-6 flex flex-col h-full gap-4 relative z-10">
+<div class="flex justify-between items-start">
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-3 py-1 rounded-full uppercase tracking-wider">Ordenanzas</span>
+<span class="material-symbols-outlined text-primary" data-icon="gavel">gavel</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mt-2">Normativas Municipales Vigentes</h3>
+<p class="text-on-surface-variant flex-1">
+                        Regulaciones actuales para la construcción y desarrollo en zonas costeras, enfocadas en la mitigación de riesgos de inundación y protección del ecosistema local.
+                    </p>
+<button class="self-start mt-4 px-6 py-2 bg-secondary text-on-secondary rounded-lg font-label-sm text-label-sm hover:bg-secondary-fixed transition-colors">
+                        Ver Detalles
+                    </button>
+</div>
+</article>
+<!-- Card 2: Coastal Management -->
+<article class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl overflow-hidden shadow-[0_8px_24px_rgba(22,40,57,0.04)] flex flex-col">
+<div class="h-1 w-full bg-tertiary-container"></div>
+<div class="p-6 flex flex-col h-full gap-4">
+<div class="flex justify-between items-start">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-3 py-1 rounded-full uppercase tracking-wider">Estrategia</span>
+<span class="material-symbols-outlined text-primary" data-icon="water">water</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mt-2">Manejo Costero</h3>
+<p class="text-on-surface-variant flex-1">
+                        Estrategias de adaptación y defensa de la línea costera ante el aumento del nivel del mar.
+                    </p>
+<a class="text-tertiary-container font-label-sm text-label-sm flex items-center gap-1 hover:underline" href="#">
+                        Descargar PDF <span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+</a>
+</div>
+</article>
+<!-- Card 3: Community Resilience -->
+<article class="col-span-1 md:col-span-3 bg-surface-container-lowest border border-outline-variant/30 rounded-xl overflow-hidden shadow-[0_8px_24px_rgba(22,40,57,0.04)] relative">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-secondary-container via-surface-container-lowest to-surface-container-lowest"></div>
+<div class="h-1 w-full bg-error"></div>
+<div class="p-6 md:p-8 flex flex-col md:flex-row gap-6 items-center relative z-10">
+<div class="flex-1 flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<span class="bg-error-container text-on-error-container font-label-sm text-label-sm px-3 py-1 rounded-full uppercase tracking-wider">Comunidad</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-primary">Planes de Resiliencia Comunitaria</h3>
+<p class="text-on-surface-variant max-w-2xl">
+                            Iniciativas locales para fortalecer la capacidad de respuesta y recuperación de los vecindarios ante eventos climáticos extremos. Incluye rutas de evacuación y refugios.
+                        </p>
+</div>
+<div class="w-full md:w-auto flex flex-col gap-2 min-w-[200px]">
+<div class="flex justify-between items-end mb-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Progreso de Implementación</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">65%</span>
+</div>
+<div class="w-full bg-surface-variant rounded-full h-2.5">
+<div class="bg-error h-2.5 rounded-full" style="width: 65%"></div>
+</div>
+</div>
+</div>
+</article>
+</section>
+  `;
+};
+
+
+// --- PUNTOS-ENCUENTRO PAGE ---
+pages['puntos-encuentro'] = () => {
+  return `
+<!-- Intro Section -->
+<section class="flex flex-col gap-4">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Puntos de Encuentro y Refugios</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis, nisl nec sodales mattis, enim justo auctor diam, et blandit justo neque non metus. Pellentesque id sem at sapien tristique sagittis.
+            </p>
+</section>
+<!-- Map/Visual Area (Placeholder for actual map) -->
+<section class="w-full h-64 bg-surface-container rounded-xl overflow-hidden shadow-sm relative" data-location="Ponce, Puerto Rico">
+<img alt="Aerial view of a coastal city" class="w-full h-full object-cover opacity-80 mix-blend-multiply" data-alt="A stylized, high-contrast aerial map view of a coastal district with clear, modern architectural lines. The scene uses a bright light-mode aesthetic with crisp whites, deep heritage navy accents, and vibrant coastal turquoise highlights marking specific locations. The lighting is sunny and clear, evoking a sense of safety and structured planning." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzMr2pElr6PFm0eUM0T84-BgEe_X2qfv1bDQlwG84vmjojNV5F_IOWzGbT4qgH8jhr_anPjR0daioqdVwiIb7UuHQXN_VlTf0xhom5cK6KUvdXn0pE5Cx-DnZABLXHgYxzHr_T-shzjGUoI9FrOBQlQVyqMITbvusPSgX3yMS6sk9fxOXs2nGEl5i2stRifh6g6oEU7zxir5j7BN0o3dpFTHkSUwkBlYLrJGfSnn5DdGsVfSRrmyhq6co2ki3YvjS3pVS4H4L0BEo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 to-transparent flex items-end p-4">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest bg-surface-bright/90 px-3 py-1 rounded-full border border-primary/20 backdrop-blur-sm">Mapa de La Playa</span>
+</div>
+</section>
+<!-- List Section -->
+<section class="flex flex-col gap-6">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary border-b-2 border-secondary-container pb-2 inline-block w-max">Ubicaciones Seguras</h3>
+<div class="grid grid-cols-1 gap-4">
+<!-- Card 1: School Shelter -->
+<article class="bg-surface-bright rounded-xl border border-outline-variant p-5 shadow-sm relative overflow-hidden flex flex-col gap-3">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary-container"></div>
+<div class="flex justify-between items-start">
+<div>
+<span class="inline-block bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-2 py-1 rounded-sm mb-2 uppercase tracking-wide">Refugio Escolar</span>
+<h4 class="font-headline-lg-mobile text-xl font-bold text-on-surface leading-tight">Escuela Lucy Grillasca</h4>
+</div>
+<span class="material-symbols-outlined text-secondary-container text-3xl" style="font-variation-settings: 'FILL' 1;">school</span>
+</div>
+<p class="font-body-md text-on-surface-variant flex items-center gap-2"><span class="material-symbols-outlined text-sm">location_on</span> Ave. Hostos, Esq. Calle 1</p>
+<div class="mt-2 flex gap-2">
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-[10px] px-2 py-1 rounded-full border border-outline/20">Capacidad: 200</span>
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-[10px] px-2 py-1 rounded-full border border-outline/20">Generador</span>
+</div>
+</article>
+<!-- Card 2: Community Center -->
+<article class="bg-surface-bright rounded-xl border border-outline-variant p-5 shadow-sm relative overflow-hidden flex flex-col gap-3">
+<div class="absolute top-0 left-0 w-full h-1 bg-tertiary-container"></div>
+<div class="flex justify-between items-start">
+<div>
+<span class="inline-block bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm px-2 py-1 rounded-sm mb-2 uppercase tracking-wide">Centro Comunal</span>
+<h4 class="font-headline-lg-mobile text-xl font-bold text-on-surface leading-tight">Centro Sor Isolina Ferré</h4>
+</div>
+<span class="material-symbols-outlined text-tertiary-container text-3xl" style="font-variation-settings: 'FILL' 1;">diversity_3</span>
+</div>
+<p class="font-body-md text-on-surface-variant flex items-center gap-2"><span class="material-symbols-outlined text-sm">location_on</span> Sector Puerto Viejo</p>
+<div class="mt-2 flex gap-2">
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-[10px] px-2 py-1 rounded-full border border-outline/20">Suministros Base</span>
+</div>
+</article>
+<!-- Card 3: Verified Safe Area -->
+<article class="bg-surface-bright rounded-xl border border-outline-variant p-5 shadow-sm relative overflow-hidden flex flex-col gap-3">
+<div class="absolute top-0 left-0 w-full h-1 bg-primary"></div>
+<div class="flex justify-between items-start">
+<div>
+<span class="inline-block bg-primary text-on-primary font-label-sm text-label-sm px-2 py-1 rounded-sm mb-2 uppercase tracking-wide">Área Segura</span>
+<h4 class="font-headline-lg-mobile text-xl font-bold text-on-surface leading-tight">Parque del Litoral (Zona Alta)</h4>
+</div>
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">park</span>
+</div>
+<p class="font-body-md text-on-surface-variant flex items-center gap-2"><span class="material-symbols-outlined text-sm">location_on</span> Final Ave. Hostos Sur</p>
+<p class="font-body-md text-sm text-on-surface-variant mt-1 italic">Punto de encuentro temporal al aire libre.</p>
+</article>
+</div>
+</section>
+  `;
+};
+
+
+// --- VISUALIZADOR PAGE ---
+pages['visualizador'] = () => {
+  return `
+<!-- Content Area -->
+<div class="px-margin-mobile py-6 bg-surface z-10 relative">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-4">Visualizador de La Playa</h1>
+<p class="text-on-surface-variant mb-6 leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Explora los sectores de La Playa de Ponce con nuestra herramienta interactiva.
+            </p>
+<!-- Layer Toggles Bento -->
+<div class="grid grid-cols-2 gap-4 mb-6">
+<button class="bg-surface-container p-4 rounded-xl flex flex-col items-start gap-2 border border-outline-variant/30 hover:border-secondary transition-colors focus:ring-2 focus:ring-tertiary-container focus:outline-none text-left">
+<span class="material-symbols-outlined text-secondary text-2xl">water</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Zonas de Inundación</span>
+</button>
+<button class="bg-primary-container p-4 rounded-xl flex flex-col items-start gap-2 border border-primary transition-colors focus:ring-2 focus:ring-tertiary-container focus:outline-none text-left">
+<span class="material-symbols-outlined text-on-primary-container text-2xl">forest</span>
+<span class="font-label-sm text-label-sm text-on-primary-container font-semibold">Manglares (Activo)</span>
+</button>
+<button class="bg-surface-container p-4 rounded-xl flex flex-col items-start gap-2 border border-outline-variant/30 hover:border-secondary transition-colors focus:ring-2 focus:ring-tertiary-container focus:outline-none text-left col-span-2">
+<span class="material-symbols-outlined text-secondary text-2xl">pin_drop</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Puntos de Interés / Landmarks</span>
+</button>
+</div>
+</div>
+<!-- Interactive Map Dashboard Area -->
+<div class="flex-1 map-container relative min-h-[400px]" data-alt="A highly detailed aerial satellite view map of a coastal neighborhood, focusing on intersecting streets, residential structures, and coastal mangrove areas. The visual style is modern, bright, and clear, with subtle cyan overlays indicating environmental zones. The lighting is sunny and high-key, creating a vibrant, professional geographic information system aesthetic. Colors emphasize the Heritage Navy of the water and the vibrant greens of the mangroves." data-location="Ponce" style="">
+<!-- Map Overlay Gradients/Shadows -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent pointer-events-none"></div>
+<!-- Floating Controls -->
+<div class="absolute right-margin-mobile bottom-margin-mobile flex flex-col gap-2">
+<button aria-label="Zoom In" class="bg-surface text-primary p-3 rounded-full shadow-lg border border-outline-variant/20 hover:bg-surface-container transition-colors focus:ring-2 focus:ring-primary focus:outline-none">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button aria-label="Zoom Out" class="bg-surface text-primary p-3 rounded-full shadow-lg border border-outline-variant/20 hover:bg-surface-container transition-colors focus:ring-2 focus:ring-primary focus:outline-none">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<button aria-label="My Location" class="bg-tertiary-container text-on-tertiary-container p-3 rounded-full shadow-lg mt-2 focus:ring-2 focus:ring-primary focus:outline-none">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">my_location</span>
+</button>
+</div>
+<!-- Map Pins (Mockup) -->
+<div class="absolute top-1/3 left-1/4 transform -translate-x-1/2 -translate-y-1/2">
+<span class="material-symbols-outlined text-secondary-container text-4xl drop-shadow-md" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<div class="absolute top-1/2 right-1/3 transform -translate-x-1/2 -translate-y-1/2">
+<span class="material-symbols-outlined text-error text-3xl drop-shadow-md" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+</div>
+<!-- Info Panel (Bottom Sheet style) -->
+<div class="bg-surface rounded-t-xl shadow-[0_-8px_30px_rgb(0,0,0,0.12)] p-margin-mobile -mt-4 relative z-20">
+<div class="w-12 h-1 bg-outline-variant/50 rounded-full mx-auto mb-4"></div>
+<h3 class="font-headline-lg-mobile text-lg font-bold text-primary mb-1">Sector Salistral</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-3 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">forest</span> Área de Conservación
+            </p>
+<div class="flex gap-2">
+<span class="bg-secondary-fixed text-on-secondary-fixed px-3 py-1 rounded-full font-label-sm text-label-sm">Manglar</span>
+<span class="bg-primary-fixed text-on-primary-fixed px-3 py-1 rounded-full font-label-sm text-label-sm">Riesgo Alto</span>
+</div>
+</div>
+  `;
+};
+
 pages.inicio = () => {
   return `
     <section class="px-margin-mobile pt-8 pb-10 flex flex-col gap-6 relative overflow-hidden">
