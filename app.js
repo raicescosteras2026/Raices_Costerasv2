@@ -1,6 +1,86 @@
 // Raíces Costeras - Application Logic & Interactive Features
 
+const staticTranslations = {
+  es: {
+    inicio: "Inicio",
+    datos: "Datos del Barrio",
+    mapas: "Mapas de Riesgo",
+    guia: "Guía de Preparación",
+    sobre: "Sobre Nosotros",
+    fotografia: "Fotografía",
+    refugios: "Refugios",
+    orgTop: "Un Nuevo Amanecer, Inc.<br/>Comité de Asesores Comunitarios",
+    orgBottom: "Comité de Asesores Comunitarios (CAC)",
+    footer: "Un Nuevo Amanecer, Inc. | Comité de Asesores Comunitarios (CAC)",
+    title: "Raíces Costeras"
+  },
+  en: {
+    inicio: "Home",
+    datos: "Neighborhood Data",
+    mapas: "Risk Maps",
+    guia: "Preparedness Guide",
+    sobre: "About Us",
+    fotografia: "Photography",
+    refugios: "Shelters",
+    orgTop: "Un Nuevo Amanecer, Inc.<br/>Community Advisory Committee",
+    orgBottom: "Community Advisory Committee (CAC)",
+    footer: "Un Nuevo Amanecer, Inc. | Community Advisory Committee (CAC)",
+    title: "Coastal Roots"
+  }
+};
+
+window.currentLang = localStorage.getItem("app_lang") || "es";
+
+function updateStaticDOM() {
+  const t = staticTranslations[window.currentLang];
+  document.querySelectorAll('a[data-route]').forEach(link => {
+    const route = link.getAttribute('data-route');
+    if (t[route]) {
+      const span = link.querySelector('span:not(.material-symbols-outlined)');
+      if (span) span.innerHTML = t[route];
+    }
+  });
+  
+  document.querySelectorAll('h1').forEach(h => {
+    if(h.innerHTML.includes('Raíces Costeras') || h.innerHTML.includes('Coastal Roots')) h.innerHTML = t.title;
+  });
+  document.querySelectorAll('div').forEach(d => {
+    if(d.classList.contains('md:hidden') && (d.innerHTML.includes('Raíces Costeras') || d.innerHTML.includes('Coastal Roots'))) d.innerHTML = t.title;
+  });
+
+  document.querySelectorAll('.font-label-caps').forEach(el => {
+    if(el.innerHTML.includes('Un Nuevo Amanecer') || el.innerHTML.includes('Comité') || el.innerHTML.includes('Committee')) {
+      if(el.innerHTML.includes('<br')) {
+        el.innerHTML = t.orgTop;
+      } else if (el.innerHTML.includes('|')) {
+        el.innerHTML = t.footer;
+      } else {
+        el.innerHTML = t.orgBottom;
+      }
+    }
+  });
+
+  const langBtnText = document.getElementById('lang-toggle-text');
+  if (langBtnText) {
+    langBtnText.innerText = window.currentLang === 'es' ? 'EN' : 'ES';
+  }
+}
+
+function initLanguage() {
+  const toggleBtn = document.getElementById('lang-toggle-btn');
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      window.currentLang = window.currentLang === 'es' ? 'en' : 'es';
+      localStorage.setItem('app_lang', window.currentLang);
+      updateStaticDOM();
+      navigateTo(window.currentRoute, false);
+    });
+  }
+  updateStaticDOM();
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  initLanguage();
   initRouter();
   initDrawer();
 });
@@ -96,8 +176,9 @@ function navigateTo(route, pushState = true) {
   if (!container) return;
 
   // Render template
-  if (typeof pages[route] === "function") {
-    container.innerHTML = pages[route]();
+  const targetPages = window.currentLang === 'en' ? (window.pagesEN || pages) : pages;
+  if (typeof targetPages[route] === "function") {
+    container.innerHTML = targetPages[route]();
     // Scroll to top
     window.scrollTo({ top: 0, behavior: "smooth" });
     // Initialize page-specific scripts

@@ -99,7 +99,7 @@
   <!-- Local styles -->
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="antialiased min-h-screen flex flex-col md:flex-row font-body-md text-on-surface">
+<body class="antialiased min-h-[max(884px,100dvh)] flex flex-col md:flex-row font-body-md text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
 
   <!-- ==========================================
   <!-- Sidebar Navigation (Desktop)
@@ -115,29 +115,33 @@
         <span class="material-symbols-outlined">home</span>
         <span class="font-body-lg text-base font-semibold">Inicio</span>
       </a>
-      <a data-route="datos" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-3 transition-colors duration-200 cursor-pointer" href="#datos">
-        <span class="material-symbols-outlined">analytics</span>
-        <span class="font-body-lg text-base font-semibold">Datos del Barrio</span>
-      </a>
       <a data-route="mapas" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-3 transition-colors duration-200 cursor-pointer" href="#mapas">
         <span class="material-symbols-outlined">map</span>
         <span class="font-body-lg text-base font-semibold">Mapas de Riesgo</span>
       </a>
-      <a data-route="guia" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-3 transition-colors duration-200 cursor-pointer" href="#guia">
-        <span class="material-symbols-outlined">menu_book</span>
-        <span class="font-body-lg text-base font-semibold">Guía de Preparación</span>
+      <a data-route="datos" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-3 transition-colors duration-200 cursor-pointer" href="#datos">
+        <span class="material-symbols-outlined">analytics</span>
+        <span class="font-body-lg text-base font-semibold">Datos</span>
+      </a>
+      <a data-route="sobre-proyecto" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-3 transition-colors duration-200 cursor-pointer" href="#sobre-proyecto">
+        <span class="material-symbols-outlined">info</span>
+        <span class="font-body-lg text-base font-semibold">Sobre el Proyecto</span>
       </a>
       <a data-route="sobre" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-3 transition-colors duration-200 cursor-pointer" href="#sobre">
         <span class="material-symbols-outlined">group</span>
         <span class="font-body-lg text-base font-semibold">Sobre Nosotros</span>
       </a>
-      <a data-route="fotografia" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-3 transition-colors duration-200 cursor-pointer" href="#fotografia">
-        <span class="material-symbols-outlined">photo_library</span>
-        <span class="font-body-lg text-base font-semibold">Fotografía</span>
+      <a data-route="puntos-encuentro" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-3 transition-colors duration-200 cursor-pointer" href="#puntos-encuentro">
+        <span class="material-symbols-outlined">location_on</span>
+        <span class="font-body-lg text-base font-semibold">Puntos de Encuentro</span>
       </a>
-      <a data-route="refugios" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-3 transition-colors duration-200 cursor-pointer" href="#refugios">
-        <span class="material-symbols-outlined">health_and_safety</span>
-        <span class="font-body-lg text-base font-semibold">Refugios</span>
+      <a data-route="contactos" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-3 transition-colors duration-200 cursor-pointer" href="#contactos">
+        <span class="material-symbols-outlined">emergency</span>
+        <span class="font-body-lg text-base font-semibold">Contactos de Emergencia</span>
+      </a>
+      <a data-route="guia" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-3 transition-colors duration-200 cursor-pointer" href="#guia">
+        <span class="material-symbols-outlined">menu_book</span>
+        <span class="font-body-lg text-base font-semibold">Guía para estar preparado</span>
       </a>
     </nav>
 
@@ -170,33 +174,37 @@
     </div>
     
     <div class="flex-grow overflow-y-auto mt-4 px-2 space-y-1">
-      <a data-route="inicio" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer" href="#inicio">
-        <span class="material-symbols-outlined">home</span>
+      <a data-route="inicio" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group" href="#inicio">
+        <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">home</span>
         <span class="font-body-lg font-semibold">Inicio</span>
       </a>
-      <a data-route="datos" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer" href="#datos">
-        <span class="material-symbols-outlined">analytics</span>
-        <span class="font-body-lg font-semibold">Datos del Barrio</span>
-      </a>
-      <a data-route="mapas" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer" href="#mapas">
-        <span class="material-symbols-outlined">map</span>
+      <a data-route="mapas" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group" href="#mapas">
+        <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">map</span>
         <span class="font-body-lg font-semibold">Mapas de Riesgo</span>
       </a>
-      <a data-route="guia" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer" href="#guia">
-        <span class="material-symbols-outlined">menu_book</span>
-        <span class="font-body-lg font-semibold">Guía de Preparación</span>
+      <a data-route="datos" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group" href="#datos">
+        <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">analytics</span>
+        <span class="font-body-lg font-semibold">Datos</span>
       </a>
-      <a data-route="sobre" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer" href="#sobre">
-        <span class="material-symbols-outlined">group</span>
+      <a data-route="sobre-proyecto" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group" href="#sobre-proyecto">
+        <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">info</span>
+        <span class="font-body-lg font-semibold">Sobre el Proyecto</span>
+      </a>
+      <a data-route="sobre" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group" href="#sobre">
+        <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">group</span>
         <span class="font-body-lg font-semibold">Sobre Nosotros</span>
       </a>
-      <a data-route="fotografia" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer" href="#fotografia">
-        <span class="material-symbols-outlined">photo_library</span>
-        <span class="font-body-lg font-semibold">Fotografía</span>
+      <a data-route="puntos-encuentro" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group" href="#puntos-encuentro">
+        <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">location_on</span>
+        <span class="font-body-lg font-semibold">Puntos de Encuentro</span>
       </a>
-      <a data-route="refugios" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer" href="#refugios">
-        <span class="material-symbols-outlined">health_and_safety</span>
-        <span class="font-body-lg font-semibold">Refugios</span>
+      <a data-route="contactos" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group" href="#contactos">
+        <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">emergency</span>
+        <span class="font-body-lg font-semibold">Contactos de Emergencia</span>
+      </a>
+      <a data-route="guia" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group" href="#guia">
+        <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">menu_book</span>
+        <span class="font-body-lg font-semibold">Guía para estar preparado</span>
       </a>
     </div>
 
@@ -226,6 +234,10 @@
       
       <!-- Right controls -->
       <div class="flex items-center gap-2">
+        <button id="lang-toggle-btn" class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-secondary-container text-on-secondary-container hover:bg-secondary-container/80 transition-colors font-label-caps text-[11px] font-bold tracking-wider shadow-sm">
+          <span class="material-symbols-outlined text-[16px]">translate</span>
+          <span id="lang-toggle-text">EN</span>
+        </button>
       </div>
     </header>
 
@@ -247,7 +259,7 @@
     </footer>
   </div>
 
-  <!-- Local logic script -->
+  <script src="pages-en.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
