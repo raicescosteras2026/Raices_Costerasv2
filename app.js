@@ -10,7 +10,7 @@ const staticTranslations = {
     fotografia: "Fotografía",
     refugios: "Refugios",
     orgTop: "Un Nuevo Amanecer, Inc.",
-    orgBottom: "",
+    orgBottom: "Un Nuevo Amanecer, Inc.",
     footer: "Un Nuevo Amanecer, Inc.",
     title: "Raíces Costeras"
   },
@@ -23,7 +23,7 @@ const staticTranslations = {
     fotografia: "Photography",
     refugios: "Shelters",
     orgTop: "Un Nuevo Amanecer, Inc.",
-    orgBottom: "",
+    orgBottom: "Un Nuevo Amanecer, Inc.",
     footer: "Un Nuevo Amanecer, Inc.",
     title: "Coastal Roots"
   }
