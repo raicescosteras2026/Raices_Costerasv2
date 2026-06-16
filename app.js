@@ -548,7 +548,7 @@ pages['estrategias'] = () => {
           Explora las diversas estrategias y proyectos propuestos para mejorar la resiliencia y seguridad de nuestra comunidad.
         </p>
       </header>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">\n
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
     <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-06">
       <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
         <i class="ti ti-users-group text-[24px]"></i>
@@ -830,11 +830,11 @@ pages['estrategias'] = () => {
         <i class="ti ti-building text-[24px]"></i>
       </div>
       <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Plan de Adaptación de Infraestructura (Salud, Educación)</h3>
-    </article>\n</div>
+    </article>
+</div>
     </div>
   `;
 };
-\n
 
 
 // --- HERRAMIENTAS PAGE ---
