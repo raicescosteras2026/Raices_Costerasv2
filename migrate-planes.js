@@ -56,7 +56,7 @@ const estrategiasData = [
   { text: "Establecer un Plan de Respuesta Comunitaria ante emergencias, con puntos de encuentro, contactos clave, capacitación de primeros auxilios y protocolos incluyendo ciclos de simulacros de emergencia tomando en consideración a personas mayores y con movilidad reducida", doc: "DOC-10", icon: "clipboard-check" },
   { text: "Establecer un mecanismo organizacional para darle seguimiento a las nuevas iniciativas de resiliencia comunitaria y atender nuevas. La comunidad enfrenta riesgos severos como inundaciones, tsunamis, terremotos y el deterioro de infraestructura esencial, lo cual requiere una respuesta planificada y continua.", doc: "DOC-10", icon: "chart-bar" },
   { text: "Realizar un registro voluntario para identificar los recursos disponibles entre los vecinos, así como las vulnerabilidades en las viviendas y las necesidades particulares en la población. Permitirá conocer fortalezas como habilidades especializadas y equipos disponibles.", doc: "DOC-10", icon: "list-details" },
-  { text: "Revisar y abogar por la actualización de las rutas de desalojo, la señalización de la ruta y el sistema de alarma oficial en caso de eventos de emergencias. Permitirá identificar y corregir deficiencias, mejorar la visibilidad de las rutas y asegurar su accesibilidad.", doc: "DOC-10", icon: "arrow-right" }
+  { text: "Revisar y abogar por la actualización de las rutas de desalojo, la señalización de la ruta y el sistema de alarma oficial en caso de eventos de emergencias.", doc: "DOC-10", icon: "arrow-right" }
 ];
 
 const planesData = [
