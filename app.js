@@ -536,6 +536,7 @@ pages['escenarios'] = () => {
 
 
 
+
 pages['estrategias'] = () => {
   return `
     <div class="w-full max-w-7xl mx-auto px-margin-mobile md:px-section-gap py-8 md:py-12">
@@ -832,6 +833,36 @@ pages['estrategias'] = () => {
         <i class="ti ti-building text-[48px]"></i>
       </div>
       <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Plan de Adaptación de Infraestructura (Salud, Educación)</h3>
+    </article>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-10">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+        <i class="ti ti-heart-handshake text-[48px]"></i>
+      </div>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Crear una red de apoyo vecinal para promover la comunicación y monitorear población vulnerable antes, durante y después de emergencias. La red tendrá un doble propósito: establecer un sistema efectivo de comunicación y organizar el acompañamiento y monitoreo de las personas más vulnerables</h3>
+    </article>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-10">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+        <i class="ti ti-list-check text-[48px]"></i>
+      </div>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Establecer un Plan de Respuesta Comunitaria ante emergencias, con puntos de encuentro, contactos clave, capacitación de primeros auxilios y protocolos incluyendo ciclos de simulacros de emergencia tomando en consideración a personas mayores y con movilidad reducida</h3>
+    </article>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-10">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+        <i class="ti ti-clipboard-data text-[48px]"></i>
+      </div>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Establecer un mecanismo organizacional para darle seguimiento a las nuevas iniciativas de resiliencia comunitaria y atender nuevas. La comunidad enfrenta riesgos severos como inundaciones, tsunamis, terremotos y el deterioro de infraestructura esencial, lo cual requiere una respuesta planificada y continua.</h3>
+    </article>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-10">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+        <i class="ti ti-clipboard-list text-[48px]"></i>
+      </div>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Realizar un registro voluntario para identificar los recursos disponibles entre los vecinos, así como las vulnerabilidades en las viviendas y las necesidades particulares en la población. Permitirá conocer fortalezas como habilidades especializadas y equipos disponibles.</h3>
+    </article>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-10">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+        <i class="ti ti-sign-right text-[48px]"></i>
+      </div>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Revisar y abogar por la actualización de las rutas de desalojo, la señalización de la ruta y el sistema de alarma oficial en caso de eventos de emergencias. Permitirá identificar y corregir deficiencias, mejorar la visibilidad de las rutas y asegurar su accesibilidad.</h3>
     </article>
 </div>
     </div>
