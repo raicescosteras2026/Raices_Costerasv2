@@ -36,7 +36,7 @@ function updateStaticDOM() {
   document.querySelectorAll('a[data-route]').forEach(link => {
     const route = link.getAttribute('data-route');
     if (t[route]) {
-      const span = link.querySelector('span:not(.material-symbols-outlined)');
+      const span = link.querySelector('span:not(.ti)');
       if (span) span.innerHTML = t[route];
     }
   });
@@ -221,7 +221,7 @@ pages['sobre-proyecto'] = () => {
     <div class="absolute top-0 left-0 w-full h-1 bg-primary"></div>
     <div class="flex items-center gap-3">
       <div class="p-3 bg-primary-fixed/30 rounded-full text-primary">
-        <span class="material-symbols-outlined">landscape</span>
+        <i class="ti ti-mountain"></i>
       </div>
       <h3 class="font-headline-sm text-headline-sm text-primary">Nuestra Visión</h3>
     </div>
@@ -234,7 +234,7 @@ pages['sobre-proyecto'] = () => {
     <div class="absolute top-0 left-0 w-full h-1 bg-secondary-container"></div>
     <div class="flex items-center gap-3">
       <div class="p-3 bg-secondary-fixed/30 rounded-full text-secondary">
-        <span class="material-symbols-outlined">groups</span>
+        <i class="ti ti-users-group"></i>
       </div>
       <h3 class="font-headline-sm text-headline-sm text-primary">Nuestra Misión</h3>
     </div>
@@ -248,17 +248,17 @@ pages['sobre-proyecto'] = () => {
   <h2 class="font-headline-sm text-headline-sm text-primary mb-6">Ejes de Trabajo</h2>
   <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
     <div class="bg-primary-fixed/20 border border-outline-variant/20 rounded-xl p-5 text-center flex flex-col items-center gap-3">
-      <span class="material-symbols-outlined text-3xl text-primary">monitoring</span>
+      <i class="ti text-3xl text-primary ti-activity"></i>
       <h4 class="font-body-md text-body-md font-semibold text-primary">Resiliencia y Datos</h4>
       <p class="text-on-surface-variant text-sm">Mapeo de riesgos, datos comunitarios y visualización geoespacial.</p>
     </div>
     <div class="bg-secondary-fixed/20 border border-outline-variant/20 rounded-xl p-5 text-center flex flex-col items-center gap-3">
-      <span class="material-symbols-outlined text-3xl text-secondary">architecture</span>
+      <i class="ti text-3xl text-secondary ti-tools"></i>
       <h4 class="font-body-md text-body-md font-semibold text-primary">Planificación</h4>
       <p class="text-on-surface-variant text-sm">Planes existentes, herramientas, estrategias de adaptación y criterios de priorización.</p>
     </div>
     <div class="bg-tertiary-fixed/20 border border-outline-variant/20 rounded-xl p-5 text-center flex flex-col items-center gap-3">
-      <span class="material-symbols-outlined text-3xl text-tertiary">emergency</span>
+      <i class="ti text-3xl text-tertiary ti-ambulance"></i>
       <h4 class="font-body-md text-body-md font-semibold text-primary">Preparación y Respuesta</h4>
       <p class="text-on-surface-variant text-sm">Guías de preparación, rutas de evacuación, puntos de encuentro y contactos de emergencia.</p>
     </div>
@@ -291,7 +291,7 @@ pages['encuesta'] = () => {
 
 <section class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 mb-8 text-center flex flex-col items-center gap-6">
   <div class="w-20 h-20 rounded-full bg-secondary-fixed/30 flex items-center justify-center">
-    <span class="material-symbols-outlined text-5xl text-secondary">assignment</span>
+    <i class="ti text-5xl text-secondary ti-clipboard-list"></i>
   </div>
   <h2 class="font-headline-sm text-headline-sm text-primary">Encuesta Comunitaria 2026</h2>
   <p class="text-on-surface-variant max-w-md">
@@ -303,7 +303,7 @@ pages['encuesta'] = () => {
     <span class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed rounded-full text-xs font-semibold uppercase tracking-wider">Español</span>
   </div>
   <a href="#" class="mt-4 inline-flex items-center gap-2 bg-primary text-on-primary px-8 py-4 rounded-lg font-headline-sm text-lg hover:opacity-90 active:scale-[0.98] transition-all shadow-lg">
-    <span class="material-symbols-outlined">open_in_new</span>
+    <i class="ti ti-external-link"></i>
     Comenzar Encuesta
   </a>
 </section>
@@ -332,7 +332,7 @@ pages['contactos'] = () => {
     <div class="absolute top-0 left-0 w-full h-1 bg-error"></div>
     <div class="flex items-center gap-3">
       <div class="p-3 bg-error-container rounded-full">
-        <span class="material-symbols-outlined text-error">emergency</span>
+        <i class="ti text-error ti-ambulance"></i>
       </div>
       <div>
         <h3 class="font-body-md font-bold text-on-surface">Sistema de Emergencias 9-1-1</h3>
@@ -346,7 +346,7 @@ pages['contactos'] = () => {
     <div class="absolute top-0 left-0 w-full h-1 bg-secondary-container"></div>
     <div class="flex items-center gap-3">
       <div class="p-3 bg-secondary-fixed/30 rounded-full">
-        <span class="material-symbols-outlined text-secondary">local_fire_department</span>
+        <i class="ti text-secondary ti-flame"></i>
       </div>
       <div>
         <h3 class="font-body-md font-bold text-on-surface">Manejo de Emergencias Municipal</h3>
@@ -360,7 +360,7 @@ pages['contactos'] = () => {
     <div class="absolute top-0 left-0 w-full h-1 bg-primary"></div>
     <div class="flex items-center gap-3">
       <div class="p-3 bg-primary-fixed/30 rounded-full">
-        <span class="material-symbols-outlined text-primary">shield</span>
+        <i class="ti text-primary ti-shield"></i>
       </div>
       <div>
         <h3 class="font-body-md font-bold text-on-surface">Defensa Civil</h3>
@@ -374,7 +374,7 @@ pages['contactos'] = () => {
     <div class="absolute top-0 left-0 w-full h-1 bg-tertiary-fixed-dim"></div>
     <div class="flex items-center gap-3">
       <div class="p-3 bg-tertiary-fixed/30 rounded-full">
-        <span class="material-symbols-outlined text-tertiary">water</span>
+        <i class="ti text-tertiary ti-droplet"></i>
       </div>
       <div>
         <h3 class="font-body-md font-bold text-on-surface">Cruz Roja Americana</h3>
@@ -387,7 +387,7 @@ pages['contactos'] = () => {
 
 <section class="bg-surface-container-low rounded-xl p-6 border border-outline-variant/20">
   <h3 class="font-body-md font-semibold text-primary mb-3 flex items-center gap-2">
-    <span class="material-symbols-outlined">volunteer_activism</span>
+    <i class="ti ti-heart-handshake"></i>
     Contacto del Proyecto
   </h3>
   <p class="text-on-surface-variant text-sm mb-2">
@@ -414,7 +414,7 @@ pages['criterios'] = () => {
 <div class="absolute top-0 left-0 w-full h-1 bg-secondary-container"></div>
 <div class="flex items-center gap-3">
 <div class="p-3 bg-secondary-container/20 rounded-full text-secondary">
-<span class="material-symbols-outlined" data-icon="diversity_3" data-weight="fill">diversity_3</span>
+<i class="ti ti-users-group" data-icon="ti-users-group" data-weight="fill"></i>
 </div>
 <h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary pt-serif-text">Vulnerabilidad Socioeconómica</h3>
 </div>
@@ -432,7 +432,7 @@ pages['criterios'] = () => {
 <div class="absolute top-0 left-0 w-full h-1 bg-tertiary-container"></div>
 <div class="flex items-center gap-3">
 <div class="p-3 bg-tertiary-container/10 rounded-full text-tertiary-container">
-<span class="material-symbols-outlined" data-icon="flood" data-weight="fill">flood</span>
+<i class="ti ti-ripple" data-icon="ti-ripple" data-weight="fill"></i>
 </div>
 <h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary pt-serif-text">Exposición Física</h3>
 </div>
@@ -448,7 +448,7 @@ pages['criterios'] = () => {
 </section>
 <!-- Data Visualization Placeholder Area -->
 <section class="mb-16 bg-surface-container-low rounded-xl p-6 border border-outline-variant/20 flex flex-col items-center justify-center text-center h-64">
-<span class="material-symbols-outlined text-4xl text-outline mb-2" data-icon="monitoring">monitoring</span>
+<i class="ti text-4xl text-outline mb-2 ti-activity" data-icon="ti-activity"></i>
 <p class="text-on-surface-variant font-label-sm uppercase tracking-widest">Visualización de Matriz de Riesgo</p>
 </section>
   `;
@@ -461,7 +461,7 @@ pages['escenarios'] = () => {
 <!-- Header Section -->
 <section class="flex flex-col gap-4">
 <div class="inline-flex items-center gap-2 bg-error-container text-on-error-container font-label-sm text-label-sm px-3 py-1 rounded-full w-max">
-<span class="material-symbols-outlined text-[16px]" data-icon="warning" data-weight="fill">warning</span>
+<i class="ti text-[16px] ti-alert-triangle-filled" data-icon="ti-alert-triangle-filled" data-weight="fill"></i>
                 ALERTA &amp; PREPARACIÓN
             </div>
 <h1 class="font-headline-xl text-headline-xl text-primary leading-tight">
@@ -492,17 +492,17 @@ pages['escenarios'] = () => {
                     </p>
 <div class="flex items-center gap-4 pt-2 border-t border-outline-variant/20">
 <div class="flex items-center gap-2 text-on-surface">
-<span class="material-symbols-outlined text-outline" data-icon="directions_walk">directions_walk</span>
+<i class="ti text-outline ti-walk" data-icon="ti-walk"></i>
 <span class="font-label-sm text-label-sm">15 min</span>
 </div>
 <div class="flex items-center gap-2 text-on-surface">
-<span class="material-symbols-outlined text-outline" data-icon="group">group</span>
+<i class="ti text-outline ti-users" data-icon="ti-users"></i>
 <span class="font-label-sm text-label-sm">Capacidad: 250</span>
 </div>
 </div>
 <button class="mt-2 w-full bg-secondary-container hover:bg-secondary text-on-secondary-container hover:text-on-secondary font-label-sm text-label-sm py-3 px-4 rounded-lg transition-colors flex justify-center items-center gap-2">
                         Ver Detalles de Ruta
-                        <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+                        <i class="ti text-[18px] ti-arrow-right" data-icon="ti-arrow-right"></i>
 </button>
 </div>
 </article>
@@ -510,7 +510,7 @@ pages['escenarios'] = () => {
 <div class="flex flex-col gap-gutter">
 <article class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-6 flex flex-col gap-3">
 <div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed mb-2">
-<span class="material-symbols-outlined" data-icon="water_drop" data-weight="fill">water_drop</span>
+<i class="ti ti-droplet-filled" data-icon="ti-droplet-filled" data-weight="fill"></i>
 </div>
 <h4 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Niveles de Inundación</h4>
 <p class="font-body-md text-body-md text-on-surface-variant">
@@ -519,7 +519,7 @@ pages['escenarios'] = () => {
 </article>
 <article class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-6 flex flex-col gap-3">
 <div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed mb-2">
-<span class="material-symbols-outlined" data-icon="home_work" data-weight="fill">home_work</span>
+<i class="ti ti-home-2" data-icon="ti-home-2" data-weight="fill"></i>
 </div>
 <h4 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Puntos de Encuentro</h4>
 <p class="font-body-md text-body-md text-on-surface-variant">
@@ -539,7 +539,7 @@ pages['estrategias'] = () => {
     <div class="w-full max-w-7xl mx-auto px-margin-mobile md:px-section-gap py-8">
       <header class="mb-10">
         <div class="inline-flex items-center gap-2 px-3 py-1 bg-primary-container/20 text-on-primary-container rounded-full mb-3">
-          <span class="material-symbols-outlined text-sm">alt_route</span>
+          <i class="ti text-sm ti-route-alt"></i>
           <span class="font-label-sm text-label-sm uppercase tracking-wider">Planificación Activa</span>
         </div>
         <h2 class="font-headline-xl text-3xl md:text-4xl text-primary font-bold leading-tight mb-4 font-pt-serif">Estrategias de Adaptación</h2>
@@ -560,7 +560,7 @@ pages['herramientas'] = () => {
 <!-- Header Section -->
 <section class="space-y-4">
 <div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container/20 text-on-secondary-container rounded-full mb-2">
-<span class="material-symbols-outlined text-sm">construction</span>
+<i class="ti text-sm ti-barrier-block"></i>
 <span class="font-label-sm text-label-sm uppercase tracking-wider">Planificación Activa</span>
 </div>
 <h2 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary font-bold leading-tight">
@@ -578,7 +578,7 @@ pages['herramientas'] = () => {
 <div class="p-6 md:p-8 flex flex-col md:flex-row gap-6 h-full">
 <div class="flex-1 space-y-4">
 <div class="h-12 w-12 bg-secondary-container/20 text-secondary-container rounded-lg flex items-center justify-center mb-2">
-<span class="material-symbols-outlined text-3xl">calculate</span>
+<i class="ti text-3xl ti-calculator"></i>
 </div>
 <h3 class="font-headline-lg text-headline-lg-mobile text-on-surface font-semibold">Calculadora de Riesgo Inmobiliario</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">
@@ -587,14 +587,14 @@ pages['herramientas'] = () => {
 <div class="pt-4 mt-auto">
 <button class="bg-secondary-container text-on-secondary-container hover:bg-secondary-fixed-dim font-label-sm text-label-sm px-6 py-3 rounded-lg flex items-center gap-2 transition-colors w-full md:w-auto justify-center font-semibold">
                                 Iniciar Evaluación
-                                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                <i class="ti text-sm ti-arrow-right"></i>
 </button>
 </div>
 </div>
 <div class="w-full md:w-1/3 bg-surface-container-low rounded-lg p-4 flex flex-col justify-center items-center border border-outline-variant/20 relative overflow-hidden">
 <!-- Decorative graphic placeholder for calculator -->
 <div class="w-24 h-24 rounded-full border-4 border-secondary-container/30 border-t-secondary-container animate-[spin_10s_linear_infinite] absolute -right-4 -top-4 opacity-50"></div>
-<span class="material-symbols-outlined text-6xl text-outline-variant mb-2 z-10">analytics</span>
+<i class="ti text-6xl text-outline-variant mb-2 z-10 ti-chart-bar"></i>
 <span class="font-label-sm text-label-sm text-outline z-10 text-center">Datos actualizados: Oct 2023</span>
 </div>
 </div>
@@ -604,7 +604,7 @@ pages['herramientas'] = () => {
 <div class="absolute top-0 left-0 w-full h-1 bg-tertiary-container"></div>
 <div class="flex justify-between items-start mb-4">
 <div class="h-10 w-10 bg-tertiary-container/10 text-tertiary-container rounded-lg flex items-center justify-center">
-<span class="material-symbols-outlined">checklist</span>
+<i class="ti ti-list-check"></i>
 </div>
 <span class="px-2 py-1 bg-tertiary-container/10 text-tertiary-container font-label-sm text-[10px] rounded uppercase">Descargable</span>
 </div>
@@ -614,16 +614,16 @@ pages['herramientas'] = () => {
                 </p>
 <div class="space-y-3">
 <div class="flex items-center gap-3 p-2 bg-surface-container-low rounded border border-outline-variant/10">
-<span class="material-symbols-outlined text-primary text-sm">check_box</span>
+<i class="ti text-primary text-sm ti-checkbox"></i>
 <span class="font-label-sm text-label-sm text-on-surface">Suministros Básicos</span>
 </div>
 <div class="flex items-center gap-3 p-2 bg-surface-container-low rounded border border-outline-variant/10">
-<span class="material-symbols-outlined text-outline text-sm">check_box_outline_blank</span>
+<i class="ti text-outline text-sm ti-square"></i>
 <span class="font-label-sm text-label-sm text-on-surface-variant">Documentos Críticos</span>
 </div>
 </div>
 <button class="mt-6 border border-tertiary-container text-tertiary-container hover:bg-tertiary-container/5 font-label-sm text-label-sm px-4 py-2 rounded-lg flex items-center justify-center gap-2 transition-colors w-full">
-<span class="material-symbols-outlined text-sm">download</span>
+<i class="ti text-sm ti-download"></i>
                     Descargar PDF
                 </button>
 </div>
@@ -633,7 +633,7 @@ pages['herramientas'] = () => {
 <div class="absolute top-0 right-0 w-64 h-64 bg-primary-container rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 opacity-50 group-hover:opacity-70 transition-opacity"></div>
 <div class="relative z-10 flex flex-col h-full">
 <div class="h-12 w-12 bg-on-primary/10 rounded-lg flex items-center justify-center mb-4 border border-on-primary/20">
-<span class="material-symbols-outlined text-on-primary">edit_location</span>
+<i class="ti text-on-primary ti-map-pin-edit"></i>
 </div>
 <h3 class="font-headline-lg text-headline-lg-mobile text-on-primary font-semibold mb-3">Mapeo Participativo</h3>
 <p class="font-body-md text-body-md text-primary-fixed-dim mb-8 flex-1">
@@ -641,7 +641,7 @@ pages['herramientas'] = () => {
                     </p>
 <button class="bg-on-primary text-primary hover:bg-primary-fixed font-label-sm text-label-sm px-6 py-3 rounded-lg flex items-center gap-2 transition-colors w-fit font-semibold">
                         Abrir Formulario
-                        <span class="material-symbols-outlined text-sm">open_in_new</span>
+                        <i class="ti text-sm ti-external-link"></i>
 </button>
 </div>
 </div>
@@ -654,7 +654,7 @@ pages['herramientas'] = () => {
 <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/80 to-transparent z-0"></div>
 <div class="relative z-10 space-y-3">
 <div class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-highest/80 backdrop-blur-sm text-on-surface rounded-md border border-outline-variant/30 w-fit">
-<span class="material-symbols-outlined text-[14px]">architecture</span>
+<i class="ti text-[14px] ti-tools"></i>
 <span class="font-label-sm text-[10px] uppercase font-bold tracking-widest">Guía Constructiva</span>
 </div>
 <h3 class="font-headline-lg text-xl text-on-surface font-bold">Refuerzo Estructural Vernáculo</h3>
@@ -662,7 +662,7 @@ pages['herramientas'] = () => {
                         Catálogo interactivo de técnicas de carpintería tradicional adaptadas para resistencia a vientos huracanados.
                     </p>
 <a class="inline-flex items-center gap-1 text-primary hover:text-primary-container font-label-sm text-label-sm pt-2 transition-colors underline underline-offset-4" href="#">
-                        Explorar Catálogo <span class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
+                        Explorar Catálogo <i class="ti text-[16px] ti-arrow-narrow-right"></i>
 </a>
 </div>
 </div>
@@ -684,7 +684,7 @@ pages['participacion'] = () => {
 <div class="absolute top-0 left-0 w-full h-1 bg-secondary-container"></div>
 <div class="p-6 flex flex-col gap-4 relative z-10">
 <div class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center text-on-secondary-container mb-2">
-<span class="material-symbols-outlined text-2xl">assignment</span>
+<i class="ti text-2xl ti-clipboard-list"></i>
 </div>
 <div>
 <h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary text-[24px] mb-2">Llena la Encuesta</h3>
@@ -692,7 +692,7 @@ pages['participacion'] = () => {
 </div>
 <button class="w-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm py-4 rounded-lg hover:bg-secondary-fixed transition-colors flex items-center justify-center gap-2 uppercase tracking-widest shadow-sm">
                     Comenzar Encuesta
-                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    <i class="ti text-sm ti-arrow-right"></i>
 </button>
 </div>
 <!-- Decorative background element -->
@@ -715,11 +715,11 @@ pages['participacion'] = () => {
 <div class="flex flex-col flex-grow">
 <h4 class="font-body-md text-body-md font-semibold text-primary">Taller de Diseño Participativo</h4>
 <div class="flex items-center gap-1 text-on-surface-variant mt-1 text-sm">
-<span class="material-symbols-outlined text-[16px]">schedule</span>
+<i class="ti text-[16px] ti-clock"></i>
 <span>10:00 AM - 12:00 PM</span>
 </div>
 <div class="flex items-center gap-1 text-on-surface-variant mt-1 text-sm">
-<span class="material-symbols-outlined text-[16px]">location_on</span>
+<i class="ti text-[16px] ti-map-pin"></i>
 <span>Centro Comunitario</span>
 </div>
 </div>
@@ -734,11 +734,11 @@ pages['participacion'] = () => {
 <div class="flex flex-col flex-grow">
 <h4 class="font-body-md text-body-md font-semibold text-primary">Reunión de Avances del Proyecto</h4>
 <div class="flex items-center gap-1 text-on-surface-variant mt-1 text-sm">
-<span class="material-symbols-outlined text-[16px]">schedule</span>
+<i class="ti text-[16px] ti-clock"></i>
 <span>6:00 PM - 8:00 PM</span>
 </div>
 <div class="flex items-center gap-1 text-on-surface-variant mt-1 text-sm">
-<span class="material-symbols-outlined text-[16px]">location_on</span>
+<i class="ti text-[16px] ti-map-pin"></i>
 <span>Plaza Principal</span>
 </div>
 </div>
@@ -746,7 +746,7 @@ pages['participacion'] = () => {
 </div>
 <button class="w-full border-2 border-primary text-primary font-label-sm text-label-sm py-4 rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors flex items-center justify-center gap-2 uppercase tracking-widest mt-2">
                 Ver Calendario Completo
-                <span class="material-symbols-outlined text-sm">calendar_month</span>
+                <i class="ti text-sm ti-calendar"></i>
 </button>
 </section>
   `;
@@ -771,7 +771,7 @@ pages['planes'] = () => {
 <div class="p-6 flex flex-col h-full gap-4 relative z-10">
 <div class="flex justify-between items-start">
 <span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-3 py-1 rounded-full uppercase tracking-wider">Ordenanzas</span>
-<span class="material-symbols-outlined text-primary" data-icon="gavel">gavel</span>
+<i class="ti text-primary ti-gavel" data-icon="ti-gavel"></i>
 </div>
 <h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mt-2">Normativas Municipales Vigentes</h3>
 <p class="text-on-surface-variant flex-1">
@@ -788,14 +788,14 @@ pages['planes'] = () => {
 <div class="p-6 flex flex-col h-full gap-4">
 <div class="flex justify-between items-start">
 <span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-3 py-1 rounded-full uppercase tracking-wider">Estrategia</span>
-<span class="material-symbols-outlined text-primary" data-icon="water">water</span>
+<i class="ti text-primary ti-droplet" data-icon="ti-droplet"></i>
 </div>
 <h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mt-2">Manejo Costero</h3>
 <p class="text-on-surface-variant flex-1">
                         Estrategias de adaptación y defensa de la línea costera ante el aumento del nivel del mar.
                     </p>
 <a class="text-tertiary-container font-label-sm text-label-sm flex items-center gap-1 hover:underline" href="#">
-                        Descargar PDF <span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+                        Descargar PDF <i class="ti text-sm ti-download" data-icon="ti-download"></i>
 </a>
 </div>
 </article>
@@ -858,9 +858,9 @@ pages['puntos-encuentro'] = () => {
 <span class="inline-block bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-2 py-1 rounded-sm mb-2 uppercase tracking-wide">Refugio Escolar</span>
 <h4 class="font-headline-lg-mobile text-xl font-bold text-on-surface leading-tight">Escuela Lucy Grillasca</h4>
 </div>
-<span class="material-symbols-outlined text-secondary-container text-3xl" style="font-variation-settings: 'FILL' 1;">school</span>
+<i class="ti text-secondary-container text-3xl ti-school"></i>
 </div>
-<p class="font-body-md text-on-surface-variant flex items-center gap-2"><span class="material-symbols-outlined text-sm">location_on</span> Ave. Hostos, Esq. Calle 1</p>
+<p class="font-body-md text-on-surface-variant flex items-center gap-2"><i class="ti text-sm ti-map-pin"></i> Ave. Hostos, Esq. Calle 1</p>
 <div class="mt-2 flex gap-2">
 <span class="bg-surface-container text-on-surface-variant font-label-sm text-[10px] px-2 py-1 rounded-full border border-outline/20">Capacidad: 200</span>
 <span class="bg-surface-container text-on-surface-variant font-label-sm text-[10px] px-2 py-1 rounded-full border border-outline/20">Generador</span>
@@ -874,9 +874,9 @@ pages['puntos-encuentro'] = () => {
 <span class="inline-block bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm px-2 py-1 rounded-sm mb-2 uppercase tracking-wide">Centro Comunal</span>
 <h4 class="font-headline-lg-mobile text-xl font-bold text-on-surface leading-tight">Centro Sor Isolina Ferré</h4>
 </div>
-<span class="material-symbols-outlined text-tertiary-container text-3xl" style="font-variation-settings: 'FILL' 1;">diversity_3</span>
+<i class="ti text-tertiary-container text-3xl ti-users-group"></i>
 </div>
-<p class="font-body-md text-on-surface-variant flex items-center gap-2"><span class="material-symbols-outlined text-sm">location_on</span> Sector Puerto Viejo</p>
+<p class="font-body-md text-on-surface-variant flex items-center gap-2"><i class="ti text-sm ti-map-pin"></i> Sector Puerto Viejo</p>
 <div class="mt-2 flex gap-2">
 <span class="bg-surface-container text-on-surface-variant font-label-sm text-[10px] px-2 py-1 rounded-full border border-outline/20">Suministros Base</span>
 </div>
@@ -889,9 +889,9 @@ pages['puntos-encuentro'] = () => {
 <span class="inline-block bg-primary text-on-primary font-label-sm text-label-sm px-2 py-1 rounded-sm mb-2 uppercase tracking-wide">Área Segura</span>
 <h4 class="font-headline-lg-mobile text-xl font-bold text-on-surface leading-tight">Parque del Litoral (Zona Alta)</h4>
 </div>
-<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">park</span>
+<i class="ti text-primary text-3xl ti-tree"></i>
 </div>
-<p class="font-body-md text-on-surface-variant flex items-center gap-2"><span class="material-symbols-outlined text-sm">location_on</span> Final Ave. Hostos Sur</p>
+<p class="font-body-md text-on-surface-variant flex items-center gap-2"><i class="ti text-sm ti-map-pin"></i> Final Ave. Hostos Sur</p>
 <p class="font-body-md text-sm text-on-surface-variant mt-1 italic">Punto de encuentro temporal al aire libre.</p>
 </article>
 </div>
@@ -912,15 +912,15 @@ pages['visualizador'] = () => {
 <!-- Layer Toggles Bento -->
 <div class="grid grid-cols-2 gap-4 mb-6">
 <button class="bg-surface-container p-4 rounded-xl flex flex-col items-start gap-2 border border-outline-variant/30 hover:border-secondary transition-colors focus:ring-2 focus:ring-tertiary-container focus:outline-none text-left">
-<span class="material-symbols-outlined text-secondary text-2xl">water</span>
+<i class="ti text-secondary text-2xl ti-droplet"></i>
 <span class="font-label-sm text-label-sm text-on-surface font-semibold">Zonas de Inundación</span>
 </button>
 <button class="bg-primary-container p-4 rounded-xl flex flex-col items-start gap-2 border border-primary transition-colors focus:ring-2 focus:ring-tertiary-container focus:outline-none text-left">
-<span class="material-symbols-outlined text-on-primary-container text-2xl">forest</span>
+<i class="ti text-on-primary-container text-2xl ti-tree"></i>
 <span class="font-label-sm text-label-sm text-on-primary-container font-semibold">Manglares (Activo)</span>
 </button>
 <button class="bg-surface-container p-4 rounded-xl flex flex-col items-start gap-2 border border-outline-variant/30 hover:border-secondary transition-colors focus:ring-2 focus:ring-tertiary-container focus:outline-none text-left col-span-2">
-<span class="material-symbols-outlined text-secondary text-2xl">pin_drop</span>
+<i class="ti text-secondary text-2xl ti-map-pin"></i>
 <span class="font-label-sm text-label-sm text-on-surface font-semibold">Puntos de Interés / Landmarks</span>
 </button>
 </div>
@@ -932,21 +932,21 @@ pages['visualizador'] = () => {
 <!-- Floating Controls -->
 <div class="absolute right-margin-mobile bottom-margin-mobile flex flex-col gap-2">
 <button aria-label="Zoom In" class="bg-surface text-primary p-3 rounded-full shadow-lg border border-outline-variant/20 hover:bg-surface-container transition-colors focus:ring-2 focus:ring-primary focus:outline-none">
-<span class="material-symbols-outlined">add</span>
+<i class="ti ti-plus"></i>
 </button>
 <button aria-label="Zoom Out" class="bg-surface text-primary p-3 rounded-full shadow-lg border border-outline-variant/20 hover:bg-surface-container transition-colors focus:ring-2 focus:ring-primary focus:outline-none">
-<span class="material-symbols-outlined">remove</span>
+<i class="ti ti-minus"></i>
 </button>
 <button aria-label="My Location" class="bg-tertiary-container text-on-tertiary-container p-3 rounded-full shadow-lg mt-2 focus:ring-2 focus:ring-primary focus:outline-none">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">my_location</span>
+<i class="ti ti-current-location"></i>
 </button>
 </div>
 <!-- Map Pins (Mockup) -->
 <div class="absolute top-1/3 left-1/4 transform -translate-x-1/2 -translate-y-1/2">
-<span class="material-symbols-outlined text-secondary-container text-4xl drop-shadow-md" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<i class="ti text-secondary-container text-4xl drop-shadow-md ti-map-pin"></i>
 </div>
 <div class="absolute top-1/2 right-1/3 transform -translate-x-1/2 -translate-y-1/2">
-<span class="material-symbols-outlined text-error text-3xl drop-shadow-md" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<i class="ti text-error text-3xl drop-shadow-md ti-map-pin"></i>
 </div>
 </div>
 <!-- Info Panel (Bottom Sheet style) -->
@@ -954,7 +954,7 @@ pages['visualizador'] = () => {
 <div class="w-12 h-1 bg-outline-variant/50 rounded-full mx-auto mb-4"></div>
 <h3 class="font-headline-lg-mobile text-lg font-bold text-primary mb-1">Sector Salistral</h3>
 <p class="font-label-sm text-label-sm text-on-surface-variant mb-3 flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px]">forest</span> Área de Conservación
+<i class="ti text-[16px] ti-tree"></i> Área de Conservación
             </p>
 <div class="flex gap-2">
 <span class="bg-secondary-fixed text-on-secondary-fixed px-3 py-1 rounded-full font-label-sm text-label-sm">Manglar</span>
@@ -989,7 +989,7 @@ pages.inicio = () => {
               <span class="font-label-caps text-label-caps text-primary uppercase block mb-1">Mapeo e Identificación de Riesgos</span>
               <h2 class="font-headline-sm text-headline-sm text-primary">Planificación y Rutas Seguras</h2>
             </div>
-            <span class="material-symbols-outlined text-secondary bg-surface rounded-full p-2 shadow-sm">map</span>
+            <i class="ti text-secondary bg-surface rounded-full p-2 shadow-sm ti-map"></i>
           </div>
           
           <div class="w-full h-40 rounded-lg bg-surface-container-low overflow-hidden relative border border-outline-variant/30 cursor-pointer" data-route="mapas">
@@ -1014,7 +1014,7 @@ pages.inicio = () => {
           </div>
           <div class="flex items-end justify-between mt-2">
             <p class="font-body-md text-xs text-on-tertiary-fixed/80">Conoce los datos demográficos y de vulnerabilidad de La Playa.</p>
-            <span class="material-symbols-outlined text-tertiary opacity-80 text-[32px]">analytics</span>
+            <i class="ti text-tertiary opacity-80 text-[32px] ti-chart-bar"></i>
           </div>
         </div>
 
@@ -1026,7 +1026,7 @@ pages.inicio = () => {
           </div>
           <div class="flex items-end justify-between mt-2">
             <p class="font-body-md text-xs text-on-primary-fixed-variant/80">Conoce la alianza comunitaria por la resiliencia climática.</p>
-            <span class="material-symbols-outlined text-primary text-[32px]">info</span>
+            <i class="ti text-primary text-[32px] ti-info-circle"></i>
           </div>
         </div>
       </div>
@@ -1035,15 +1035,15 @@ pages.inicio = () => {
     <!-- CTAs Section -->
     <section class="px-margin-mobile pb-10 flex flex-col gap-4">
       <button data-route="mapas" class="bg-primary text-on-primary font-headline-sm py-4 px-6 rounded-lg shadow-lg flex items-center justify-center gap-2 hover:bg-primary-container active:scale-[0.98] transition-all w-full">
-        <span class="material-symbols-outlined">map</span>
+        <i class="ti ti-map"></i>
         Ver Mapas de Riesgo y Desalojo
       </button>
       <button data-route="sobre-proyecto" class="bg-primary-container text-on-primary-container font-headline-sm py-4 px-6 rounded-lg shadow-lg flex items-center justify-center gap-2 hover:opacity-90 active:scale-[0.98] transition-all w-full">
-        <span class="material-symbols-outlined">info</span>
+        <i class="ti ti-info-circle"></i>
         Conoce el Proyecto Raíces Costeras
       </button>
       <button data-route="datos" class="bg-secondary-container text-on-secondary-container font-headline-sm py-4 px-6 rounded-lg shadow-lg flex items-center justify-center gap-2 hover:opacity-90 active:scale-[0.98] transition-all w-full">
-        <span class="material-symbols-outlined">analytics</span>
+        <i class="ti ti-chart-bar"></i>
         Ver Datos de la Comunidad
       </button>
     </section>
@@ -1086,7 +1086,7 @@ pages.datos = () => {
           <div class="absolute inset-0 bg-secondary-fixed opacity-5 group-hover:opacity-10 transition-opacity"></div>
           <div class="flex justify-between items-start mb-4 relative z-10">
             <span class="font-label-caps text-label-caps text-secondary tracking-widest uppercase">Demografía</span>
-            <span class="material-symbols-outlined text-secondary" style="font-size: 28px; font-variation-settings: 'FILL' 1;">groups</span>
+            <i class="ti text-secondary ti-users-group" style="font-size: 28px; font-variation-settings: 'FILL' 1;"></i>
           </div>
           <div class="flex-1 flex flex-col justify-center relative z-10">
             <h3 class="font-display-lg text-display-lg text-primary mb-2">12,450</h3>
@@ -1099,7 +1099,7 @@ pages.datos = () => {
           <div class="absolute inset-0 bg-tertiary-fixed opacity-5 group-hover:opacity-10 transition-opacity"></div>
           <div class="flex justify-between items-start mb-4 relative z-10">
             <span class="font-label-caps text-label-caps text-tertiary tracking-widest uppercase">Ambiente</span>
-            <span class="material-symbols-outlined text-tertiary" style="font-size: 28px; font-variation-settings: 'FILL' 1;">forest</span>
+            <i class="ti text-tertiary ti-tree" style="font-size: 28px; font-variation-settings: 'FILL' 1;"></i>
           </div>
           <div class="flex-1 flex flex-col justify-center relative z-10">
             <h3 class="font-display-lg text-display-lg text-primary mb-2">850</h3>
@@ -1112,7 +1112,7 @@ pages.datos = () => {
           <div class="absolute inset-0 bg-primary-fixed opacity-5 group-hover:opacity-10 transition-opacity"></div>
           <div class="flex justify-between items-start mb-4 relative z-10">
             <span class="font-label-caps text-label-caps text-primary tracking-widest uppercase">Economía</span>
-            <span class="material-symbols-outlined text-primary" style="font-size: 28px; font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+            <i class="ti text-primary ti-wallet" style="font-size: 28px; font-variation-settings: 'FILL' 1;"></i>
           </div>
           <div class="flex-1 flex flex-col justify-center relative z-10">
             <h3 class="font-display-lg text-display-lg text-primary mb-2">45%</h3>
@@ -1125,7 +1125,7 @@ pages.datos = () => {
           <div class="absolute inset-0 bg-secondary-fixed opacity-5 group-hover:opacity-10 transition-opacity"></div>
           <div class="flex justify-between items-start mb-4 relative z-10">
             <span class="font-label-caps text-label-caps text-secondary tracking-widest uppercase">Demografía</span>
-            <span class="material-symbols-outlined text-secondary" style="font-size: 28px; font-variation-settings: 'FILL' 1;">elderly</span>
+            <i class="ti text-secondary ti-old" style="font-size: 28px; font-variation-settings: 'FILL' 1;"></i>
           </div>
           <div class="flex-1 flex flex-col justify-center relative z-10">
             <h3 class="font-display-lg text-display-lg text-primary mb-2">32%</h3>
@@ -1138,7 +1138,7 @@ pages.datos = () => {
           <div class="absolute inset-0 bg-tertiary-fixed opacity-5 group-hover:opacity-10 transition-opacity"></div>
           <div class="flex justify-between items-start mb-4 relative z-10">
             <span class="font-label-caps text-label-caps text-tertiary tracking-widest uppercase">Ambiente</span>
-            <span class="material-symbols-outlined text-tertiary" style="font-size: 28px; font-variation-settings: 'FILL' 1;">water_drop</span>
+            <i class="ti text-tertiary ti-droplet-filled" style="font-size: 28px; font-variation-settings: 'FILL' 1;"></i>
           </div>
           <div class="flex-1 flex flex-col justify-center relative z-10">
             <h3 class="font-display-lg text-display-lg text-primary mb-2">2.5<span class="text-2xl ml-1">mm</span></h3>
@@ -1150,7 +1150,7 @@ pages.datos = () => {
       <!-- Interactive Charts Panel -->
       <section class="mt-12 bg-surface-container-low rounded-2xl p-6 md:p-8 border border-outline-variant/30">
         <h3 class="font-headline-sm text-primary mb-6 flex items-center gap-2">
-          <span class="material-symbols-outlined text-secondary">analytics</span>
+          <i class="ti text-secondary ti-chart-bar"></i>
           Visualizaciones Interactivas de Datos
         </h3>
         
@@ -1333,7 +1333,7 @@ pages.mapas = () => {
             <img alt="Mapa de Zonas de Inundación" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2t5nIIeb_hotxwQsgLjDb_NwAzT3MLlN5NSphMOWEqGSiwGpq08FYJHUwIUTWXKXC_ZyylnxsCdFo1gsRaleKurh_GqmrI-ssg48s4sMGrGWDR7ymercjHE424M7irq_gAikOlyGSFysZfOOI_KNApfqNtQOH0b1lObV7kCp-HVmYReRHVrUAzKNh2kMDD91hK3J0JNoGBEkqUPCr8g_UDrRP_1JSO0yCG7K3qjca0jpr-KXA-DprJDw4Ug120bo6NSOKhaG2NrM"/>
             <div class="absolute top-4 left-4">
               <span class="bg-surface-container-lowest/90 backdrop-blur-sm px-3 py-1 rounded-full font-label-caps text-label-caps text-primary border border-outline-variant/30 flex items-center gap-1 shadow-sm">
-                <span class="material-symbols-outlined text-[14px]">waves</span>
+                <i class="ti text-[14px] ti-wave-sine"></i>
                 Nivel del Mar
               </span>
             </div>
@@ -1348,7 +1348,7 @@ pages.mapas = () => {
             <div class="flex items-center justify-between pt-4 border-t border-surface-variant">
               <span class="text-xs text-on-surface-variant font-label-caps">Capas: Elevación, Marea</span>
               <button id="btn-open-flood-modal" class="text-primary font-label-caps text-label-caps flex items-center gap-1 hover:text-secondary transition-colors font-bold">
-                Ver Mapa Interactivo <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                Ver Mapa Interactivo <i class="ti text-[16px] ti-arrow-right"></i>
               </button>
             </div>
           </div>
@@ -1360,7 +1360,7 @@ pages.mapas = () => {
             <img alt="Mapa de Rutas de Desalojo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8GoemdRBe5tsfPAasBYNptd3tPePK29Azg81dgRZrKzxn9SIUBAPBFVr_7yAeSlCDrJ3uECfwC8a8QL_EPJpC8FC-HEogAulJOcaJX4E46Bzxlvbbx4q1fAI9yQfjeAZBviAXk-bLt9MU_lsP-DzaZxupIkvB1U7S2Kx7seDe_7zZUzuFXsvIu7fbnmVx1e9YmbjoR1O9O5-Gt6NRnPTSOekw_3fAli00-BnpXNi0E4liN-gEhDyM4lu8qqyq768htkCoiJa08jk"/>
             <div class="absolute top-4 left-4">
               <span class="bg-surface-container-lowest/90 backdrop-blur-sm px-3 py-1 rounded-full font-label-caps text-label-caps text-primary border border-outline-variant/30 flex items-center gap-1 shadow-sm">
-                <span class="material-symbols-outlined text-[14px]">directions_run</span>
+                <i class="ti text-[14px] ti-run"></i>
                 Evacuación
               </span>
             </div>
@@ -1375,7 +1375,7 @@ pages.mapas = () => {
             <div class="flex items-center justify-between pt-4 border-t border-surface-variant">
               <span class="text-xs text-on-surface-variant font-label-caps">Actualizado: Oct 2024</span>
               <button id="btn-open-routes-modal" class="text-primary font-label-caps text-label-caps flex items-center gap-1 hover:text-secondary transition-colors font-bold">
-                Ver Mapa Interactivo <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                Ver Mapa Interactivo <i class="ti text-[16px] ti-arrow-right"></i>
               </button>
             </div>
           </div>
@@ -1384,14 +1384,14 @@ pages.mapas = () => {
         <!-- Action Card -->
         <div class="glass-card p-8 bg-surface-container-low flex flex-col justify-center items-center text-center border border-outline-variant/50 rounded-xl md:col-span-2 lg:col-span-1 min-h-[220px]">
           <div class="w-14 h-14 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center mb-4">
-            <span class="material-symbols-outlined text-2xl">download</span>
+            <i class="ti text-2xl ti-download"></i>
           </div>
           <h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Descargar Paquete Completo</h3>
           <p class="font-body-md text-body-md text-on-surface-variant mb-6 max-w-sm">
             Obtén todos los mapas en alta resolución para uso educativo o planificación comunitaria offline.
           </p>
           <a href="#" class="bg-primary text-on-primary px-6 py-3 rounded-full font-label-caps text-xs hover:bg-primary-container hover:shadow-md transition-all active:scale-95 flex items-center gap-2">
-            <span class="material-symbols-outlined text-[18px]">folder_zip</span>
+            <i class="ti text-[18px] ti-folder-zip"></i>
             Descargar ZIP (45 MB)
           </a>
         </div>
@@ -1402,14 +1402,14 @@ pages.mapas = () => {
           <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0); background-size: 20px 20px;"></div>
           <div class="relative z-10">
             <div class="flex items-center gap-3 mb-4">
-              <span class="material-symbols-outlined text-tertiary-fixed">info</span>
+              <i class="ti text-tertiary-fixed ti-info-circle"></i>
               <span class="font-label-caps text-label-caps text-tertiary-fixed font-bold uppercase">Metodología</span>
             </div>
             <p class="font-body-lg text-body-lg mb-4 text-on-tertiary-fixed">
               Estos mapas son el resultado de un esfuerzo colaborativo entre cartógrafos, el Comité de Asesores Comunitarios y residentes locales de Ponce Playa.
             </p>
             <a class="inline-flex items-center gap-1 font-label-caps text-xs text-tertiary-fixed font-bold underline underline-offset-4 hover:opacity-80 transition-opacity" href="#">
-              Leer sobre el proceso <span class="material-symbols-outlined text-[16px]">east</span>
+              Leer sobre el proceso <i class="ti text-[16px] ti-arrow-right"></i>
             </a>
           </div>
         </div>
@@ -1427,7 +1427,7 @@ pages.mapas = () => {
             <p id="modal-map-subtitle" class="font-body-md text-xs text-on-surface-variant">Visualizador de inundaciones costeras</p>
           </div>
           <button id="modal-close-btn" class="p-2 rounded-full hover:bg-surface-container-high transition-colors">
-            <span class="material-symbols-outlined text-primary">close</span>
+            <i class="ti text-primary ti-x"></i>
           </button>
         </header>
 
@@ -1444,7 +1444,7 @@ pages.mapas = () => {
               </div>
               <input type="range" id="water-level-slider" min="0" max="30" value="0" class="w-full h-2 bg-outline-variant rounded-lg appearance-none cursor-pointer accent-primary" />
               <div class="p-3 bg-error-container/30 border border-error-container/60 rounded-lg flex gap-2">
-                <span class="material-symbols-outlined text-error text-[20px]">warning</span>
+                <i class="ti text-error text-[20px] ti-alert-triangle-filled"></i>
                 <p id="slider-alert-text" class="font-body-md text-xs text-on-error-container font-semibold">Nivel base. Costa segura.</p>
               </div>
             </div>
@@ -1469,7 +1469,7 @@ pages.mapas = () => {
             <!-- Ponce Playa stats summary -->
             <div class="mt-auto p-4 bg-primary-fixed rounded-xl border border-primary-fixed-dim">
               <div class="flex items-center gap-2 mb-1">
-                <span class="material-symbols-outlined text-primary text-[20px]">security</span>
+                <i class="ti text-primary text-[20px] ti-shield"></i>
                 <span class="font-label-caps text-xs text-on-primary-fixed font-bold uppercase">Estado de Ruta</span>
               </div>
               <p class="font-body-md text-xs text-on-primary-fixed-variant leading-relaxed">
@@ -1528,7 +1528,7 @@ pages.mapas = () => {
                 <g class="safe-pin-marker cursor-pointer" data-info="Refugio A: Centro Comunitario Playa. Capacidad 250 personas. Kit médico y generador de emergencia disponible.">
                   <circle cx="250" cy="100" r="10" fill="#22c55e" fill-opacity="0.3" class="animate-ping" />
                   <circle cx="250" cy="100" r="7" fill="#22c55e" stroke="#ffffff" stroke-width="1.5" />
-                  <span class="material-symbols-outlined hidden">home</span>
+                  <i class="ti hidden ti-home"></i>
                 </g>
 
                 <!-- Safe Zone: Ponce High School (Top West) -->
@@ -1557,7 +1557,7 @@ pages.mapas = () => {
             <!-- Map Point Information Toast -->
             <div id="map-toast" class="absolute bottom-4 left-4 right-4 bg-primary/95 text-on-primary p-3 rounded-lg border border-primary-container shadow-lg backdrop-blur-md hidden text-xs transition-opacity duration-300">
               <div class="flex items-start gap-2">
-                <span class="material-symbols-outlined text-[16px] text-secondary">info</span>
+                <i class="ti text-[16px] text-secondary ti-info-circle"></i>
                 <p id="map-toast-content"></p>
               </div>
             </div>
@@ -1694,12 +1694,12 @@ pages.guia = () => {
         <!-- 1. Mochila de Emergencia (Spans 2 cols on md) -->
         <section class="texture-overlay bg-surface-container-low rounded-xl p-card-padding shadow-lg md:col-span-2 flex flex-col relative overflow-hidden border border-outline-variant/30">
           <div class="absolute -right-10 -bottom-10 opacity-5 pointer-events-none">
-            <span class="material-symbols-outlined text-[150px] text-primary">backpack</span>
+            <i class="ti text-[150px] text-primary ti-backpack"></i>
           </div>
           <header class="flex items-center justify-between mb-4 relative z-20">
             <div class="flex items-center gap-2">
               <div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
-                <span class="material-symbols-outlined icon-fill">medical_services</span>
+                <i class="ti icon-fill ti-first-aid-kit"></i>
               </div>
               <div>
                 <span class="font-label-caps text-label-caps text-secondary block">Inventario Vital</span>
@@ -1745,7 +1745,7 @@ pages.guia = () => {
         <section class="texture-overlay bg-surface-container-high rounded-xl p-card-padding shadow-lg md:col-span-2 flex flex-col border border-outline-variant/30">
           <header class="flex items-center gap-gutter mb-gutter">
             <div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
-              <span class="material-symbols-outlined icon-fill">family_home</span>
+              <i class="ti icon-fill ti-home-shield"></i>
             </div>
             <div>
               <span class="font-label-caps text-label-caps text-secondary block">Estrategia</span>
@@ -1758,7 +1758,7 @@ pages.guia = () => {
             <!-- Step 1 -->
             <div class="bg-surface p-4 rounded-lg border-t-2 border-primary-fixed-dim">
               <div class="flex items-center gap-2 mb-2">
-                <span class="material-symbols-outlined text-secondary text-[20px]">meeting_room</span>
+                <i class="ti text-secondary text-[20px] ti-door-enter"></i>
                 <h4 class="font-body-lg text-on-surface font-semibold">Zonas Seguras</h4>
               </div>
               <p class="font-body-md text-xs text-on-surface-variant">Identifique los cuartos interiores más resistentes en su casa, lejos de ventanas.</p>
@@ -1766,7 +1766,7 @@ pages.guia = () => {
             <!-- Step 2 -->
             <div class="bg-surface p-4 rounded-lg border-t-2 border-secondary">
               <div class="flex items-center gap-2 mb-2">
-                <span class="material-symbols-outlined text-secondary text-[20px]">pin_drop</span>
+                <i class="ti text-secondary text-[20px] ti-map-pin"></i>
                 <h4 class="font-body-lg text-on-surface font-semibold">Puntos de Reunión</h4>
               </div>
               <p class="font-body-md text-xs text-on-surface-variant">Acuerden un punto de encuentro en el barrio y otro fuera en caso de inundación.</p>
@@ -1776,7 +1776,7 @@ pages.guia = () => {
             <div class="bg-surface p-4 rounded-lg border-t-2 border-tertiary-fixed-dim sm:col-span-2 flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-between">
               <div class="flex-grow">
                 <div class="flex items-center gap-2 mb-1">
-                  <span class="material-symbols-outlined text-secondary text-[20px]">contact_phone</span>
+                  <i class="ti text-secondary text-[20px] ti-phone-call"></i>
                   <h4 class="font-body-lg text-on-surface font-semibold">Contacto Foráneo</h4>
                 </div>
                 <div id="contact-display" class="font-body-md text-xs text-on-surface-variant">
@@ -1802,20 +1802,20 @@ pages.guia = () => {
             <article class="glass-card rounded-xl p-card-padding flex flex-col border border-outline-variant/20 relative overflow-hidden group">
               <div class="absolute inset-0 bg-tertiary-fixed opacity-5 group-hover:opacity-10 transition-opacity"></div>
               <div class="w-12 h-12 rounded-full bg-tertiary-fixed text-on-tertiary-fixed mb-4 flex items-center justify-center relative z-10">
-                <span class="material-symbols-outlined icon-fill">weather_mix</span>
+                <i class="ti icon-fill ti-cloud-storm"></i>
               </div>
               <h4 class="font-headline-sm text-headline-sm text-primary mb-2 relative z-10">Antes</h4>
               <ul class="flex flex-col gap-2 font-body-md text-sm text-on-surface-variant relative z-10 flex-grow">
                 <li class="flex items-start gap-2">
-                  <span class="material-symbols-outlined text-primary text-sm mt-0.5">stop_circle</span>
+                  <i class="ti text-primary text-sm mt-0.5 ti-player-stop-filled"></i>
                   <span>Asegure puertas, ventanas y objetos sueltos en el patio.</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="material-symbols-outlined text-primary text-sm mt-0.5">stop_circle</span>
+                  <i class="ti text-primary text-sm mt-0.5 ti-player-stop-filled"></i>
                   <span>Llene los tanques de gasolina de sus vehículos.</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="material-symbols-outlined text-primary text-sm mt-0.5">stop_circle</span>
+                  <i class="ti text-primary text-sm mt-0.5 ti-player-stop-filled"></i>
                   <span>Verifique su mochila de emergencia y plan familiar.</span>
                 </li>
               </ul>
@@ -1825,20 +1825,20 @@ pages.guia = () => {
             <article class="glass-card rounded-xl p-card-padding flex flex-col border border-primary-fixed/50 relative overflow-hidden group">
               <div class="absolute inset-0 bg-primary-fixed opacity-10 group-hover:opacity-15 transition-opacity"></div>
               <div class="w-12 h-12 rounded-full bg-primary text-on-primary mb-4 flex items-center justify-center relative z-10">
-                <span class="material-symbols-outlined icon-fill">warning</span>
+                <i class="ti icon-fill ti-alert-triangle-filled"></i>
               </div>
               <h4 class="font-headline-sm text-headline-sm text-primary mb-2 relative z-10">Durante</h4>
               <ul class="flex flex-col gap-2 font-body-md text-sm text-on-surface-variant relative z-10 flex-grow">
                 <li class="flex items-start gap-2">
-                  <span class="material-symbols-outlined text-secondary text-sm mt-0.5">stop_circle</span>
+                  <i class="ti text-secondary text-sm mt-0.5 ti-player-stop-filled"></i>
                   <span>Manténgase alejado de ventanas y puertas de cristal.</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="material-symbols-outlined text-secondary text-sm mt-0.5">stop_circle</span>
+                  <i class="ti text-secondary text-sm mt-0.5 ti-player-stop-filled"></i>
                   <span>Escuche boletines oficiales en la radio portátil.</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="material-symbols-outlined text-secondary text-sm mt-0.5">stop_circle</span>
+                  <i class="ti text-secondary text-sm mt-0.5 ti-player-stop-filled"></i>
                   <span>Desconecte la electricidad si sube el nivel del agua.</span>
                 </li>
               </ul>
@@ -1848,20 +1848,20 @@ pages.guia = () => {
             <article class="glass-card rounded-xl p-card-padding flex flex-col border border-outline-variant/20 relative overflow-hidden group">
               <div class="absolute inset-0 bg-secondary-fixed opacity-5 group-hover:opacity-10 transition-opacity"></div>
               <div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container mb-4 flex items-center justify-center relative z-10">
-                <span class="material-symbols-outlined icon-fill">check_circle</span>
+                <i class="ti icon-fill ti-circle-check-filled"></i>
               </div>
               <h4 class="font-headline-sm text-headline-sm text-primary mb-2 relative z-10">Después</h4>
               <ul class="flex flex-col gap-2 font-body-md text-sm text-on-surface-variant relative z-10 flex-grow">
                 <li class="flex items-start gap-2">
-                  <span class="material-symbols-outlined text-primary text-sm mt-0.5">stop_circle</span>
+                  <i class="ti text-primary text-sm mt-0.5 ti-player-stop-filled"></i>
                   <span>Espere la confirmación de cese de peligro por autoridades.</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="material-symbols-outlined text-primary text-sm mt-0.5">stop_circle</span>
+                  <i class="ti text-primary text-sm mt-0.5 ti-player-stop-filled"></i>
                   <span>Evite caminar o transitar por calles inundadas.</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="material-symbols-outlined text-primary text-sm mt-0.5">stop_circle</span>
+                  <i class="ti text-primary text-sm mt-0.5 ti-player-stop-filled"></i>
                   <span>Beba agua embotellada hasta saber que el grifo es seguro.</span>
                 </li>
               </ul>
@@ -1875,7 +1875,7 @@ pages.guia = () => {
     <div id="contact-modal" class="fixed inset-0 bg-surface-variant/80 backdrop-blur-sm z-[999] hidden flex items-center justify-center p-4">
       <div class="bg-surface border border-outline-variant/30 rounded-2xl w-full max-w-md p-6 shadow-2xl flex flex-col gap-4">
         <h3 class="font-headline-sm text-primary flex items-center gap-2">
-          <span class="material-symbols-outlined text-secondary">contact_phone</span>
+          <i class="ti text-secondary ti-phone-call"></i>
           Añadir Contacto de Emergencia
         </h3>
         <p class="font-body-md text-xs text-on-surface-variant">Establezca un contacto fuera del sur de Puerto Rico para reportar estado durante huracanes.</p>
@@ -2001,7 +2001,7 @@ pages.sobre = () => {
         <!-- Left Column: Context -->
         <div class="md:col-span-7 bg-surface-container-lowest rounded-xl p-card-padding md:p-8 shadow-lg border border-surface-variant relative overflow-hidden">
           <div class="absolute -right-10 -top-10 text-primary-container/5 pointer-events-none">
-            <span class="material-symbols-outlined" style="font-size: 200px;">waves</span>
+            <i class="ti ti-wave-sine" style="font-size: 200px;"></i>
           </div>
           <h3 class="font-headline-sm text-on-surface mb-4">Un Esfuerzo de Raíz</h3>
           <p class="font-body-lg text-on-surface-variant mb-4">
@@ -2019,7 +2019,7 @@ pages.sobre = () => {
           <div class="bg-surface-container-low rounded-xl p-card-padding shadow-lg flex flex-col gap-2 h-full justify-center border border-outline-variant/30">
             <div class="flex items-center gap-3 mb-2">
               <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0">
-                <span class="material-symbols-outlined">wb_sunny</span>
+                <i class="ti ti-sun"></i>
               </div>
               <h4 class="font-headline-sm text-base text-on-surface font-semibold">Un Nuevo Amanecer, Inc.</h4>
             </div>
@@ -2032,7 +2032,7 @@ pages.sobre = () => {
           <div class="bg-tertiary-container/10 rounded-xl p-card-padding shadow-lg flex flex-col gap-2 h-full justify-center border border-tertiary-container/20">
             <div class="flex items-center gap-3 mb-2">
               <div class="w-10 h-10 rounded-full bg-tertiary flex items-center justify-center text-on-tertiary shrink-0">
-                <span class="material-symbols-outlined">diversity_3</span>
+                <i class="ti ti-users-group"></i>
               </div>
               <h4 class="font-headline-sm text-base text-on-surface font-semibold">Comité de Asesores Comunitarios</h4>
             </div>
@@ -2052,7 +2052,7 @@ pages.sobre = () => {
             <div class="absolute top-0 left-0 w-full h-1 bg-secondary"></div>
             <div class="flex justify-between items-start mb-4">
               <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Pilar 01</span>
-              <span class="material-symbols-outlined text-secondary text-3xl opacity-80">satellite_alt</span>
+              <i class="ti text-secondary text-3xl opacity-80 ti-satellite"></i>
             </div>
             <h4 class="font-headline-sm text-body-lg font-bold text-on-surface mb-3">Datos e Inteligencia Territorial</h4>
             <p class="font-body-md text-sm text-on-surface-variant flex-grow leading-relaxed">
@@ -2065,7 +2065,7 @@ pages.sobre = () => {
             <div class="absolute top-0 left-0 w-full h-1 bg-primary"></div>
             <div class="flex justify-between items-start mb-4">
               <span class="font-label-caps text-label-caps text-primary uppercase tracking-widest">Pilar 02</span>
-              <span class="material-symbols-outlined text-primary text-3xl opacity-80">nature</span>
+              <i class="ti text-primary text-3xl opacity-80 ti-tree"></i>
             </div>
             <h4 class="font-headline-sm text-body-lg font-bold text-on-surface mb-3">Infraestructura Ecológica</h4>
             <p class="font-body-md text-sm text-on-surface-variant flex-grow leading-relaxed">
@@ -2078,7 +2078,7 @@ pages.sobre = () => {
             <div class="absolute top-0 left-0 w-full h-1 bg-tertiary"></div>
             <div class="flex justify-between items-start mb-4">
               <span class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest">Pilar 03</span>
-              <span class="material-symbols-outlined text-tertiary text-3xl opacity-80">support_agent</span>
+              <i class="ti text-tertiary text-3xl opacity-80 ti-headset"></i>
             </div>
             <h4 class="font-headline-sm text-body-lg font-bold text-on-surface mb-3">Capacidad Adaptativa</h4>
             <p class="font-body-md text-sm text-on-surface-variant flex-grow leading-relaxed">
@@ -2167,12 +2167,10 @@ pages.refugios = () => {
     <div class="bg-surface-container-low border border-outline-variant/50 rounded-xl p-5 flex flex-col gap-3 hover:bg-surface-container-high transition-colors shadow-sm">
       <div class="flex items-start justify-between gap-2">
         <h3 class="font-headline-sm text-on-surface font-semibold text-base leading-tight">${r.name}</h3>
-        <span class="material-symbols-outlined text-primary text-xl bg-primary-container/30 rounded-full p-1.5 shrink-0">
-          ${r.type === 'Escuela' ? 'school' : 'domain'}
-        </span>
+        <i class="ti text-primary text-xl bg-primary-container/30 rounded-full p-1.5 shrink-0 ${r.type === 'Escuela' ? 'ti-school' : 'ti-building'}"></i>
       </div>
       <div class="mt-auto pt-3 border-t border-outline-variant/30 flex items-center gap-2 text-on-surface-variant">
-        <span class="material-symbols-outlined text-[18px]">call</span>
+        <i class="ti text-[18px] ti-phone"></i>
         <a href="tel:${r.phone.replace(/[^0-9]/g, '')}" class="font-body-md font-medium hover:text-primary transition-colors">${r.phone}</a>
       </div>
     </div>
@@ -2183,11 +2181,11 @@ pages.refugios = () => {
       
       <div class="bg-error-container text-on-error-container p-6 rounded-2xl mb-8 flex flex-col md:flex-row gap-6 items-center shadow-md relative overflow-hidden">
         <div class="absolute -right-6 -bottom-6 opacity-5 pointer-events-none">
-          <span class="material-symbols-outlined" style="font-size: 150px;">health_and_safety</span>
+          <i class="ti ti-shield-check" style="font-size: 150px;"></i>
         </div>
         
         <div class="bg-error text-on-error w-16 h-16 rounded-full flex items-center justify-center shrink-0 shadow-sm z-10">
-          <span class="material-symbols-outlined text-3xl">warning</span>
+          <i class="ti text-3xl ti-alert-triangle-filled"></i>
         </div>
         
         <div class="flex-grow text-center md:text-left z-10">
@@ -2199,7 +2197,7 @@ pages.refugios = () => {
         </div>
         
         <div class="shrink-0 text-center flex flex-col items-center gap-1 opacity-90 z-10 bg-error-container/50 p-2 rounded-lg">
-          <span class="material-symbols-outlined text-3xl">admin_panel_settings</span>
+          <i class="ti text-3xl ti-shield-lock"></i>
           <span class="font-label-caps text-[10px] uppercase tracking-wider font-bold">OMME Ponce</span>
         </div>
       </div>
