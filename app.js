@@ -9,9 +9,9 @@ const staticTranslations = {
     sobre: "Sobre Nosotros",
     fotografia: "Fotografía",
     refugios: "Refugios",
-    orgTop: "Un Nuevo Amanecer, Inc.<br/>Comité de Asesores Comunitarios",
-    orgBottom: "Comité de Asesores Comunitarios (CAC)",
-    footer: "Un Nuevo Amanecer, Inc. | Comité de Asesores Comunitarios (CAC)",
+    orgTop: "Un Nuevo Amanecer, Inc.",
+    orgBottom: "",
+    footer: "Un Nuevo Amanecer, Inc.",
     title: "Raíces Costeras"
   },
   en: {
@@ -22,9 +22,9 @@ const staticTranslations = {
     sobre: "About Us",
     fotografia: "Photography",
     refugios: "Shelters",
-    orgTop: "Un Nuevo Amanecer, Inc.<br/>Community Advisory Committee",
-    orgBottom: "Community Advisory Committee (CAC)",
-    footer: "Un Nuevo Amanecer, Inc. | Community Advisory Committee (CAC)",
+    orgTop: "Un Nuevo Amanecer, Inc.",
+    orgBottom: "",
+    footer: "Un Nuevo Amanecer, Inc.",
     title: "Coastal Roots"
   }
 };
