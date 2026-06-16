@@ -719,9 +719,7 @@ pages['estrategias'] = () => {
           <span class="font-label-sm text-label-sm uppercase tracking-wider">Planificación Activa</span>
         </div>
         <h2 class="font-headline-xl text-4xl md:text-5xl text-primary font-bold leading-tight mb-4 font-pt-serif">Estrategias de Adaptación</h2>
-        <p class="font-body-md text-on-surface-variant leading-relaxed text-lg md:text-xl max-w-3xl">
-          Explora las diversas estrategias y proyectos propuestos para mejorar la resiliencia y seguridad de nuestra comunidad.
-        </p>
+
       </header>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         ${cardsHtml}
