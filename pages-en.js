@@ -262,18 +262,18 @@ function renderCharts() {
         <line x1="40" y1="210" x2="380" y2="210" stroke="#a0a0a0" stroke-width="1" />
         
         <!-- Y-Axis Labels -->
-        <text x="30" y="24" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="end">40mm</text>
-        <text x="30" y="74" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="end">30mm</text>
-        <text x="30" y="124" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="end">20mm</text>
-        <text x="30" y="174" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="end">10mm</text>
-        <text x="30" y="214" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="end">0mm</text>
+        <text x="30" y="24" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="end">40mm</text>
+        <text x="30" y="74" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="end">30mm</text>
+        <text x="30" y="124" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="end">20mm</text>
+        <text x="30" y="174" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="end">10mm</text>
+        <text x="30" y="214" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="end">0mm</text>
 
         <!-- X-Axis Labels -->
-        <text x="40" y="230" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="middle">2010</text>
-        <text x="125" y="230" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="middle">2014</text>
-        <text x="210" y="230" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="middle">2018</text>
-        <text x="295" y="230" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="middle">2022</text>
-        <text x="380" y="230" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="middle">2026</text>
+        <text x="40" y="230" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="middle">2010</text>
+        <text x="125" y="230" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="middle">2014</text>
+        <text x="210" y="230" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="middle">2018</text>
+        <text x="295" y="230" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="middle">2022</text>
+        <text x="380" y="230" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="middle">2026</text>
 
         <!-- Line Gradient -->
         <defs>
@@ -311,36 +311,36 @@ function renderCharts() {
         <line x1="50" y1="200" x2="370" y2="200" stroke="#a0a0a0" stroke-width="1" />
 
         <!-- Y Axis Labels -->
-        <text x="40" y="24" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="end">1000ha</text>
-        <text x="40" y="84" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="end">750ha</text>
-        <text x="40" y="144" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="end">500ha</text>
-        <text x="40" y="204" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="end">250ha</text>
+        <text x="40" y="24" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="end">1000ha</text>
+        <text x="40" y="84" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="end">750ha</text>
+        <text x="40" y="144" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="end">500ha</text>
+        <text x="40" y="204" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="end">250ha</text>
 
         <!-- Bar 1 (2018) -->
         <rect x="90" y="120" width="30" height="80" rx="4" fill="${primaryColor}" class="hover:opacity-85 transition-opacity" />
         <rect x="122" y="160" width="15" height="40" rx="2" fill="${accentColor}" />
-        <text x="113" y="218" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="middle">2018</text>
+        <text x="113" y="218" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="middle">2018</text>
 
         <!-- Bar 2 (2020) -->
         <rect x="170" y="90" width="30" height="110" rx="4" fill="${primaryColor}" class="hover:opacity-85 transition-opacity" />
         <rect x="202" y="130" width="15" height="70" rx="2" fill="${accentColor}" />
-        <text x="193" y="218" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="middle">2020</text>
+        <text x="193" y="218" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="middle">2020</text>
 
         <!-- Bar 3 (2022) -->
         <rect x="250" y="60" width="30" height="140" rx="4" fill="${primaryColor}" class="hover:opacity-85 transition-opacity" />
         <rect x="282" y="110" width="15" height="90" rx="2" fill="${accentColor}" />
-        <text x="273" y="218" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="middle">2022</text>
+        <text x="273" y="218" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="middle">2022</text>
 
         <!-- Bar 4 (2024) -->
         <rect x="330" y="30" width="30" height="170" rx="4" fill="${primaryColor}" class="hover:opacity-85 transition-opacity" />
         <rect x="362" y="80" width="15" height="120" rx="2" fill="${accentColor}" />
-        <text x="353" y="218" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="middle">2024</text>
+        <text x="353" y="218" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="middle">2024</text>
 
         <!-- Legend -->
         <circle cx="100" cy="-5" r="5" fill="${primaryColor}" />
-        <text x="110" y="-1" font-size="10" font-family="Vollkorn" fill="#707974">Manglar Protegido</text>
+        <text x="110" y="-1" font-size="10" font-family="PT Serif" fill="#707974">Manglar Protegido</text>
         <circle cx="230" cy="-5" r="5" fill="${accentColor}" />
-        <text x="240" y="-1" font-size="10" font-family="Vollkorn" fill="#707974">Nuevas Siembras</text>
+        <text x="240" y="-1" font-size="10" font-family="PT Serif" fill="#707974">Nuevas Siembras</text>
       </svg>
     `;
   }
@@ -580,13 +580,13 @@ pagesEN.mapas = () => {
               </g>
 
               <!-- Map Labels -->
-              <text x="250" y="85" font-size="10" font-weight="bold" fill="#003629" text-anchor="middle" font-family="Vollkorn">Refugio Central</text>
-              <text x="120" y="85" font-size="10" font-weight="bold" fill="#003629" text-anchor="middle" font-family="Vollkorn">Refugio Oeste</text>
-              <text x="380" y="85" font-size="10" font-weight="bold" fill="#003629" text-anchor="middle" font-family="Vollkorn">Refugio Este</text>
+              <text x="250" y="85" font-size="10" font-weight="bold" fill="#003629" text-anchor="middle" font-family="PT Serif">Refugio Central</text>
+              <text x="120" y="85" font-size="10" font-weight="bold" fill="#003629" text-anchor="middle" font-family="PT Serif">Refugio Oeste</text>
+              <text x="380" y="85" font-size="10" font-weight="bold" fill="#003629" text-anchor="middle" font-family="PT Serif">Refugio Este</text>
               
-              <text x="145" y="215" font-size="8" fill="#707974" font-family="Vollkorn">Sec. Lirios</text>
-              <text x="340" y="215" font-size="8" fill="#707974" font-family="Vollkorn">Sec. Vistas</text>
-              <text x="250" y="360" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle" font-family="Vollkorn">Mar Caribe</text>
+              <text x="145" y="215" font-size="8" fill="#707974" font-family="PT Serif">Sec. Lirios</text>
+              <text x="340" y="215" font-size="8" fill="#707974" font-family="PT Serif">Sec. Vistas</text>
+              <text x="250" y="360" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle" font-family="PT Serif">Mar Caribe</text>
             </svg>
 
             <!-- Map Point Information Toast -->

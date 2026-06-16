@@ -403,7 +403,7 @@ pages['contactos'] = () => {
 pages['criterios'] = () => {
   return `
 <header class="mb-12">
-<h1 class="font-headline-xl text-headline-xl text-primary vollkorn-text mb-4">Criterios de Priorización</h1>
+<h1 class="font-headline-xl text-headline-xl text-primary pt-serif-text mb-4">Criterios de Priorización</h1>
 <p class="text-on-surface-variant max-w-prose text-lg leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </p>
@@ -416,7 +416,7 @@ pages['criterios'] = () => {
 <div class="p-3 bg-secondary-container/20 rounded-full text-secondary">
 <span class="material-symbols-outlined" data-icon="diversity_3" data-weight="fill">diversity_3</span>
 </div>
-<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary vollkorn-text">Vulnerabilidad Socioeconómica</h3>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary pt-serif-text">Vulnerabilidad Socioeconómica</h3>
 </div>
 <p class="text-on-surface-variant">
                     Evaluamos la capacidad de respuesta de las comunidades ante eventos climáticos, considerando factores como el acceso a servicios básicos, niveles de ingresos y densidad poblacional. Las áreas con menor resiliencia económica reciben mayor prioridad de intervención.
@@ -434,7 +434,7 @@ pages['criterios'] = () => {
 <div class="p-3 bg-tertiary-container/10 rounded-full text-tertiary-container">
 <span class="material-symbols-outlined" data-icon="flood" data-weight="fill">flood</span>
 </div>
-<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary vollkorn-text">Exposición Física</h3>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary pt-serif-text">Exposición Física</h3>
 </div>
 <p class="text-on-surface-variant">
                     Análisis topográfico y geoespacial para determinar el nivel de riesgo directo por inundaciones, erosión costera y aumento del nivel del mar. Se priorizan las zonas con mayor probabilidad de impacto físico a corto y mediano plazo.
@@ -537,7 +537,7 @@ pages['estrategias'] = () => {
   return `
 <!-- Header Section -->
 <section class="flex flex-col gap-4">
-<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-vollkorn">Estrategias de Adaptación</h2>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-pt-serif">Estrategias de Adaptación</h2>
 <p class="font-body-md text-on-surface-variant leading-relaxed text-lg">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
@@ -552,7 +552,7 @@ pages['estrategias'] = () => {
 <div class="w-10 h-10 rounded-full bg-tertiary-container/10 flex items-center justify-center text-tertiary-container">
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">eco</span>
 </div>
-<h3 class="font-vollkorn font-bold text-xl text-primary">Soluciones Basadas en la Naturaleza</h3>
+<h3 class="font-pt-serif font-bold text-xl text-primary">Soluciones Basadas en la Naturaleza</h3>
 </div>
 <div class="h-40 rounded-lg bg-surface-container-high overflow-hidden relative">
 <img alt="Mangrove forest coastal protection" class="w-full h-full object-cover" data-alt="A lush, dense mangrove forest growing directly out of shallow coastal waters under bright, sunny daylight. The scene emphasizes nature-based coastal protection in a tropical or subtropical setting. The lighting is crisp, highlighting the complex root structures and vibrant green leaves against a clear blue sky. The visual style is highly detailed, photorealistic documentary photography, reflecting a professional environmental planning aesthetic with a bright, light-mode friendly color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4VyztYdfQzoT61ko6WbTfInP9bpe_VDyp9fwJxpOZqZpCxY2Yz7UgPwgiwUjdyR325X1qdM5wkFe-QKQx4Rin9L1SuKhXNFicATKHJLUrgpFkhf4vXOlzaZL82yy8qUXReAotpsYA2bF9H6II7kG7VF_0MwKujYFTScI_9YrSxlMuwGJ87ZFvynEyjWK5vRFlyH65jD6CmjT9biKPi4_0YuMyMiq1bBnoHG8Im3d8x6tTXcvWgHr1IVbKWp6beUjVwDqlECTyKhs"/>
@@ -574,7 +574,7 @@ pages['estrategias'] = () => {
 <div class="w-10 h-10 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary">
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">architecture</span>
 </div>
-<h3 class="font-vollkorn font-bold text-xl text-primary">Mejoras Estructurales</h3>
+<h3 class="font-pt-serif font-bold text-xl text-primary">Mejoras Estructurales</h3>
 </div>
 <div class="h-40 rounded-lg bg-surface-container-high overflow-hidden relative">
 <img alt="Elevated coastal home architecture" class="w-full h-full object-cover" data-alt="A modern, elevated coastal home designed for flood resilience. The house features sturdy wooden pilings, clean architectural lines, and a welcoming porch. The setting is bright and sunny, conveying structural reliability and community warmth. The color palette includes warm sunlight yellow accents and coastal turquoise trims against a shell white exterior. The image is a photorealistic architectural visualization in a bright, modern corporate style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACBGjSm1rgLkFWr_SC9PbjroEGPlLNGOesYDMYTZVQLXC5ExIrJ62xEuEw4sWVGk4cHH92YDWpZwkUIKfCvl0q_m-3Yx-WInNFf0eeE1c1wKbDJsHcLcOgCdF-z0UDZxFBS0eXG5CCtWivB4MWQCDzKLdxzTZoTQsSKbfb1D4WFSEMa560gWBAH-YKSe-gYRQTuP8E7WOz_00aybkL3zy82-KRM8e1QWhrblukts1LQt1codBqkuMLt4_ApZcKR3TC0bWyL_76sgE"/>
@@ -596,7 +596,7 @@ pages['estrategias'] = () => {
 <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">group</span>
 </div>
-<h3 class="font-vollkorn font-bold text-xl text-primary">Protocolos Comunitarios</h3>
+<h3 class="font-pt-serif font-bold text-xl text-primary">Protocolos Comunitarios</h3>
 </div>
 <p class="font-body-md text-on-surface-variant">
                         Redes de apoyo vecinal y sistemas de alerta temprana gestionados por la propia comunidad.
@@ -1290,18 +1290,18 @@ function renderCharts() {
         <line x1="40" y1="210" x2="380" y2="210" stroke="#a0a0a0" stroke-width="1" />
         
         <!-- Y-Axis Labels -->
-        <text x="30" y="24" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="end">40mm</text>
-        <text x="30" y="74" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="end">30mm</text>
-        <text x="30" y="124" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="end">20mm</text>
-        <text x="30" y="174" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="end">10mm</text>
-        <text x="30" y="214" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="end">0mm</text>
+        <text x="30" y="24" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="end">40mm</text>
+        <text x="30" y="74" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="end">30mm</text>
+        <text x="30" y="124" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="end">20mm</text>
+        <text x="30" y="174" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="end">10mm</text>
+        <text x="30" y="214" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="end">0mm</text>
 
         <!-- X-Axis Labels -->
-        <text x="40" y="230" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="middle">2010</text>
-        <text x="125" y="230" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="middle">2014</text>
-        <text x="210" y="230" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="middle">2018</text>
-        <text x="295" y="230" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="middle">2022</text>
-        <text x="380" y="230" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="middle">2026</text>
+        <text x="40" y="230" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="middle">2010</text>
+        <text x="125" y="230" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="middle">2014</text>
+        <text x="210" y="230" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="middle">2018</text>
+        <text x="295" y="230" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="middle">2022</text>
+        <text x="380" y="230" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="middle">2026</text>
 
         <!-- Line Gradient -->
         <defs>
@@ -1339,36 +1339,36 @@ function renderCharts() {
         <line x1="50" y1="200" x2="370" y2="200" stroke="#a0a0a0" stroke-width="1" />
 
         <!-- Y Axis Labels -->
-        <text x="40" y="24" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="end">1000ha</text>
-        <text x="40" y="84" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="end">750ha</text>
-        <text x="40" y="144" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="end">500ha</text>
-        <text x="40" y="204" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="end">250ha</text>
+        <text x="40" y="24" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="end">1000ha</text>
+        <text x="40" y="84" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="end">750ha</text>
+        <text x="40" y="144" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="end">500ha</text>
+        <text x="40" y="204" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="end">250ha</text>
 
         <!-- Bar 1 (2018) -->
         <rect x="90" y="120" width="30" height="80" rx="4" fill="${primaryColor}" class="hover:opacity-85 transition-opacity" />
         <rect x="122" y="160" width="15" height="40" rx="2" fill="${accentColor}" />
-        <text x="113" y="218" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="middle">2018</text>
+        <text x="113" y="218" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="middle">2018</text>
 
         <!-- Bar 2 (2020) -->
         <rect x="170" y="90" width="30" height="110" rx="4" fill="${primaryColor}" class="hover:opacity-85 transition-opacity" />
         <rect x="202" y="130" width="15" height="70" rx="2" fill="${accentColor}" />
-        <text x="193" y="218" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="middle">2020</text>
+        <text x="193" y="218" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="middle">2020</text>
 
         <!-- Bar 3 (2022) -->
         <rect x="250" y="60" width="30" height="140" rx="4" fill="${primaryColor}" class="hover:opacity-85 transition-opacity" />
         <rect x="282" y="110" width="15" height="90" rx="2" fill="${accentColor}" />
-        <text x="273" y="218" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="middle">2022</text>
+        <text x="273" y="218" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="middle">2022</text>
 
         <!-- Bar 4 (2024) -->
         <rect x="330" y="30" width="30" height="170" rx="4" fill="${primaryColor}" class="hover:opacity-85 transition-opacity" />
         <rect x="362" y="80" width="15" height="120" rx="2" fill="${accentColor}" />
-        <text x="353" y="218" font-size="10" font-family="Vollkorn" fill="#707974" text-anchor="middle">2024</text>
+        <text x="353" y="218" font-size="10" font-family="PT Serif" fill="#707974" text-anchor="middle">2024</text>
 
         <!-- Legend -->
         <circle cx="100" cy="-5" r="5" fill="${primaryColor}" />
-        <text x="110" y="-1" font-size="10" font-family="Vollkorn" fill="#707974">Manglar Protegido</text>
+        <text x="110" y="-1" font-size="10" font-family="PT Serif" fill="#707974">Manglar Protegido</text>
         <circle cx="230" cy="-5" r="5" fill="${accentColor}" />
-        <text x="240" y="-1" font-size="10" font-family="Vollkorn" fill="#707974">Nuevas Siembras</text>
+        <text x="240" y="-1" font-size="10" font-family="PT Serif" fill="#707974">Nuevas Siembras</text>
       </svg>
     `;
   }
@@ -1609,13 +1609,13 @@ pages.mapas = () => {
               </g>
 
               <!-- Map Labels -->
-              <text x="250" y="85" font-size="10" font-weight="bold" fill="#003629" text-anchor="middle" font-family="Vollkorn">Refugio Central</text>
-              <text x="120" y="85" font-size="10" font-weight="bold" fill="#003629" text-anchor="middle" font-family="Vollkorn">Refugio Oeste</text>
-              <text x="380" y="85" font-size="10" font-weight="bold" fill="#003629" text-anchor="middle" font-family="Vollkorn">Refugio Este</text>
+              <text x="250" y="85" font-size="10" font-weight="bold" fill="#003629" text-anchor="middle" font-family="PT Serif">Refugio Central</text>
+              <text x="120" y="85" font-size="10" font-weight="bold" fill="#003629" text-anchor="middle" font-family="PT Serif">Refugio Oeste</text>
+              <text x="380" y="85" font-size="10" font-weight="bold" fill="#003629" text-anchor="middle" font-family="PT Serif">Refugio Este</text>
               
-              <text x="145" y="215" font-size="8" fill="#707974" font-family="Vollkorn">Sec. Lirios</text>
-              <text x="340" y="215" font-size="8" fill="#707974" font-family="Vollkorn">Sec. Vistas</text>
-              <text x="250" y="360" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle" font-family="Vollkorn">Mar Caribe</text>
+              <text x="145" y="215" font-size="8" fill="#707974" font-family="PT Serif">Sec. Lirios</text>
+              <text x="340" y="215" font-size="8" fill="#707974" font-family="PT Serif">Sec. Vistas</text>
+              <text x="250" y="360" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle" font-family="PT Serif">Mar Caribe</text>
             </svg>
 
             <!-- Map Point Information Toast -->
