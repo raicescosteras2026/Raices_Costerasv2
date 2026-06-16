@@ -132,7 +132,7 @@ const estrategiasData = [
   { text: "Reuniones con Líderes Municipales", doc: "DOC-06", icon: "users-group" },
   { text: "Control de Desbordamiento de Infraestructura Pluvial", doc: "DOC-07", icon: "home-down" },
   { text: "Mantenimiento del Sistema de Alcantarillado y Prevención de Desbordamientos", doc: "DOC-07", icon: "tool" },
-  { text: "Oportunidades Económicas del Puerto", doc: "DOC-02", icon: "boat" },
+
   { text: "Barreras Naturales (Manglares, Arrecifes)", doc: "DOC-06", icon: "tree" },
   { text: "Mejora de la Red Eléctrica y Alumbrado Nocturno", doc: "DOC-09", icon: "bulb" },
   { text: "Desarrollo de Capacidades Comunitarias para la Preparación ante Desastres", doc: "DOC-07", icon: "certificate" },
