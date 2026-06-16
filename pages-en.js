@@ -245,9 +245,9 @@ function initDatosPage() {
 }
 
 function renderCharts() {
-  const primaryColor = "#003629";
-  const secondaryColor = "#006a64";
-  const accentColor = "#e3a38c";
+  const primaryColor = "#097C87";
+  const secondaryColor = "#23CED9";
+  const accentColor = "#F9D779";
 
   // Render Sea Level Chart
   const seaContainer = document.getElementById("sea-level-chart-container");
@@ -520,21 +520,21 @@ pagesEN.mapas = () => {
               <path class="map-water" d="M 0 320 Q 150 300 250 310 T 500 300 L 500 400 L 0 400 Z" />
               
               <!-- Dynamic Water Rise Shading (controlled by slider) -->
-              <path id="water-rise-path" fill="#006a64" fill-opacity="0.2" stroke="none" d="M 0 320 Q 150 300 250 310 T 500 300 L 500 400 L 0 400 Z" />
+              <path id="water-rise-path" fill="#23CED9" fill-opacity="0.2" stroke="none" d="M 0 320 Q 150 300 250 310 T 500 300 L 500 400 L 0 400 Z" />
 
               <!-- Shore Sand Line -->
               <path fill="none" stroke="#e3dbcb" stroke-width="6" d="M 0 320 Q 150 300 250 310 T 500 300" />
               
               <!-- Mangrove Forest Icons (decorations) -->
               <g class="mangrove-group opacity-60">
-                <path d="M 30 280 L 35 270 L 40 280 M 35 270 L 35 290" stroke="#003629" stroke-width="1.5" />
-                <circle cx="35" cy="268" r="4" fill="#006a64" />
+                <path d="M 30 280 L 35 270 L 40 280 M 35 270 L 35 290" stroke="#097C87" stroke-width="1.5" />
+                <circle cx="35" cy="268" r="4" fill="#23CED9" />
                 
-                <path d="M 60 290 L 65 280 L 70 290 M 65 280 L 65 300" stroke="#003629" stroke-width="1.5" />
-                <circle cx="65" cy="278" r="4" fill="#006a64" />
+                <path d="M 60 290 L 65 280 L 70 290 M 65 280 L 65 300" stroke="#097C87" stroke-width="1.5" />
+                <circle cx="65" cy="278" r="4" fill="#23CED9" />
 
-                <path d="M 450 280 L 455 270 L 460 280 M 455 270 L 455 290" stroke="#003629" stroke-width="1.5" />
-                <circle cx="455" cy="268" r="4" fill="#006a64" />
+                <path d="M 450 280 L 455 270 L 460 280 M 455 270 L 455 290" stroke="#097C87" stroke-width="1.5" />
+                <circle cx="455" cy="268" r="4" fill="#23CED9" />
               </g>
 
               <!-- Flood Risk Shaded Polygon Area (controlled via opacity checkbox) -->
@@ -580,9 +580,9 @@ pagesEN.mapas = () => {
               </g>
 
               <!-- Map Labels -->
-              <text x="250" y="85" font-size="10" font-weight="bold" fill="#003629" text-anchor="middle" font-family="PT Serif">Refugio Central</text>
-              <text x="120" y="85" font-size="10" font-weight="bold" fill="#003629" text-anchor="middle" font-family="PT Serif">Refugio Oeste</text>
-              <text x="380" y="85" font-size="10" font-weight="bold" fill="#003629" text-anchor="middle" font-family="PT Serif">Refugio Este</text>
+              <text x="250" y="85" font-size="10" font-weight="bold" fill="#097C87" text-anchor="middle" font-family="PT Serif">Refugio Central</text>
+              <text x="120" y="85" font-size="10" font-weight="bold" fill="#097C87" text-anchor="middle" font-family="PT Serif">Refugio Oeste</text>
+              <text x="380" y="85" font-size="10" font-weight="bold" fill="#097C87" text-anchor="middle" font-family="PT Serif">Refugio Este</text>
               
               <text x="145" y="215" font-size="8" fill="#707974" font-family="PT Serif">Sec. Lirios</text>
               <text x="340" y="215" font-size="8" fill="#707974" font-family="PT Serif">Sec. Vistas</text>
