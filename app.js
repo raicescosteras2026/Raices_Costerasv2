@@ -1071,26 +1071,26 @@ pages.inicio = () => {
         </div>
 
         <!-- Card 2: Datos de la Comunidad (Half Width) -->
-        <div class="sm:col-span-2 bg-tertiary-fixed rounded-xl p-card-padding shadow-lg flex flex-col gap-3 justify-between cursor-pointer border border-outline-variant/10 hover:translate-y-[-2px] transition-transform duration-300" data-route="guia">
+        <div class="sm:col-span-2 bg-tertiary-fixed rounded-xl p-card-padding shadow-lg flex flex-col gap-3 justify-between cursor-pointer border border-outline-variant/10 hover:translate-y-[-2px] transition-transform duration-300" data-route="datos">
           <div>
-            <span class="font-label-caps text-label-caps text-tertiary uppercase block mb-1">Simulacros y Guías</span>
-            <h2 class="font-headline-sm text-body-lg text-on-tertiary-fixed font-bold leading-tight">Educación y Preparación Familiar</h2>
+            <span class="font-label-caps text-label-caps text-tertiary uppercase block mb-1">Resiliencia y Datos</span>
+            <h2 class="font-headline-sm text-body-lg text-on-tertiary-fixed font-bold leading-tight">Datos de la Comunidad</h2>
           </div>
           <div class="flex items-end justify-between mt-2">
-            <p class="font-body-md text-xs text-on-tertiary-fixed/80">Guía interactiva para armar tu mochila de emergencia.</p>
-            <span class="material-symbols-outlined text-tertiary opacity-80 text-[32px]">school</span>
+            <p class="font-body-md text-xs text-on-tertiary-fixed/80">Conoce los datos demográficos y de vulnerabilidad de La Playa.</p>
+            <span class="material-symbols-outlined text-tertiary opacity-80 text-[32px]">analytics</span>
           </div>
         </div>
 
-        <!-- Card 3: Protegiendo Nuestra Costa (Half Width) -->
-        <div class="sm:col-span-2 bg-primary-fixed rounded-xl p-card-padding shadow-lg flex flex-col gap-3 justify-between cursor-pointer border border-outline-variant/10 hover:translate-y-[-2px] transition-transform duration-300" data-route="sobre">
+        <!-- Card 3: Sobre el Proyecto (Half Width) -->
+        <div class="sm:col-span-2 bg-primary-fixed rounded-xl p-card-padding shadow-lg flex flex-col gap-3 justify-between cursor-pointer border border-outline-variant/10 hover:translate-y-[-2px] transition-transform duration-300" data-route="sobre-proyecto">
           <div>
-            <span class="font-label-caps text-label-caps text-on-primary-fixed-variant uppercase block mb-1">Soluciones Naturales</span>
-            <h2 class="font-headline-sm text-body-lg text-on-primary-fixed font-bold leading-tight">Protección de Nuestras Costas</h2>
+            <span class="font-label-caps text-label-caps text-on-primary-fixed-variant uppercase block mb-1">Iniciativa Comunitaria</span>
+            <h2 class="font-headline-sm text-body-lg text-on-primary-fixed font-bold leading-tight">Sobre el Proyecto</h2>
           </div>
           <div class="flex items-end justify-between mt-2">
-            <p class="font-body-md text-xs text-on-primary-fixed-variant/80">Conoce los 3 pilares de resiliencia ecológica.</p>
-            <span class="material-symbols-outlined text-primary text-[32px]">forest</span>
+            <p class="font-body-md text-xs text-on-primary-fixed-variant/80">Conoce la alianza comunitaria por la resiliencia climática.</p>
+            <span class="material-symbols-outlined text-primary text-[32px]">info</span>
           </div>
         </div>
       </div>
@@ -1102,9 +1102,9 @@ pages.inicio = () => {
         <span class="material-symbols-outlined">map</span>
         Ver Mapas de Riesgo y Desalojo
       </button>
-      <button data-route="guia" class="bg-primary-container text-on-primary-container font-headline-sm py-4 px-6 rounded-lg shadow-lg flex items-center justify-center gap-2 hover:opacity-90 active:scale-[0.98] transition-all w-full">
-        <span class="material-symbols-outlined">download</span>
-        Completar Guía de Preparación
+      <button data-route="sobre-proyecto" class="bg-primary-container text-on-primary-container font-headline-sm py-4 px-6 rounded-lg shadow-lg flex items-center justify-center gap-2 hover:opacity-90 active:scale-[0.98] transition-all w-full">
+        <span class="material-symbols-outlined">info</span>
+        Conoce el Proyecto Raíces Costeras
       </button>
       <button data-route="datos" class="bg-secondary-container text-on-secondary-container font-headline-sm py-4 px-6 rounded-lg shadow-lg flex items-center justify-center gap-2 hover:opacity-90 active:scale-[0.98] transition-all w-full">
         <span class="material-symbols-outlined">analytics</span>
