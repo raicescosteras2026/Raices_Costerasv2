@@ -50,31 +50,47 @@ const data = [
   { text: "Plan de Adaptación de Infraestructura (Salud, Educación)", doc: "DOC-02", icon: "building" }
 ];
 
-let cardsHtml = '<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">\\n';
+function getCategoryColor(doc) {
+  if (["DOC-03", "DOC-04", "DOC-05"].includes(doc)) {
+    return "bg-primary-container text-on-primary-container"; // Cyan / Teal
+  }
+  if (["DOC-01", "DOC-07", "DOC-09"].includes(doc)) {
+    return "bg-secondary-container text-on-secondary-container"; // Yellow / Peach
+  }
+  if (["DOC-02", "DOC-06", "DOC-10", "DOC-11", "DOC-12"].includes(doc)) {
+    return "bg-tertiary-container text-on-tertiary-container"; // Sage Green
+  }
+  return "bg-surface-variant text-on-surface-variant";
+}
+
+let cardsHtml = '<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">\n';
 
 data.forEach(item => {
+  const categoryColor = getCategoryColor(item.doc);
+  
+  // New layout: flex-col, large padding (p-8), minimum height, bigger text and icons
   cardsHtml += `
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="${item.doc}">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-${item.icon} text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="${item.doc}">
+      <div class="w-20 h-20 shrink-0 rounded-2xl ${categoryColor} flex items-center justify-center">
+        <i class="ti ti-${item.icon} text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">${item.text}</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">${item.text}</h3>
     </article>`;
 });
 
-cardsHtml += '\\n</div>';
+cardsHtml += '\n</div>';
 
 const pageTemplate = `
 pages['estrategias'] = () => {
   return \`
-    <div class="w-full max-w-7xl mx-auto px-margin-mobile md:px-section-gap py-8">
-      <header class="mb-10">
-        <div class="inline-flex items-center gap-2 px-3 py-1 bg-primary-container/20 text-on-primary-container rounded-full mb-3">
+    <div class="w-full max-w-7xl mx-auto px-margin-mobile md:px-section-gap py-8 md:py-12">
+      <header class="mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-primary-container/20 text-on-primary-container rounded-full mb-4">
           <i class="ti ti-route-alt text-sm"></i>
           <span class="font-label-sm text-label-sm uppercase tracking-wider">Planificación Activa</span>
         </div>
-        <h2 class="font-headline-xl text-3xl md:text-4xl text-primary font-bold leading-tight mb-4 font-pt-serif">Estrategias de Adaptación</h2>
-        <p class="font-body-md text-on-surface-variant leading-relaxed text-lg max-w-3xl">
+        <h2 class="font-headline-xl text-4xl md:text-5xl text-primary font-bold leading-tight mb-4 font-pt-serif">Estrategias de Adaptación</h2>
+        <p class="font-body-md text-on-surface-variant leading-relaxed text-lg md:text-xl max-w-3xl">
           Explora las diversas estrategias y proyectos propuestos para mejorar la resiliencia y seguridad de nuestra comunidad.
         </p>
       </header>
@@ -87,10 +103,11 @@ pages['estrategias'] = () => {
 const appJsPath = 'app.js';
 let appJs = fs.readFileSync(appJsPath, 'utf8');
 
+// Regex to capture the entire pages['estrategias'] assignment
 const regex = /pages\['estrategias'\] = \(\) => \{[\s\S]*?^\};\n?/m;
-const newAppJs = appJs.replace(regex, pageTemplate + '\\n');
 
-if (appJs !== newAppJs) {
+if (regex.test(appJs)) {
+  const newAppJs = appJs.replace(regex, pageTemplate);
   fs.writeFileSync(appJsPath, newAppJs);
   console.log("Successfully updated pages['estrategias'] in app.js");
 } else {

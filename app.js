@@ -535,301 +535,303 @@ pages['escenarios'] = () => {
 // --- ESTRATEGIAS PAGE ---
 
 
+
 pages['estrategias'] = () => {
   return `
-    <div class="w-full max-w-7xl mx-auto px-margin-mobile md:px-section-gap py-8">
-      <header class="mb-10">
-        <div class="inline-flex items-center gap-2 px-3 py-1 bg-primary-container/20 text-on-primary-container rounded-full mb-3">
+    <div class="w-full max-w-7xl mx-auto px-margin-mobile md:px-section-gap py-8 md:py-12">
+      <header class="mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-primary-container/20 text-on-primary-container rounded-full mb-4">
           <i class="ti ti-route-alt text-sm"></i>
           <span class="font-label-sm text-label-sm uppercase tracking-wider">Planificación Activa</span>
         </div>
-        <h2 class="font-headline-xl text-3xl md:text-4xl text-primary font-bold leading-tight mb-4 font-pt-serif">Estrategias de Adaptación</h2>
-        <p class="font-body-md text-on-surface-variant leading-relaxed text-lg max-w-3xl">
+        <h2 class="font-headline-xl text-4xl md:text-5xl text-primary font-bold leading-tight mb-4 font-pt-serif">Estrategias de Adaptación</h2>
+        <p class="font-body-md text-on-surface-variant leading-relaxed text-lg md:text-xl max-w-3xl">
           Explora las diversas estrategias y proyectos propuestos para mejorar la resiliencia y seguridad de nuestra comunidad.
         </p>
       </header>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-06">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-users-group text-[24px]"></i>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-06">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+        <i class="ti ti-users-group text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Reuniones con Líderes Municipales</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Reuniones con Líderes Municipales</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-07">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-home-down text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-07">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-secondary-container text-on-secondary-container flex items-center justify-center">
+        <i class="ti ti-home-down text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Control de Desbordamiento de Infraestructura Pluvial</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Control de Desbordamiento de Infraestructura Pluvial</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-07">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-tool text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-07">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-secondary-container text-on-secondary-container flex items-center justify-center">
+        <i class="ti ti-tool text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Mantenimiento del Sistema de Alcantarillado y Prevención de Desbordamientos</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Mantenimiento del Sistema de Alcantarillado y Prevención de Desbordamientos</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-02">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-boat text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-02">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+        <i class="ti ti-boat text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Oportunidades Económicas del Puerto</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Oportunidades Económicas del Puerto</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-06">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-tree text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-06">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+        <i class="ti ti-tree text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Barreras Naturales (Manglares, Arrecifes)</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Barreras Naturales (Manglares, Arrecifes)</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-09">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-bulb text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-09">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-secondary-container text-on-secondary-container flex items-center justify-center">
+        <i class="ti ti-bulb text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Mejora de la Red Eléctrica y Alumbrado Nocturno</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Mejora de la Red Eléctrica y Alumbrado Nocturno</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-07">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-certificate text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-07">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-secondary-container text-on-secondary-container flex items-center justify-center">
+        <i class="ti ti-certificate text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Desarrollo de Capacidades Comunitarias para la Preparación ante Desastres</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Desarrollo de Capacidades Comunitarias para la Preparación ante Desastres</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-07">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-database text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-07">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-secondary-container text-on-secondary-container flex items-center justify-center">
+        <i class="ti ti-database text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Portal de Datos Abiertos</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Portal de Datos Abiertos</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-05">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-recycle text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-05">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-primary-container text-on-primary-container flex items-center justify-center">
+        <i class="ti ti-recycle text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Educación Ambiental (Reciclaje y Limpiezas)</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Educación Ambiental (Reciclaje y Limpiezas)</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-05">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-tree text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-05">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-primary-container text-on-primary-container flex items-center justify-center">
+        <i class="ti ti-tree text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Reforestación Urbana para Reducir el Calor</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Reforestación Urbana para Reducir el Calor</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-07">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-building-arch text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-07">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-secondary-container text-on-secondary-container flex items-center justify-center">
+        <i class="ti ti-building-arch text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Mejora de Infraestructura en Centros Comunitarios para mayor Resiliencia</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Mejora de Infraestructura en Centros Comunitarios para mayor Resiliencia</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-09">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-solar-panel text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-09">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-secondary-container text-on-secondary-container flex items-center justify-center">
+        <i class="ti ti-solar-panel text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Microrredes de Energía</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Microrredes de Energía</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-07">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-engine text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-07">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-secondary-container text-on-secondary-container flex items-center justify-center">
+        <i class="ti ti-engine text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Actualización de la Infraestructura de Aguas Pluviales</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Actualización de la Infraestructura de Aguas Pluviales</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-01">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-home text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-01">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-secondary-container text-on-secondary-container flex items-center justify-center">
+        <i class="ti ti-home text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Protección de Viviendas contra Inundaciones</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Protección de Viviendas contra Inundaciones</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-07">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-circle-check text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-07">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-secondary-container text-on-secondary-container flex items-center justify-center">
+        <i class="ti ti-circle-check text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Ejecución del Plan de Mitigación</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Ejecución del Plan de Mitigación</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-07">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-school text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-07">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-secondary-container text-on-secondary-container flex items-center justify-center">
+        <i class="ti ti-school text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Capacitación General sobre Riesgos</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Capacitación General sobre Riesgos</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-07">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-wave-sine text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-07">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-secondary-container text-on-secondary-container flex items-center justify-center">
+        <i class="ti ti-wave-sine text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Drenaje de Aguas Pluviales en Puerto Viejo</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Drenaje de Aguas Pluviales en Puerto Viejo</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-03">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-trees text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-03">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-primary-container text-on-primary-container flex items-center justify-center">
+        <i class="ti ti-trees text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Parques de Bolsillo en Lotes Baldíos</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Parques de Bolsillo en Lotes Baldíos</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-11">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-heart-handshake text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-11">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+        <i class="ti ti-heart-handshake text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Ayuda a Familias de Bajos Ingresos para Mejorar sus Hogares</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Ayuda a Familias de Bajos Ingresos para Mejorar sus Hogares</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-06">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-route-alt text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-06">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+        <i class="ti ti-route-alt text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Mantenimiento, Actualización y Señalización de Rutas de Evacuación</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Mantenimiento, Actualización y Señalización de Rutas de Evacuación</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-06">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-megaphone text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-06">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+        <i class="ti ti-megaphone text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Capacidad de Difundir Planes de Evacuación en Caso de Desastre</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Capacidad de Difundir Planes de Evacuación en Caso de Desastre</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-09">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-building-skyscraper text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-09">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-secondary-container text-on-secondary-container flex items-center justify-center">
+        <i class="ti ti-building-skyscraper text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Identificar Edificios como Centros de Resiliencia</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Identificar Edificios como Centros de Resiliencia</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-06">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-road text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-06">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+        <i class="ti ti-road text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Establecer Rutas Viales Primarias y Alternativas Seguras para Emergencias</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Establecer Rutas Viales Primarias y Alternativas Seguras para Emergencias</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-06">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-handshake text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-06">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+        <i class="ti ti-handshake text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Establecer Alianzas Gubernamentales y Privadas para Servicios Básicos en Emergencias</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Establecer Alianzas Gubernamentales y Privadas para Servicios Básicos en Emergencias</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-06">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-list-check text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-06">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+        <i class="ti ti-list-check text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Validar Planes Operativos de Emergencia mediante Simulacros Multigubernamentales</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Validar Planes Operativos de Emergencia mediante Simulacros Multigubernamentales</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-06">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-ambulance text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-06">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+        <i class="ti ti-ambulance text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Simulacros de Preparación</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Simulacros de Preparación</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-11">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-tent text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-11">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+        <i class="ti ti-tent text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Rescate de la Escuela Eugenio María de Hostos para Refugio</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Rescate de la Escuela Eugenio María de Hostos para Refugio</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-01">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-droplet text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-01">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-secondary-container text-on-secondary-container flex items-center justify-center">
+        <i class="ti ti-droplet text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Rehabilitar Estaciones de Bombeo y Mejorar Drenajes</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Rehabilitar Estaciones de Bombeo y Mejorar Drenajes</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-06">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-shield-check text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-06">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+        <i class="ti ti-shield-check text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Habilitar Lugares Seguros y Accesibles como Refugios Equipados</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Habilitar Lugares Seguros y Accesibles como Refugios Equipados</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-06">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-users text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-06">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+        <i class="ti ti-users text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Organizar Comunidades para Respuesta ante Desastres Naturales a Gran Escala</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Organizar Comunidades para Respuesta ante Desastres Naturales a Gran Escala</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-06">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-first-aid-kit text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-06">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+        <i class="ti ti-first-aid-kit text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Fomentar Botiquines de Primeros Auxilios Accesibles por Familia</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Fomentar Botiquines de Primeros Auxilios Accesibles por Familia</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-06">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-users-group text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-06">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+        <i class="ti ti-users-group text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Establecer Alianzas con Entidades Locales para Planes de Emergencia Inclusivos</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Establecer Alianzas con Entidades Locales para Planes de Emergencia Inclusivos</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-12">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-accessible text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-12">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+        <i class="ti ti-accessible text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Desarrollar Plan de Emergencia para Evacuación de Adultos Mayores y Poblaciones Vulnerables</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Desarrollar Plan de Emergencia para Evacuación de Adultos Mayores y Poblaciones Vulnerables</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-06">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-lifebuoy text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-06">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+        <i class="ti ti-lifebuoy text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Alianzas Intersectoriales para Garantizar Servicios Básicos durante Emergencias</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Alianzas Intersectoriales para Garantizar Servicios Básicos durante Emergencias</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-06">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-map text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-06">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+        <i class="ti ti-map text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Establecer Rutas Viales Seguras y Efectivas para Respuesta Rápida</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Establecer Rutas Viales Seguras y Efectivas para Respuesta Rápida</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-10">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-sign-right text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-10">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+        <i class="ti ti-sign-right text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Mantener, Actualizar y Señalizar Rutas de Evacuación</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Mantener, Actualizar y Señalizar Rutas de Evacuación</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-06">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-alert-triangle text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-06">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+        <i class="ti ti-alert-triangle text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Realizar Simulacros para Garantizar la Preparación</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Realizar Simulacros para Garantizar la Preparación</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-06">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-device-tv text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-06">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+        <i class="ti ti-device-tv text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Educar a Ciudadanos sobre su Rol Activo en Planificación y Respuesta ante Desastres</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Educar a Ciudadanos sobre su Rol Activo en Planificación y Respuesta ante Desastres</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-05">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-wash-hands text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-05">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-primary-container text-on-primary-container flex items-center justify-center">
+        <i class="ti ti-wash-hands text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Calidad del Agua y Señalización</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Calidad del Agua y Señalización</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-07">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-vaccine text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-07">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-secondary-container text-on-secondary-container flex items-center justify-center">
+        <i class="ti ti-vaccine text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Suministro de Medicamentos durante Emergencias (Alianzas)</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Suministro de Medicamentos durante Emergencias (Alianzas)</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-07">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-box text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-07">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-secondary-container text-on-secondary-container flex items-center justify-center">
+        <i class="ti ti-box text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Mapa Interactivo de Salud y Cultura</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Mapa Interactivo de Salud y Cultura</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-07">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-brain text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-07">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-secondary-container text-on-secondary-container flex items-center justify-center">
+        <i class="ti ti-brain text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Iniciativas de Educación sobre Emociones y Estrés</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Iniciativas de Educación sobre Emociones y Estrés</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-04">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-droplet text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-04">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-primary-container text-on-primary-container flex items-center justify-center">
+        <i class="ti ti-droplet text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Capacitación Municipal sobre Contaminación del Sistema de Agua</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Capacitación Municipal sobre Contaminación del Sistema de Agua</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-04">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-file-certificate text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-04">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-primary-container text-on-primary-container flex items-center justify-center">
+        <i class="ti ti-file-certificate text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Ordenanza de Regulación de Aguas Residuales</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Ordenanza de Regulación de Aguas Residuales</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-06">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-badge text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-06">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+        <i class="ti ti-badge text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Alianzas de Servicios de Emergencia</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Alianzas de Servicios de Emergencia</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-07">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-tools text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-07">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-secondary-container text-on-secondary-container flex items-center justify-center">
+        <i class="ti ti-tools text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Reparación de Infraestructura Sanitaria</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Reparación de Infraestructura Sanitaria</h3>
     </article>
-    <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 flex gap-4 items-center" data-doc="DOC-02">
-      <div class="w-12 h-12 shrink-0 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
-        <i class="ti ti-building text-[24px]"></i>
+    <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="DOC-02">
+      <div class="w-20 h-20 shrink-0 rounded-2xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+        <i class="ti ti-building text-[48px]"></i>
       </div>
-      <h3 class="font-body-md text-[15px] text-on-surface font-semibold leading-tight">Plan de Adaptación de Infraestructura (Salud, Educación)</h3>
+      <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">Plan de Adaptación de Infraestructura (Salud, Educación)</h3>
     </article>
 </div>
     </div>
