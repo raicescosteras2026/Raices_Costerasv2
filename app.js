@@ -129,7 +129,7 @@ function initDrawer() {
 // ==========================================
 
 const estrategiasData = [
-  { text: "Reuniones con Líderes Municipales", doc: "DOC-06", icon: "users-group" },
+  { text: "Reuniones con Líderes Municipales", doc: "DOC-06", icon: "users-group", votes: "1", percentage: "4.17%" },
   { text: "Control de Desbordamiento de Infraestructura Pluvial", doc: "DOC-07", icon: "home-down" },
   { text: "Mantenimiento del Sistema de Alcantarillado y Prevención de Desbordamientos", doc: "DOC-07", icon: "tool" },
 
@@ -137,8 +137,8 @@ const estrategiasData = [
   { text: "Mejora de la Red Eléctrica y Alumbrado Nocturno", doc: "DOC-09", icon: "bulb" },
   { text: "Desarrollo de Capacidades Comunitarias para la Preparación ante Desastres", doc: "DOC-07", icon: "certificate" },
   { text: "Portal de Datos Abiertos", doc: "DOC-07", icon: "database" },
-  { text: "Educación Ambiental (Reciclaje y Limpiezas)", doc: "DOC-05", icon: "recycle" },
-  { text: "Reforestación Urbana para Reducir el Calor", doc: "DOC-05", icon: "tree" },
+  { text: "Educación Ambiental (Reciclaje y Limpiezas)", doc: "DOC-05", icon: "recycle", votes: "3", percentage: "12.50%" },
+  { text: "Reforestación Urbana para Reducir el Calor", doc: "DOC-05", icon: "tree", votes: "1", percentage: "4.17%" },
   { text: "Mejora de Infraestructura en Centros Comunitarios para mayor Resiliencia", doc: "DOC-07", icon: "building-arch" },
   { text: "Microrredes de Energía", doc: "DOC-09", icon: "solar-panel" },
   { text: "Actualización de la Infraestructura de Aguas Pluviales", doc: "DOC-07", icon: "engine" },
@@ -148,34 +148,34 @@ const estrategiasData = [
   { text: "Drenaje de Aguas Pluviales en Puerto Viejo", doc: "DOC-07", icon: "wave-sine" },
   { text: "Parques de Bolsillo en Lotes Baldíos", doc: "DOC-03", icon: "trees" },
   { text: "Ayuda a Familias de Bajos Ingresos para Mejorar sus Hogares", doc: "DOC-11", icon: "heart-handshake" },
-  { text: "Mantenimiento, Actualización y Señalización de Rutas de Evacuación", doc: "DOC-06", icon: "route" },
-  { text: "Capacidad de Difundir Planes de Evacuación en Caso de Desastre", doc: "DOC-06", icon: "speakerphone" },
-  { text: "Identificar Edificios como Centros de Resiliencia", doc: "DOC-09", icon: "building-skyscraper" },
-  { text: "Establecer Rutas Viales Primarias y Alternativas Seguras para Emergencias", doc: "DOC-06", icon: "road" },
-  { text: "Establecer Alianzas Gubernamentales y Privadas para Servicios Básicos en Emergencias", doc: "DOC-06", icon: "users" },
-  { text: "Validar Planes Operativos de Emergencia mediante Simulacros Multigubernamentales", doc: "DOC-06", icon: "list-check" },
-  { text: "Simulacros de Preparación", doc: "DOC-06", icon: "ambulance" },
-  { text: "Rescate de la Escuela Eugenio María de Hostos para Refugio", doc: "DOC-11", icon: "tent" },
-  { text: "Rehabilitar Estaciones de Bombeo y Mejorar Drenajes", doc: "DOC-01", icon: "droplet" },
-  { text: "Habilitar Lugares Seguros y Accesibles como Refugios Equipados", doc: "DOC-06", icon: "shield-check" },
-  { text: "Organizar Comunidades para Respuesta ante Desastres Naturales a Gran Escala", doc: "DOC-06", icon: "users" },
-  { text: "Fomentar Botiquines de Primeros Auxilios Accesibles por Familia", doc: "DOC-06", icon: "first-aid-kit" },
-  { text: "Establecer Alianzas con Entidades Locales para Planes de Emergencia Inclusivos", doc: "DOC-06", icon: "users-group" },
-  { text: "Desarrollar Plan de Emergencia para Evacuación de Adultos Mayores y Poblaciones Vulnerables", doc: "DOC-12", icon: "accessible" },
+  { text: "Mantenimiento, Actualización y Señalización de Rutas de Evacuación", doc: "DOC-06", icon: "route", votes: "30", percentage: "14.02%" },
+  { text: "Capacidad de Difundir Planes de Evacuación en Caso de Desastre", doc: "DOC-06", icon: "speakerphone", votes: "25", percentage: "11.68%" },
+  { text: "Identificar Edificios como Centros de Resiliencia", doc: "DOC-09", icon: "building-skyscraper", votes: "36", percentage: "16.82%" },
+  { text: "Establecer Rutas Viales Primarias y Alternativas Seguras para Emergencias", doc: "DOC-06", icon: "road", votes: "33", percentage: "15.42%" },
+  { text: "Establecer Alianzas Gubernamentales y Privadas para Servicios Básicos en Emergencias", doc: "DOC-06", icon: "users", votes: "34", percentage: "15.89%" },
+  { text: "Validar Planes Operativos de Emergencia mediante Simulacros Multigubernamentales", doc: "DOC-06", icon: "list-check", votes: "1", percentage: "4.17%" },
+  { text: "Simulacros de Preparación", doc: "DOC-06", icon: "ambulance", votes: "1", percentage: "4.17%" },
+  { text: "Rescate de la Escuela Eugenio María de Hostos para Refugio", doc: "DOC-11", icon: "tent", votes: "1", percentage: "4.17%" },
+  { text: "Rehabilitar Estaciones de Bombeo y Mejorar Drenajes", doc: "DOC-01", icon: "droplet", votes: "1", percentage: "4.17%" },
+  { text: "Habilitar Lugares Seguros y Accesibles como Refugios Equipados", doc: "DOC-06", icon: "shield-check", votes: "1", percentage: "4.17%" },
+  { text: "Organizar Comunidades para Respuesta ante Desastres Naturales a Gran Escala", doc: "DOC-06", icon: "users", votes: "1", percentage: "4.17%" },
+  { text: "Fomentar Botiquines de Primeros Auxilios Accesibles por Familia", doc: "DOC-06", icon: "first-aid-kit", votes: "1", percentage: "4.17%" },
+  { text: "Establecer Alianzas con Entidades Locales para Planes de Emergencia Inclusivos", doc: "DOC-06", icon: "users-group", votes: "1", percentage: "4.17%" },
+  { text: "Desarrollar Plan de Emergencia para Evacuación de Adultos Mayores y Poblaciones Vulnerables", doc: "DOC-12", icon: "accessible", votes: "1", percentage: "4.17%" },
   { text: "Alianzas Intersectoriales para Garantizar Servicios Básicos durante Emergencias", doc: "DOC-06", icon: "lifebuoy" },
   { text: "Establecer Rutas Viales Seguras y Efectivas para Respuesta Rápida", doc: "DOC-06", icon: "map" },
-  { text: "Mantener, Actualizar y Señalizar Rutas de Evacuación", doc: "DOC-10", icon: "sign-right" },
-  { text: "Realizar Simulacros para Garantizar la Preparación", doc: "DOC-06", icon: "alert-triangle" },
-  { text: "Educar a Ciudadanos sobre su Rol Activo en Planificación y Respuesta ante Desastres", doc: "DOC-06", icon: "device-tv" },
-  { text: "Calidad del Agua y Señalización", doc: "DOC-05", icon: "droplet" },
-  { text: "Suministro de Medicamentos durante Emergencias (Alianzas)", doc: "DOC-07", icon: "vaccine" },
-  { text: "Mapa Interactivo de Salud y Cultura", doc: "DOC-07", icon: "box" },
-  { text: "Iniciativas de Educación sobre Emociones y Estrés", doc: "DOC-07", icon: "brain" },
-  { text: "Capacitación Municipal sobre Contaminación del Sistema de Agua", doc: "DOC-04", icon: "droplet" },
-  { text: "Ordenanza de Regulación de Aguas Residuales", doc: "DOC-04", icon: "file-certificate" },
-  { text: "Alianzas de Servicios de Emergencia", doc: "DOC-06", icon: "badge" },
-  { text: "Reparación de Infraestructura Sanitaria", doc: "DOC-07", icon: "tools" },
-  { text: "Plan de Adaptación de Infraestructura (Salud, Educación)", doc: "DOC-02", icon: "building" },
+  { text: "Mantener, Actualizar y Señalizar Rutas de Evacuación", doc: "DOC-10", icon: "sign-right", votes: "3", percentage: "12.50%" },
+  { text: "Realizar Simulacros para Garantizar la Preparación", doc: "DOC-06", icon: "alert-triangle", votes: "30", percentage: "14.02%" },
+  { text: "Educar a Ciudadanos sobre su Rol Activo en Planificación y Respuesta ante Desastres", doc: "DOC-06", icon: "device-tv", votes: "26", percentage: "12.15%" },
+  { text: "Calidad del Agua y Señalización", doc: "DOC-05", icon: "droplet", votes: "4", percentage: "16.67%" },
+  { text: "Suministro de Medicamentos durante Emergencias (Alianzas)", doc: "DOC-07", icon: "vaccine", votes: "3", percentage: "12.50%" },
+  { text: "Mapa Interactivo de Salud y Cultura", doc: "DOC-07", icon: "box", votes: "3", percentage: "12.50%" },
+  { text: "Iniciativas de Educación sobre Emociones y Estrés", doc: "DOC-07", icon: "brain", votes: "2", percentage: "8.33%" },
+  { text: "Capacitación Municipal sobre Contaminación del Sistema de Agua", doc: "DOC-04", icon: "droplet", votes: "2", percentage: "8.33%" },
+  { text: "Ordenanza de Regulación de Aguas Residuales", doc: "DOC-04", icon: "file-certificate", votes: "2", percentage: "8.33%" },
+  { text: "Alianzas de Servicios de Emergencia", doc: "DOC-06", icon: "badge", votes: "2", percentage: "8.33%" },
+  { text: "Reparación de Infraestructura Sanitaria", doc: "DOC-07", icon: "tools", votes: "1", percentage: "4.17%" },
+  { text: "Plan de Adaptación de Infraestructura (Salud, Educación)", doc: "DOC-02", icon: "building", votes: "1", percentage: "4.17%" },
   { text: "Crear una red de apoyo vecinal para promover la comunicación y monitorear población vulnerable antes, durante y después de emergencias.", doc: "DOC-10", icon: "heart" },
   { text: "Establecer un Plan de Respuesta Comunitaria ante emergencias, con puntos de encuentro, contactos clave, capacitación de primeros auxilios", doc: "DOC-10", icon: "clipboard-check" },
   { text: "Establecer un mecanismo organizacional para darle seguimiento a las nuevas iniciativas de resiliencia comunitaria", doc: "DOC-10", icon: "chart-bar" },
@@ -707,6 +707,19 @@ pages['estrategias'] = () => {
           <i class="ti ti-${item.icon} text-[48px]"></i>
         </div>
         <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">${item.text}</h3>
+      
+        ${item.votes ? `
+        <div class="flex gap-4 mt-auto pt-4 border-t border-outline-variant/30 w-full">
+          <div class="flex flex-col">
+            <span class="text-[10px] font-label-caps text-on-surface-variant uppercase">Votos</span>
+            <span class="font-bold text-primary">${item.votes}</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-[10px] font-label-caps text-on-surface-variant uppercase">Porciento</span>
+            <span class="font-bold text-primary">${item.percentage}</span>
+          </div>
+        </div>
+        ` : ''}
       </article>
     `;
   }).join('');
