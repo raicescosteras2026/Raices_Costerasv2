@@ -176,11 +176,19 @@ const estrategiasData = [
   { text: "Alianzas de Servicios de Emergencia", doc: "DOC-06", icon: "badge", votes: "2", percentage: "8.33%" },
   { text: "Reparación de Infraestructura Sanitaria", doc: "DOC-07", icon: "tools", votes: "1", percentage: "4.17%" },
   { text: "Plan de Adaptación de Infraestructura (Salud, Educación)", doc: "DOC-02", icon: "building", votes: "1", percentage: "4.17%" },
-  { text: "Crear una red de apoyo vecinal para promover la comunicación y monitorear población vulnerable antes, durante y después de emergencias.", doc: "DOC-10", icon: "heart" },
-  { text: "Establecer un Plan de Respuesta Comunitaria ante emergencias, con puntos de encuentro, contactos clave, capacitación de primeros auxilios", doc: "DOC-10", icon: "clipboard-check" },
-  { text: "Establecer un mecanismo organizacional para darle seguimiento a las nuevas iniciativas de resiliencia comunitaria", doc: "DOC-10", icon: "chart-bar" },
-  { text: "Realizar un registro voluntario para identificar los recursos disponibles entre los vecinos, así como las vulnerabilidades", doc: "DOC-10", icon: "list-details" },
-  { text: "Revisar y abogar por la actualización de las rutas de desalojo, la señalización de la ruta y el sistema de alarma oficial en caso de eventos de emergencias.", doc: "DOC-10", icon: "arrow-right" }
+  { text: "Crear una red de apoyo vecinal para promover la comunicación y monitorear población vulnerable antes, durante y después de emergencias.", doc: "DOC-10", icon: "heart", votes: "5", percentage: "23.8%" },
+  { text: "Establecer un Plan de Respuesta Comunitaria ante emergencias, con puntos de encuentro, contactos clave, capacitación de primeros auxilios", doc: "DOC-10", icon: "clipboard-check", votes: "3", percentage: "14.3%" },
+  { text: "Establecer un mecanismo organizacional para darle seguimiento a las nuevas iniciativas de resiliencia comunitaria", doc: "DOC-10", icon: "chart-bar", votes: "2", percentage: "9.5%" },
+  { text: "Realizar un registro voluntario para identificar los recursos disponibles entre los vecinos, así como las vulnerabilidades", doc: "DOC-10", icon: "list-details", votes: "2", percentage: "9.5%" },
+  { text: "Revisar y abogar por la actualización de las rutas de desalojo, la señalización de la ruta y el sistema de alarma oficial en caso de eventos de emergencias.", doc: "DOC-10", icon: "arrow-right", votes: "2", percentage: "9.5%" },
+
+  { text: "Coordinar el funcionamiento de las bombas de agua, para controlar las inundaciones urbanas, y abogar por la realización de un análisis de capacidad de la infraestructura. Un manejo efectivo permitirá una respuesta rápida y controlada ante lluvias intensas", doc: "DOC-10", icon: "engine", votes: "1", percentage: "4.8%" },
+  { text: "Gestionar cursos de formación en oficios locales (carpintería, electricidad, costura, cocina, entre otros) para ampliar las oportunidades laborales. Brinda a los residentes habilidades prácticas para mejorar viviendas y generar ingresos.", doc: "DOC-10", icon: "briefcase", votes: "1", percentage: "4.8%" },
+  { text: "Estrategia para fortalecer la economía local y garantizar su recuperación tras desastres naturales, proporcionando un respaldo económico inmediato para cubrir gastos imprevistos y reparar daños.", doc: "DOC-10", icon: "coin", votes: "1", percentage: "4.8%" },
+  { text: "Establecer espacios verdes en el entorno urbano mediante un Programa de Huertos Urbano en el que participen escuelas e iglesias de la comunidad. Ayudarían a mitigar los efectos del cambio climático y revitalizar áreas abandonadas.", doc: "DOC-10", icon: "seeding", votes: "1", percentage: "4.8%" },
+  { text: "Se propone abogar porque el Municipio de Ponce implemente un Plan de Mejoramiento Peatonal como estrategia clave para garantizar la movilidad segura de residentes, especialmente personas mayores y con discapacidad. Incluye arborización para mitigar el calor extremo.", doc: "DOC-10", icon: "walk", votes: "1", percentage: "4.8%" },
+  { text: "Crear una salida vehicular de emergencia para los residentes del área de Villa del Carmen. Se propone explorar junto al Municipio de Ponce y las agencias pertinentes la creación de una salida de emergencias vehicular para casos en que la Ave. Caribe quede intransitable", doc: "DOC-10", icon: "car", votes: "1", percentage: "4.8%" },
+  { text: "Mejorar la seguridad jurídica residencial de las familias mediante la coordinación de proceso de orientación a la comunidad en asuntos de vivienda: titularidad, tenencia, impuesto sobre la propiedad, derechos, entre otros temas", doc: "DOC-10", icon: "file-certificate", votes: "1", percentage: "4.8%" }
 ];
 
 const planesData = [
