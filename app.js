@@ -699,7 +699,12 @@ pages['escenarios'] = () => {
 
 
 pages['estrategias'] = () => {
-  const cardsHtml = estrategiasData.map(item => {
+  const sortedEstrategias = [...estrategiasData].sort((a, b) => {
+    const votesA = a.votes ? parseInt(a.votes, 10) : -1;
+    const votesB = b.votes ? parseInt(b.votes, 10) : -1;
+    return votesB - votesA;
+  });
+  const cardsHtml = sortedEstrategias.map(item => {
     const categoryColor = getCategoryColor(item.doc);
     return `
       <article class="bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-lg transition-all p-8 md:p-10 flex flex-col gap-6 items-start min-h-[300px] justify-center" data-doc="${item.doc}">
