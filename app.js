@@ -366,6 +366,8 @@ function initPageScripts(route) {
     initGuiaPage();
   } else if (route === "inicio") {
     initInicioPage();
+  } else if (route === "reunion-junio") {
+    initReunionJunioPage();
   }
 }
 
@@ -721,18 +723,7 @@ pages['estrategias'] = () => {
         </div>
         <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">${item.text}</h3>
       
-        ${item.votes ? `
-        <div class="flex gap-4 mt-auto pt-4 border-t border-outline-variant/30 w-full">
-          <div class="flex flex-col">
-            <span class="text-[10px] font-label-caps text-on-surface-variant uppercase">Votos</span>
-            <span class="font-bold text-primary">${item.votes}</span>
-          </div>
-          <div class="flex flex-col">
-            <span class="text-[10px] font-label-caps text-on-surface-variant uppercase">Porciento</span>
-            <span class="font-bold text-primary">${item.percentage}</span>
-          </div>
-        </div>
-        ` : ''}
+
       </article>
     `;
   }).join('');
@@ -2300,3 +2291,166 @@ pages.refugios = () => {
     </div>
   `;
 };
+
+
+// --- REUNION JUNIO PAGE ---
+pages['reunion-junio'] = () => {
+  return `
+    <section class="px-margin-mobile pt-8 pb-10 flex flex-col gap-6 relative overflow-hidden">
+      <!-- Decoración de fondo -->
+      <div class="absolute -top-20 -right-20 w-64 h-64 bg-tertiary-fixed-dim/30 rounded-full blur-3xl -z-10"></div>
+      
+      <header class="space-y-4 relative z-10">
+        <h1 class="font-headline-xl text-4xl md:text-5xl text-primary font-bold leading-tight font-pt-serif">Reunión Junio 3</h1>
+        <p class="font-body-md text-on-surface-variant leading-relaxed text-lg md:text-xl max-w-3xl">
+          Visualización de las estrategias propuestas y votadas durante el taller comunitario (DOC-10). Las barras representan la cantidad de votos recibidos por cada estrategia.
+        </p>
+      </header>
+
+      <div class="w-full mt-6 bg-surface-container-lowest border border-outline-variant/30 rounded-3xl p-4 md:p-8 shadow-sm overflow-x-auto">
+        <div id="d3-chart-container" class="min-w-[800px] w-full min-h-[600px]"></div>
+      </div>
+    </section>
+  `;
+};
+
+function initReunionJunioPage() {
+  // Asegurarnos de que el contenedor existe
+  const container = document.getElementById('d3-chart-container');
+  if (!container) return;
+
+  // Filtrar datos para DOC-10 con votos y ordenarlos
+  let chartData = estrategiasData.filter(d => d.doc === 'DOC-10' && d.votes).map(d => {
+    return {
+      text: d.text,
+      votes: parseInt(d.votes, 10),
+      percentage: d.percentage
+    };
+  });
+  
+  chartData.sort((a, b) => b.votes - a.votes);
+
+  // Configuración del gráfico
+  const margin = { top: 20, right: 100, bottom: 40, left: 350 };
+  const width = container.clientWidth;
+  // Dynamic height based on number of items
+  const height = chartData.length * 50 + margin.top + margin.bottom;
+
+  // Limpiar contenedor
+  d3.select('#d3-chart-container').selectAll('*').remove();
+
+  const svg = d3.select('#d3-chart-container')
+    .append('svg')
+    .attr('width', width)
+    .attr('height', height)
+    .attr('viewBox', [0, 0, width, height])
+    .attr('style', 'max-width: 100%; height: auto; font-family: "PT Serif", serif;');
+
+  const x = d3.scaleLinear()
+    .domain([0, d3.max(chartData, d => d.votes) * 1.1]) // add some padding
+    .range([margin.left, width - margin.right]);
+
+  const y = d3.scaleBand()
+    .domain(chartData.map(d => d.text))
+    .range([margin.top, height - margin.bottom])
+    .padding(0.3);
+
+  // Add grid lines
+  svg.append("g")
+    .attr("class", "grid")
+    .attr("transform", `translate(0,${height - margin.bottom})`)
+    .call(d3.axisBottom(x)
+      .tickSize(-(height - margin.top - margin.bottom))
+      .tickFormat("")
+    )
+    .call(g => g.select(".domain").remove())
+    .call(g => g.selectAll(".tick line").attr("stroke", "rgba(0,0,0,0.05)").attr("stroke-dasharray", "2,2"));
+
+  // Formatear texto largo para el eje Y
+  function wrap(text, width) {
+    text.each(function() {
+      var text = d3.select(this),
+          words = text.text().split(/\s+/).reverse(),
+          word,
+          line = [],
+          lineNumber = 0,
+          lineHeight = 1.1, // ems
+          y = text.attr("y"),
+          dy = parseFloat(text.attr("dy") || 0.32),
+          tspan = text.text(null).append("tspan").attr("x", -10).attr("y", y).attr("dy", dy + "em");
+      while (word = words.pop()) {
+        line.push(word);
+        tspan.text(line.join(" "));
+        if (tspan.node().getComputedTextLength() > width) {
+          line.pop();
+          tspan.text(line.join(" "));
+          line = [word];
+          tspan = text.append("tspan").attr("x", -10).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
+        }
+      }
+    });
+  }
+
+  // Y Axis
+  svg.append("g")
+    .attr("transform", `translate(${margin.left},0)`)
+    .call(d3.axisLeft(y).tickSizeOuter(0))
+    .call(g => g.select(".domain").remove()) // remove axis line
+    .call(g => g.selectAll(".tick text")
+      .attr("class", "text-sm text-on-surface-variant font-body-md")
+      .call(wrap, margin.left - 20));
+
+  // Color scale
+  const colorScale = d3.scaleSequential()
+    .domain([0, d3.max(chartData, d => d.votes)])
+    .interpolator(d3.interpolateHslLong("#0369a1", "#0284c7")); // primary colors
+
+  // Tooltip
+  const tooltip = d3.select("body").append("div")
+    .attr("class", "absolute opacity-0 bg-surface text-on-surface border border-outline-variant/30 px-4 py-3 rounded-xl shadow-lg pointer-events-none transition-opacity duration-200 z-50 text-sm max-w-xs font-body-md");
+
+  // Bars
+  svg.append("g")
+    .selectAll("rect")
+    .data(chartData)
+    .join("rect")
+      .attr("x", x(0))
+      .attr("y", d => y(d.text))
+      .attr("height", y.bandwidth())
+      .attr("width", 0) // start at 0 for animation
+      .attr("fill", d => colorScale(d.votes))
+      .attr("rx", 6)
+      .on("mouseover", function(event, d) {
+        d3.select(this).attr("fill", "#0284c7").attr("opacity", 0.8);
+        tooltip.transition().duration(200).style("opacity", 1);
+        tooltip.html(`<strong class="text-primary block mb-1">Votos: ${d.votes}</strong><span class="block mb-1">Porciento: ${d.percentage}</span><span class="text-xs text-on-surface-variant">${d.text}</span>`)
+               .style("left", (event.pageX + 15) + "px")
+               .style("top", (event.pageY - 28) + "px");
+      })
+      .on("mouseout", function(event, d) {
+        d3.select(this).attr("fill", colorScale(d.votes)).attr("opacity", 1);
+        tooltip.transition().duration(500).style("opacity", 0);
+      })
+      .transition()
+      .duration(1000)
+      .delay((d, i) => i * 50) // staggered animation
+      .attr("width", d => x(d.votes) - x(0));
+
+  // Data Labels
+  svg.append("g")
+    .attr("fill", "white")
+    .attr("text-anchor", "end")
+    .attr("class", "font-bold font-body-md text-sm")
+    .selectAll("text")
+    .data(chartData)
+    .join("text")
+      .attr("x", d => x(d.votes) - 8)
+      .attr("y", d => y(d.text) + y.bandwidth() / 2)
+      .attr("dy", "0.35em")
+      .text(d => `${d.votes} (${d.percentage})`)
+      .attr("opacity", 0)
+      .transition()
+      .duration(1000)
+      .delay((d, i) => i * 50 + 500)
+      .attr("opacity", 1);
+}
