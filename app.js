@@ -723,7 +723,12 @@ pages['estrategias'] = () => {
         </div>
         <h3 class="font-pt-serif text-2xl md:text-3xl text-on-surface font-bold leading-snug">${item.text}</h3>
       
-
+        ${item.percentage ? `
+        <div class="flex flex-col mt-auto pt-4 border-t border-outline-variant/30 w-full">
+          <span class="text-[10px] font-label-caps text-on-surface-variant uppercase">Porciento</span>
+          <span class="font-bold text-primary">${item.percentage}</span>
+        </div>
+        ` : ''}
       </article>
     `;
   }).join('');
