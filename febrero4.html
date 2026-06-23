@@ -1,17 +1,40 @@
 <!DOCTYPE html>
+<html lang="es">
+<head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://d3js.org/d3.v4.js"></script>
 
 <style>
   body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+  }
+  .chart-container {
+    width: 100%;
+    max-width: 900px; /* Limits size on large screens */
+    margin: 0 auto;
+    overflow: visible; /* Helps avoid cropping */
   }
   .extra-info {
-    margin-top: 30px;
-    margin-left: 300px;
+    margin-top: 20px;
     font-size: 16px;
     line-height: 1.6;
+    padding: 0 10px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
   }
+  
+  /* Desktop alignment */
+  @media (min-width: 768px) {
+    .extra-info {
+      margin-top: 30px;
+      padding-left: 300px; /* Aligned with the chart's left margin */
+    }
+  }
+
   .extra-info h3 {
     margin-bottom: 10px;
     font-weight: normal;
@@ -38,8 +61,10 @@
     margin-bottom: 6px;
   }
 </style>
+</head>
+<body>
 
-<div id="my_dataviz"></div>
+<div class="chart-container" id="my_dataviz"></div>
 
 <div class="extra-info">
   <h3>Priorización de Estrategias con<br>Líderes comunitarios</h3>
@@ -49,17 +74,19 @@
 </div>
 
 <script>
-var margin = {top: 50, right: 30, bottom: 50, left: 300},
+var margin = {top: 50, right: 40, bottom: 50, left: 260},
     width = 900 - margin.left - margin.right,
     height = 650 - margin.top - margin.bottom;
 
+// To make it responsive, we append viewBox instead of fixed width/height
 var svg = d3.select("#my_dataviz")
   .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
+    .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
+    .attr("preserveAspectRatio", "xMinYMin meet")
+    .style("width", "100%")
+    .style("height", "auto")
   .append("g")
-    .attr("transform",
-          "translate(" + margin.left + "," + margin.top + ")");
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 var data = [
   {Estrategia: "Reuniones Municipio-Líderes", Count: 4},
@@ -98,7 +125,9 @@ var y = d3.scaleBand()
   .padding(1); 
   
 svg.append("g")
-  .call(d3.axisLeft(y));
+  .call(d3.axisLeft(y))
+  .selectAll(".tick text")
+  .call(wrap, margin.left - 20); // wrap long labels
 
 var tooltip = d3.select("body").append("div")
     .attr("class", "tooltip");
@@ -143,7 +172,21 @@ svg.selectAll("mycircle")
       tooltip.html("<strong>" + d.Estrategia + "</strong>Votos: " + d.Count)
              .style("left", (d3.event.pageX + 15) + "px")
              .style("top", (d3.event.pageY - 28) + "px");
+    })
+    .on("touchstart", function(d) {
+      d3.event.preventDefault(); // Prevents touch from double firing
+      tooltip.transition().duration(200).style("opacity", 1);
+      tooltip.html("<strong>" + d.Estrategia + "</strong>Votos: " + d.Count)
+             .style("left", (d3.event.touches[0].pageX + 15) + "px")
+             .style("top", (d3.event.touches[0].pageY - 28) + "px");
     });
+
+// Close tooltip when clicking outside
+d3.select("body").on("touchstart", function() {
+   if(d3.event.target.tagName !== "circle") {
+       tooltip.transition().duration(500).style("opacity", 0);
+   }
+});
 
 // Animation for circles
 svg.selectAll("circle")
@@ -172,7 +215,7 @@ svg.selectAll("myTextLabels")
 svg.append("text")
   .attr("x", 0)
   .attr("y", -20)
-  .style("font-size", "20px")
+  .style("font-size", "22px")
   .text("Conteo Total de Estrategias");
 
 svg.append("text")
@@ -182,12 +225,30 @@ svg.append("text")
   .style("font-size", "14px")
   .text("Cantidad (Count)");
 
-svg.append("text")
-  .attr("transform", "rotate(-90)")
-  .attr("y", -margin.left + 20)
-  .attr("x", 0 - (height / 2))
-  .style("text-anchor", "middle")
-  .style("font-size", "16px")
-  .text("Estrategia");
-
+// Helper to wrap long text labels (better on mobile)
+function wrap(text, width) {
+  text.each(function() {
+    var text = d3.select(this),
+        words = text.text().split(/\s+/).reverse(),
+        word,
+        line = [],
+        lineNumber = 0,
+        lineHeight = 1.1, // ems
+        y = text.attr("y"),
+        dy = parseFloat(text.attr("dy") || 0),
+        tspan = text.text(null).append("tspan").attr("x", -10).attr("y", y).attr("dy", dy + "em");
+    while (word = words.pop()) {
+      line.push(word);
+      tspan.text(line.join(" "));
+      if (tspan.node().getComputedTextLength() > width) {
+        line.pop();
+        tspan.text(line.join(" "));
+        line = [word];
+        tspan = text.append("tspan").attr("x", -10).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
+      }
+    }
+  });
+}
 </script>
+</body>
+</html>
