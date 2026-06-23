@@ -1,56 +1,95 @@
 <!DOCTYPE html>
+<html lang="es">
+<head>
 <meta charset="utf-8">
-<!-- Load d3.js -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://d3js.org/d3.v4.js"></script>
 
 <style>
   body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+  }
+  .chart-container {
+    width: 100%;
+    max-width: 1100px; /* Adjusting max-width because strategy text here is very long */
+    margin: 0 auto;
+    overflow: visible;
   }
   .extra-info {
-    margin-top: 30px;
-    margin-left: 450px; /* Aligned with the chart's left margin */
+    margin-top: 20px;
     font-size: 18px;
     line-height: 1.6;
     color: #4a4a4a;
+    padding: 0 10px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
   }
+  
+  /* Desktop alignment */
+  @media (min-width: 768px) {
+    .extra-info {
+      margin-top: 30px;
+      padding-left: 450px; /* Aligned with the chart's exceptionally long left margin */
+    }
+  }
+
   .extra-info h2 {
     font-size: 28px;
     margin-bottom: 5px;
     color: #333;
     font-weight: normal;
   }
+  
+  /* Tooltip css */
+  .tooltip {
+    position: absolute;
+    text-align: left;
+    padding: 12px;
+    font: 14px Arial, sans-serif;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    pointer-events: none;
+    opacity: 0;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+    z-index: 10;
+    max-width: 250px;
+  }
+  .tooltip strong {
+    color: #333;
+    display: block;
+    margin-bottom: 6px;
+  }
 </style>
+</head>
+<body>
 
-<!-- Create a div where the graph will take place -->
-<div id="my_dataviz"></div>
+<div class="chart-container" id="my_dataviz"></div>
 
-<!-- Div for the extra information outside the bars from image_379401.png -->
 <div class="extra-info">
   <h2>Participantes: 7</h2>
   <h2>Votos: 24</h2>
   <p>Febrero 18, 2026</p>
   <p style="font-size: 24px; margin-bottom: 5px;">Raíces Costeras</p>
-  <p>Preparado por: Julián Salcedo</p>
 </div>
 
 <script>
-// set the dimensions and margins of the graph
-// Increased left margin significantly to fit the exceptionally long text descriptions
 var margin = {top: 50, right: 50, bottom: 50, left: 450},
     width = 1100 - margin.left - margin.right,
     height = 750 - margin.top - margin.bottom;
 
-// append the svg object to the body of the page
 var svg = d3.select("#my_dataviz")
   .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
+    .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
+    .attr("preserveAspectRatio", "xMinYMin meet")
+    .style("width", "100%")
+    .style("height", "auto")
   .append("g")
-    .attr("transform",
-          "translate(" + margin.left + "," + margin.top + ")");
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-// Hardcoded Data parsed from image_379401.png
 var data = [
   {Estrategia: "Mantenimiento, actualización y rotulación de rutas de desalojo", Count: 3},
   {Estrategia: "Poder difundir planes de desalojo necesarios ante un evento de desastre.", Count: 2},
@@ -71,7 +110,6 @@ var data = [
   {Estrategia: "Desarrollar un Plan de Emergencia dirigido a atender el desalojo de adultos mayores y otras poblaciones vulnerables", Count: 1}
 ];
 
-// Add X axis
 var x = d3.scaleLinear()
   .domain([0, 4]) 
   .range([ 0, width]);
@@ -80,39 +118,98 @@ svg.append("g")
   .attr("transform", "translate(0," + height + ")")
   .call(d3.axisBottom(x).ticks(4));
 
-// Y axis
 var y = d3.scaleBand()
   .range([ 0, height ])
   .domain(data.map(function(d) { return d.Estrategia; }))
-  .padding(.3);
+  .padding(1);
   
 svg.append("g")
   .call(d3.axisLeft(y))
   .selectAll(".tick text")
-  .call(wrap, margin.left - 20); // Helper function to wrap long text labels
+  .call(wrap, margin.left - 20); // Helper function to wrap exceptionally long text labels
 
-// Bars
-svg.selectAll("myRect")
+var tooltip = d3.select("body").append("div")
+    .attr("class", "tooltip");
+
+// Lines
+svg.selectAll("myline")
   .data(data)
   .enter()
-  .append("rect")
-  .attr("x", x(0) )
-  .attr("y", function(d) { return y(d.Estrategia); })
-  .attr("width", function(d) { return x(d.Count); })
-  .attr("height", y.bandwidth() )
-  .attr("fill", "#f64c54"); // Red/coral color matching the image
+  .append("line")
+    .attr("x1", x(0))
+    .attr("x2", x(0))
+    .attr("y1", function(d) { return y(d.Estrategia); })
+    .attr("y2", function(d) { return y(d.Estrategia); })
+    .attr("stroke", "grey");
 
-// Add labels outside the end of the bars (matching image_379401.png)
+// Animation for lines
+svg.selectAll("line")
+  .transition()
+  .duration(1000)
+  .attr("x1", function(d) { return x(d.Count); });
+
+// Circles
+svg.selectAll("mycircle")
+  .data(data)
+  .enter()
+  .append("circle")
+    .attr("cx", x(0))
+    .attr("cy", function(d) { return y(d.Estrategia); })
+    .attr("r", "7")
+    .style("fill", "#f64c54") // Coral red color matching the image
+    .attr("stroke", "black")
+    .style("cursor", "pointer")
+    .on("mouseover", function(d) {
+      d3.select(this).transition().duration(200).style("fill", "#ff7f0e").attr("r", 10);
+    })
+    .on("mouseout", function(d) {
+      d3.select(this).transition().duration(200).style("fill", "#f64c54").attr("r", 7);
+      tooltip.transition().duration(500).style("opacity", 0);
+    })
+    .on("click", function(d) {
+      tooltip.transition().duration(200).style("opacity", 1);
+      tooltip.html("<strong>" + d.Estrategia + "</strong>Votos: " + d.Count)
+             .style("left", (d3.event.pageX + 15) + "px")
+             .style("top", (d3.event.pageY - 28) + "px");
+    })
+    .on("touchstart", function(d) {
+      d3.event.preventDefault(); // Prevents touch from double firing
+      tooltip.transition().duration(200).style("opacity", 1);
+      tooltip.html("<strong>" + d.Estrategia + "</strong>Votos: " + d.Count)
+             .style("left", (d3.event.touches[0].pageX + 15) + "px")
+             .style("top", (d3.event.touches[0].pageY - 28) + "px");
+    });
+
+// Close tooltip when clicking outside
+d3.select("body").on("touchstart", function() {
+   if(d3.event.target.tagName !== "circle") {
+       tooltip.transition().duration(500).style("opacity", 0);
+   }
+});
+
+// Animation for circles
+svg.selectAll("circle")
+  .transition()
+  .duration(1000)
+  .attr("cx", function(d) { return x(d.Count); });
+
+// Add labels at the end of the lollipops
 svg.selectAll("myTextLabels")
   .data(data)
   .enter()
   .append("text")
-  .attr("x", function(d) { return x(d.Count) + 5; }) // Push text slightly outside the bar
-  .attr("y", function(d) { return y(d.Estrategia) + y.bandwidth() / 2 + 5; })
+  .attr("x", function(d) { return x(d.Count) + 15; }) 
+  .attr("y", function(d) { return y(d.Estrategia) + 4; })
   .text(function(d) { return d.Count; })
   .attr("fill", "black")
   .attr("font-family", "Arial")
-  .attr("font-weight", "bold");
+  .attr("font-size", "12px")
+  .attr("font-weight", "bold")
+  .style("opacity", 0)
+  .transition()
+  .delay(1000)
+  .duration(500)
+  .style("opacity", 1);
 
 // Add Chart Title
 svg.append("text")
@@ -156,3 +253,5 @@ function wrap(text, width) {
   });
 }
 </script>
+</body>
+</html>
