@@ -750,6 +750,15 @@ pages['estrategias'] = () => {
   `;
 };
 
+// --- RESULTADOS VOTACIONES PAGES ---
+pages['febrero4'] = () => `<iframe src="febrero4.html" class="w-full h-[800px] border-none rounded-xl"></iframe>`;
+pages['febrero18'] = () => `<iframe src="febrero18.html" class="w-full h-[800px] border-none rounded-xl"></iframe>`;
+pages['marzoxx'] = () => `<iframe src="marzoxx.html" class="w-full h-[800px] border-none rounded-xl"></iframe>`;
+pages['abrilxx'] = () => `<iframe src="abrilxx.html" class="w-full h-[800px] border-none rounded-xl"></iframe>`;
+pages['mayoxx'] = () => `<iframe src="mayoxx.html" class="w-full h-[800px] border-none rounded-xl"></iframe>`;
+pages['junioxx'] = () => `<iframe src="junioxx.html" class="w-full h-[800px] border-none rounded-xl"></iframe>`;
+
+
 
 // --- HERRAMIENTAS PAGE ---
 pages['herramientas'] = () => {
