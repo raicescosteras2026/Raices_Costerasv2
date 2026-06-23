@@ -758,6 +758,8 @@ pages['abrilxx'] = () => `<iframe src="abrilxx.html" class="w-full h-[800px] bor
 pages['mayoxx'] = () => `<iframe src="mayoxx.html" class="w-full h-[800px] border-none rounded-xl"></iframe>`;
 pages['junioxx'] = () => `<iframe src="junioxx.html" class="w-full h-[800px] border-none rounded-xl"></iframe>`;
 
+pages['estado-rotulos'] = () => `<iframe src="Rutas_Evacuaciones__Raíces_Costeras_sampleTemplateIndividual_21_records_20260623154548.pdf" class="w-full h-[800px] border-none rounded-xl"></iframe>`;
+
 
 
 // --- HERRAMIENTAS PAGE ---
