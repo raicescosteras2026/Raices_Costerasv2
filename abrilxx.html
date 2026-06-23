@@ -70,7 +70,7 @@
 <div class="chart-container" id="my_dataviz"></div>
 
 <div class="extra-info">
-  <h2>Votos: 127</h2>
+  <h2>Votos: 24</h2>
   <p>Abril 8, 2026</p>
   <p style="font-size: 24px; margin-bottom: 5px;">Raíces Costeras</p>
 </div>
@@ -90,22 +90,26 @@ var svg = d3.select("#my_dataviz")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 var data = [
-    {Estrategia: "Establecer alianzas con clínicas locales para ferias de salud preventivas", Count: 28},
-    {Estrategia: "Crear un programa de visitas a hogares para adultos mayores", Count: 24},
-    {Estrategia: "Distribución de kits de primeros auxilios y medicamentos básicos", Count: 21},
-    {Estrategia: "Talleres de nutrición y manejo de enfermedades crónicas (diabetes, hipertensión)", Count: 18},
-    {Estrategia: "Coordinar transporte comunitario para citas médicas", Count: 15},
-    {Estrategia: "Campaña de vacunación y prevención de enfermedades transmitidas por mosquitos", Count: 12},
-    {Estrategia: "Capacitación en salud mental y primeros auxilios psicológicos", Count: 9}
+    {Estrategia: "1. Realizar un estudio sobre la calidad de las aguas de la bahía para identificar niveles de contaminación. En caso de detectarse riesgos para la salud, instalar rotulación informativa y preventiva orientando sobre el uso seguro del área.", Count: 4},
+    {Estrategia: "14. Desarrollar alianzas para el suplido de medicamentos a la población adulta y encamados durante eventos naturales.", Count: 3},
+    {Estrategia: "15. Se desarrollará un mapa interactivo que incluya activos de salud junto con los turísticos y culturales.", Count: 3},
+    {Estrategia: "4. Organizar limpiezas comunitarias de forma periódica en cuerpos de agua y costas para reducir la acumulación de residuos y proteger la calidad del agua.", Count: 3},
+    {Estrategia: "13. Establecer una campaña educativa y un sistema de referido para el manejo de las emociones ante eventos estresores.", Count: 2},
+    {Estrategia: "3. Proveer entrenamiento efectivo para el personal municipal, cubriendo la Detección y Eliminación de Descargas Ilícitas y la prevención de la contaminación.", Count: 2},
+    {Estrategia: "6. Reglamentar el manejo y disposición de la totalidad de las aguas usadas en las áreas residenciales para evitar que lleguen a los distintos cuerpos de agua y a las costas.", Count: 2},
+    {Estrategia: "8. Establecer alianzas con el gobierno central y la empresa privada, para responder a la necesidad de las comunidades en caso de que los servicios básicos de agua, energía, comunicaciones y salud no estén disponibles durante una emergencia.", Count: 2},
+    {Estrategia: "12. mitigar el efecto de isla de calor mediante aumento de áreas verdes.", Count: 1},
+    {Estrategia: "5. Resolver problemas críticos de la infraestructura sanitaria que afectan la calidad de vida", Count: 1},
+    {Estrategia: "9. Crear un plan de contingencia para la adaptación de la infraestructura, como la expansión de las instalaciones de salud y educación, utilizando una combinación de subvenciones y asociaciones público-privadas.", Count: 1}
 ];
 
 var x = d3.scaleLinear()
-  .domain([0, 30]) 
+  .domain([0, 5]) 
   .range([ 0, width]);
   
 svg.append("g")
   .attr("transform", "translate(0," + height + ")")
-  .call(d3.axisBottom(x).ticks(6));
+  .call(d3.axisBottom(x).ticks(5));
 
 var y = d3.scaleBand()
   .range([ 0, height ])
