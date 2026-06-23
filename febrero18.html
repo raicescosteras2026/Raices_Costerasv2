@@ -79,7 +79,7 @@
 <script>
 var margin = {top: 50, right: 50, bottom: 50, left: 450},
     width = 1100 - margin.left - margin.right,
-    height = 750 - margin.top - margin.bottom;
+    height = 1100 - margin.top - margin.bottom;
 
 var svg = d3.select("#my_dataviz")
   .append("svg")
@@ -250,6 +250,9 @@ function wrap(text, width) {
         tspan = text.append("tspan").attr("x", -10).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
       }
     }
+    // Adjust vertical alignment to center multi-line text block
+    var offset = (lineNumber * lineHeight) / 2;
+    text.attr("transform", "translate(0, " + -offset + "em)");
   });
 }
 </script>
