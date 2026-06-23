@@ -168,14 +168,14 @@ svg.selectAll("mycircle")
     })
     .on("click", function(d) {
       tooltip.transition().duration(200).style("opacity", 1);
-      tooltip.html("<strong>" + d.Estrategia + "</strong>Votos: " + d.Count)
+      tooltip.html("<strong>" + d.Estrategia + "</strong>Votos: " + d.Count + " (" + ((d.Count / 24) * 100).toFixed(1) + "%)")
              .style("left", (d3.event.pageX + 15) + "px")
              .style("top", (d3.event.pageY - 28) + "px");
     })
     .on("touchstart", function(d) {
       d3.event.preventDefault(); // Prevents touch from double firing
       tooltip.transition().duration(200).style("opacity", 1);
-      tooltip.html("<strong>" + d.Estrategia + "</strong>Votos: " + d.Count)
+      tooltip.html("<strong>" + d.Estrategia + "</strong>Votos: " + d.Count + " (" + ((d.Count / 24) * 100).toFixed(1) + "%)")
              .style("left", (d3.event.touches[0].pageX + 15) + "px")
              .style("top", (d3.event.touches[0].pageY - 28) + "px");
     });
