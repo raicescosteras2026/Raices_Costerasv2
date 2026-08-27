@@ -4,18 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Raíces Costeras - Playa de Ponce</title>
-  
+
   <!-- Tabler Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
-  
+
   <!-- Google Fonts: PT Serif -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
-
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-
   <!-- Tailwind Configuration mapping colors to our CSS variables -->
   <script id="tailwind-config">
     tailwind.config = {
@@ -95,15 +93,12 @@
       }
     };
   </script>
-
   <!-- Local styles -->
   <link rel="stylesheet" href="style.css?v=3" />
-
   <!-- D3.js -->
   <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body class="antialiased min-h-[max(884px,100dvh)] flex flex-col md:flex-row font-body-md text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
-
   <!-- ==========================================
   <!-- Sidebar Navigation (Desktop)
   <!-- ========================================== -->
@@ -112,9 +107,9 @@
       <h1 class="font-display-lg text-3xl font-black text-primary tracking-tight">Raíces Costeras</h1>
       <span class="font-label-caps text-[10px] text-secondary tracking-widest uppercase">Playa de Ponce</span>
     </div>
-    
+
     <nav class="flex-grow px-4 mt-4 overflow-y-auto space-y-6 pb-8 custom-scrollbar">
-      
+
       <!-- RESILIENCIA Y DATOS -->
       <div class="hidden">
         <h3 class="font-label-caps text-[10px] text-on-surface-variant/70 tracking-widest uppercase mb-2 px-4">Resiliencia y Datos</h3>
@@ -133,7 +128,6 @@
           </a>
         </div>
       </div>
-
       <!-- PLANIFICACIÓN -->
       <div>
         <h3 class="font-label-caps text-[10px] text-on-surface-variant/70 tracking-widest uppercase mb-2 px-4">Planificación</h3>
@@ -154,7 +148,6 @@
             <i class="ti text-[20px] ti-chart-pie-2"></i>
             <span class="font-body-md text-[15px] font-semibold">Reunión Junio 3</span>
           </a>
-
           <!-- RESULTADOS VOTACIONES -->
           <details class="group px-2">
             <summary class="flex items-center justify-between text-on-surface-variant hover:bg-surface-container-high rounded-lg px-2 py-2.5 transition-colors duration-200 cursor-pointer list-none">
@@ -172,25 +165,24 @@
               <a data-route="junioxx" href="#junioxx" class="block py-1.5 text-sm text-on-surface-variant hover:text-primary transition-colors">Junio 3</a>
             </div>
           </details>
-
           <a href="https://unnuevoamanecer.maps.arcgis.com/apps/mapviewer/index.html?webmap=b3e22bfcb821489ab3134a94d443315d&center=-66.62135%2C17.986053&scale=36111.909643039246" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-2.5 transition-colors duration-200 cursor-pointer">
             <i class="ti text-[20px] ti-map-pin"></i>
             <span class="font-body-md text-[15px] font-semibold">Puntos de Encuentro</span>
           </a>
-
           <a href="estado_rotulos.pdf" target="_blank" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-2.5 transition-colors duration-200 cursor-pointer">
             <i class="ti text-[20px] ti-file-description"></i>
             <span class="font-body-md text-[15px] font-semibold">Estado de Rótulos</span>
           </a>
-
+          <a href="https://raicescosteras2026.github.io/Plancomunitario/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-2.5 transition-colors duration-200 cursor-pointer">
+            <i class="ti text-[20px] ti-notebook"></i>
+            <span class="font-body-md text-[15px] font-semibold">Plan Comunitario</span>
+          </a>
         </div>
       </div>
-
       <!-- PREPARACIÓN Y RESPUESTA -->
       <div class="hidden">
         <h3 class="font-label-caps text-[10px] text-on-surface-variant/70 tracking-widest uppercase mb-2 px-4">Preparación y Respuesta</h3>
         <div class="space-y-1">
-
           <a data-route="escenarios" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-2.5 transition-colors duration-200 cursor-pointer" href="#escenarios">
             <i class="ti text-[20px] ti-route"></i>
             <span class="font-body-md text-[15px] font-semibold">Escenarios y Rutas de Evacuación</span>
@@ -205,7 +197,6 @@
           </a>
         </div>
       </div>
-
       <!-- COMUNIDAD -->
       <div class="hidden">
         <h3 class="font-label-caps text-[10px] text-on-surface-variant/70 tracking-widest uppercase mb-2 px-4">Comunidad</h3>
@@ -214,7 +205,6 @@
             <i class="ti text-[20px] ti-info-circle"></i>
             <span class="font-body-md text-[15px] font-semibold">Sobre el Proyecto</span>
           </a>
-
           <a data-route="encuesta" class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-4 py-2.5 transition-colors duration-200 cursor-pointer" href="#encuesta">
             <i class="ti text-[20px] ti-chart-pie"></i>
             <span class="font-body-md text-[15px] font-semibold">Llena la Encuesta</span>
@@ -226,7 +216,6 @@
         </div>
       </div>
     </nav>
-
     <!-- Sidebar Bottom Control (Org Info) -->
     <div class="p-6 border-t border-outline-variant/30 flex flex-col gap-4">
       <div class="text-center">
@@ -236,13 +225,12 @@
       </div>
     </div>
   </aside>
-
   <!-- ==========================================
   <!-- Mobile Drawer Menu
   <!-- ========================================== -->
   <!-- Drawer Overlay -->
   <div class="fixed inset-0 bg-surface-variant/60 backdrop-blur-sm z-[55] hidden opacity-0 transition-opacity duration-300" id="drawer-overlay"></div>
-  
+
   <!-- Drawer Container -->
   <nav id="nav-drawer" class="fixed inset-y-0 left-0 z-[60] flex flex-col py-6 bg-surface-container w-4/5 max-w-sm border-r border-outline-variant/30 shadow-2xl rounded-r-2xl h-full transform -translate-x-full transition-transform duration-300 ease-in-out">
     <div class="flex items-center justify-between px-margin-mobile pb-6 border-b border-outline-variant/20">
@@ -254,9 +242,9 @@
         <i class="ti ti-x"></i>
       </button>
     </div>
-    
+
     <div class="flex-grow overflow-y-auto mt-4 px-2 space-y-6 pb-8 custom-scrollbar">
-      
+
       <!-- RESILIENCIA Y DATOS -->
       <div class="hidden">
         <h3 class="font-label-caps text-[10px] text-on-surface-variant/70 tracking-widest uppercase mb-2 px-4">Resiliencia y Datos</h3>
@@ -275,7 +263,6 @@
           </a>
         </div>
       </div>
-
       <!-- PLANIFICACIÓN -->
       <div>
         <h3 class="font-label-caps text-[10px] text-on-surface-variant/70 tracking-widest uppercase mb-2 px-4">Planificación</h3>
@@ -296,7 +283,6 @@
             <i class="ti text-outline group-hover:text-primary transition-colors ti-chart-pie-2"></i>
             <span class="font-body-md text-[16px] font-semibold">Reunión Junio 3</span>
           </a>
-
           <!-- RESULTADOS VOTACIONES -->
           <details class="group px-2">
             <summary class="flex items-center justify-between text-on-surface-variant hover:bg-surface-container-high rounded-lg px-2 py-3 transition-colors duration-200 cursor-pointer list-none">
@@ -314,25 +300,24 @@
               <a data-route="junioxx" href="#junioxx" class="block py-2 text-[15px] text-on-surface-variant hover:text-primary transition-colors">Junio 3</a>
             </div>
           </details>
-
           <a href="https://unnuevoamanecer.maps.arcgis.com/apps/mapviewer/index.html?webmap=b3e22bfcb821489ab3134a94d443315d&center=-66.62135%2C17.986053&scale=36111.909643039246" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group">
             <i class="ti text-outline group-hover:text-primary transition-colors ti-map-pin"></i>
             <span class="font-body-md text-[16px] font-semibold">Puntos de Encuentro</span>
           </a>
-
           <a href="estado_rotulos.pdf" target="_blank" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group">
             <i class="ti text-outline group-hover:text-primary transition-colors ti-file-description"></i>
             <span class="font-body-md text-[16px] font-semibold">Estado de Rótulos</span>
           </a>
-
+          <a href="https://raicescosteras2026.github.io/Plancomunitario/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group">
+            <i class="ti text-outline group-hover:text-primary transition-colors ti-notebook"></i>
+            <span class="font-body-md text-[16px] font-semibold">Plan Comunitario</span>
+          </a>
         </div>
       </div>
-
       <!-- PREPARACIÓN Y RESPUESTA -->
       <div class="hidden">
         <h3 class="font-label-caps text-[10px] text-on-surface-variant/70 tracking-widest uppercase mb-2 px-4">Preparación y Respuesta</h3>
         <div class="space-y-1">
-
           <a data-route="escenarios" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group" href="#escenarios">
             <i class="ti text-outline group-hover:text-primary transition-colors ti-route"></i>
             <span class="font-body-md text-[16px] font-semibold">Escenarios y Rutas de Evacuación</span>
@@ -347,7 +332,6 @@
           </a>
         </div>
       </div>
-
       <!-- COMUNIDAD -->
       <div class="hidden">
         <h3 class="font-label-caps text-[10px] text-on-surface-variant/70 tracking-widest uppercase mb-2 px-4">Comunidad</h3>
@@ -356,7 +340,6 @@
             <i class="ti text-outline group-hover:text-primary transition-colors ti-info-circle"></i>
             <span class="font-body-md text-[16px] font-semibold">Sobre el Proyecto</span>
           </a>
-
           <a data-route="encuesta" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-colors rounded-lg cursor-pointer group" href="#encuesta">
             <i class="ti text-outline group-hover:text-primary transition-colors ti-chart-pie"></i>
             <span class="font-body-md text-[16px] font-semibold">Llena la Encuesta</span>
@@ -368,31 +351,29 @@
         </div>
       </div>
     </div>
-
     <div class="p-6 border-t border-outline-variant/30 flex flex-col gap-3">
       <div class="text-center font-label-caps text-[9px] text-on-surface-variant/80">
         <p class="mb-1 uppercase font-bold text-primary">Un Nuevo Amanecer, Inc.</p>
       </div>
     </div>
   </nav>
-
   <!-- ==========================================
   <!-- Main View Area (Adapts to Sidebar offset on desktop)
   <!-- ========================================== -->
   <div class="flex-grow md:pl-80 flex flex-col min-w-0">
-    
+
     <!-- Top Bar (Sticky on Mobile, hidden on Desktop except for minimal utility) -->
     <header class="sticky top-0 z-40 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 flex justify-between items-center w-full px-margin-mobile h-16 shrink-0 md:bg-surface/50 md:border-b-0">
       <!-- Mobile menu trigger -->
       <button id="menu-btn" class="md:hidden text-primary hover:bg-secondary-container/20 rounded-full p-2 -ml-2 transition-colors focus:outline-none">
         <i class="ti ti-menu-2"></i>
       </button>
-      
+
       <!-- Logo title on Mobile -->
       <div class="font-display-lg text-xl md:text-2xl font-black text-primary tracking-tight md:hidden">
         Raíces Costeras
       </div>
-      
+
       <!-- Right controls -->
       <div class="flex items-center gap-2">
         <button id="lang-toggle-btn" class="hidden flex items-center gap-1 px-3 py-1.5 rounded-full bg-secondary-container text-on-secondary-container hover:bg-secondary-container/80 transition-colors font-label-caps text-[11px] font-bold tracking-wider shadow-sm">
@@ -401,12 +382,10 @@
         </button>
       </div>
     </header>
-
     <!-- Main dynamic content container -->
     <main id="main-content-container" class="flex-grow pb-16">
       <!-- Dynamic Views rendered via app.js -->
     </main>
-
     <!-- Global Footer -->
     <footer class="bg-surface-container-low w-full py-8 px-margin-mobile flex flex-col items-center text-center gap-2 border-t border-outline-variant/20">
       <div class="font-label-caps text-[10px] text-primary uppercase tracking-widest font-bold">
@@ -419,7 +398,6 @@
       </nav>
     </footer>
   </div>
-
   <script src="pages-en.js"></script>
   <script src="app.js"></script>
 </body>
